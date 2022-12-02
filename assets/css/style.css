@@ -1639,6 +1639,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-left: auto;
   }
   
+  .resume-btn {
+    width: max-content;
+    margin-left: auto;
+  }
+  
 }
 
 
