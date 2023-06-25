@@ -518,10 +518,13 @@ main {
 
 .about-text p {
   margin-bottom: 15px;
-  font-size: var(--fs-3); /* Added font size */
-  line-height: 1.6; /* Added line height */
 }
 
+/* Highlighted Words */
+.about-text .highlight {
+  color: var(--bittersweet-shimmer); /* Choose a pleasing color */
+  font-weight: var(--fw-600); /* Increase font weight for emphasis */
+}
 
 
 /**
