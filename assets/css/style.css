@@ -7,8 +7,18 @@
  * copyright 2022 @codewithsadee
  */
 
+ /* Additional CSS Classes */
+  .section-about {
+    background: var(--bg-gradient-onyx);
+    color: var(--white-1);
+    padding: 20px;
+  }
 
-
+  .section-about p {
+    margin-bottom: 20px;
+    font-size: var(--fs-3);
+    line-height: 1.6;
+  }
 
 
 /*-----------------------------------*\
@@ -495,7 +505,9 @@ main {
   #ABOUT
 \*-----------------------------------*/
 
-.about .article-title { margin-bottom: 15px; }
+.about .article-title {
+  margin-bottom: 15px;
+}
 
 .about-text {
   color: var(--light-gray);
@@ -504,7 +516,11 @@ main {
   line-height: 1.6;
 }
 
-.about-text p { margin-bottom: 15px; }
+.about-text p {
+  margin-bottom: 15px;
+  font-size: var(--fs-3); /* Added font size */
+  line-height: 1.6; /* Added line height */
+}
 
 
 
