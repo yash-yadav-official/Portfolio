@@ -39,18 +39,18 @@
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
+  --jet: hsl(209, 100%, 45%);
+  --onyx: hsl(0, 0%, 20%);
+  --eerie-black-1: hsl(240, 2%, 15%);
+  --eerie-black-2: hsl(240, 2%, 10%);
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --white-2: hsl(0, 0%, 95%);
+  --orange-yellow-crayola: hsl(45, 100%, 60%);
+  --vegas-gold: hsl(45, 60%, 50%);
+  --light-gray: hsl(0, 0%, 80%);
+  --light-gray-70: hsla(0, 0%, 80%, 0.7);
+  --bittersweet-shimmer: hsl(14, 85%, 53%);
 
   /**
    * typography
