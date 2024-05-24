@@ -200,8 +200,8 @@ article {
 .resume-icon-box {
   position: relative;
   background: var(--border-gradient-onyx);
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -526,7 +526,11 @@ main {
  * #service 
  */
 
-.resume { color: #03fc84; }
+.resume { 
+  color: #03fc84;
+  height: 40px;
+  width: 40px;
+}
 
 .service { margin-bottom: 35px; }
 
@@ -1453,6 +1457,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   .testimonials-text {
     line-clamp: 2;
     -webkit-line-clamp: 2;
+  }
+
+  .resume-ion-icon { 
+  color: #03fc84;
+  height: 40px;
+  width: 40px;
   }
 
   /* testimonials modal */
