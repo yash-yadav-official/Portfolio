@@ -506,13 +506,12 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
-.resume { color: inherit; }
-
-
 
 /**
  * #service 
  */
+
+.resume { color: #03fc84; }
 
 .service { margin-bottom: 35px; }
 
