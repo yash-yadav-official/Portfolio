@@ -527,9 +527,7 @@ main {
  */
 
 .resume { 
-  color: #03fc84;
-  height: 40px;
-  width: 40px;
+  color: #03fc84; 
 }
 
 .service { margin-bottom: 35px; }
@@ -1457,12 +1455,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .testimonials-text {
     line-clamp: 2;
     -webkit-line-clamp: 2;
-  }
-
-  .resume-ion-icon { 
-  color: #03fc84;
-  height: 40px;
-  width: 40px;
   }
 
   /* testimonials modal */
