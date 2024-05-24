@@ -796,7 +796,7 @@ main {
 }
 
 .timeline-list span {
-  color: var(--vegas-gold);
+  color: #03fc84;
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
