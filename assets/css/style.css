@@ -607,6 +607,10 @@ main {
   overflow: hidden;
 }
 
+.testimonials-item-date {
+  display: none;
+}
+
 
 /**
  * #testimonials-modal
