@@ -1,4 +1,4 @@
-import {getLogger} from './logger.js';
+import { getLogger } from './logger.js';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -11,8 +11,7 @@ const logger = getLogger();
 const app = express();
 const port = 3000;
 
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
