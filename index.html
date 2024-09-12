@@ -50,11 +50,13 @@
         <div class="info-content">
           <h1 class="name" title="Manuel Pueyrredon">Manuel Pueyrredon</h1>
           <p class="title" data-lang="en">Software Engineer Student </p>
+          <p class="title" data-lang="es" style="display:none;">Estudiante de Ingeniería en Informática</p>
           
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
           <span data-lang="en">Show Contacts</span>
+          <span data-lang="es" style="display:none;">Mostrar Contacto</span>
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
@@ -75,6 +77,7 @@
 
             <div class="contact-info">
               <p class="contact-title" data-lang="en">Email</p>
+              <p class="contact-title" data-lang="es" style="display:none;">Correo Electrónico</p>
 
               <a href="mailto:manupuey03@gmail.com" class="contact-link">manupuey03@gmail.com</a>
             </div>
@@ -89,6 +92,7 @@
 
             <div class="contact-info">
               <p class="contact-title" data-lang="en">Phone</p>
+              <p class="contact-title" data-lang="es" style="display:none;">Teléfono</p>
 
               <a href="tel:+5491160113268" class="contact-link">+5491160113268</a>
             </div>
@@ -103,6 +107,7 @@
 
             <div class="contact-info">
               <p class="contact-title" data-lang="en">Birthday</p>
+              <p class="contact-title" data-lang="es" style="display:none;">Fecha de nacimiento</p>
 
               <time datetime="2003-11-11" data-lang="en">November 11, 2003</time>
             </div>
@@ -117,6 +122,7 @@
 
             <div class="contact-info">
               <p class="contact-title" data-lang="en">Location</p>
+              <p class="contact-title" data-lang="es" style="display:none;">Ubicación</p>
 
               <address>San Isidro, Buenos Aires, Argentina</address>
             </div>
@@ -167,19 +173,46 @@
 
           <li class="navbar-item">
             <button class="navbar-link  active" data-nav-link data-lang="en">About</button>
+            <span data-lang="es" style="display:none;">Sobre mí</span>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link data-lang="en">Resume</button>
+            <button data-lang="es" style="display:none;">Currículum</button>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link data-lang="en">Portfolio</button>
+            <button data-lang="es" style="display:none;">Portafolio</button>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link data-lang="en">Contact</button>
+            <button data-lang="es" style="display:none;">Contacto</button>
           </li>
+
+          <li>
+            <!-- Botón desplegable con imágenes de banderas -->
+            <div class="dropdown">
+              <!-- Botón que muestra la bandera actual y el ícono de desplegar -->
+              <button class="dropbtn">
+                <img id="current-flag" src="./assets/images/Bandera-Ingles.svg" alt="English" width="20"> 
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </button>
+            
+              <!-- Contenedor desplegable con las banderas -->
+              <div class="dropdown-content">
+                <a href="#" onclick="changeLanguage('en')">
+                  <img src="./assets/images/Bandera-Ingles.svg" alt="English" width="20"> English
+                </a>
+                <a href="#" onclick="changeLanguage('es')">
+                  <img src="./assets/images/Bandera-Espaniol.svg" alt="Español" width="20"> Español
+                </a>
+              </div>
+            </div>
+          </li>
+
+
 
         </ul>
 
@@ -197,6 +230,7 @@
 
         <header>
           <h2 class="h2 article-title" data-lang="en">About me</h2>
+          <h2 class="h2 article-title" data-lang="es" style="display:none;">Sobre mí</h2>
         </header>
 
         <section class="about-text">
@@ -208,6 +242,13 @@
             enrich my perspective and drive my desire to grow both personally and professionally.
           </p>
 
+          <p data-lang="es" style="display:none;">
+            Soy atento y aprendo rápidamente, con una gran pasión por la tecnología y la programación.
+            Como estudiante de Ingeniería en Informática, busco constantemente profundizar mi comprensión del campo.
+            Disfruto enfrentar nuevos desafíos y aplicar mis habilidades de manera innovadora.
+            Mi curiosidad va más allá de la tecnología, abarcando temas como matemáticas y deportes, 
+            todo lo cual enriquece mi perspectiva y alimenta mi deseo de crecer tanto personal como profesionalmente.
+          </p>
         </section>
 
 
@@ -218,6 +259,7 @@
         <section class="service">
 
           <h3 class="h3 service-title" data-lang="en">What i'm doing</h3>
+          <h3 class="h3 service-title" data-lang="es" style="display:none;">Lo que estoy haciendo</h3>
 
           <ul class="service-list">
 
@@ -230,9 +272,14 @@
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title" data-lang="en">Script Developer</h4>
+                <h4 class="h4 service-item-title" data-lang="es" style="display:none;">Desarrollador de Scripts</h4>
 
                 <p class="service-item-text" data-lang="en">
                   Create efficient algorithms to solve an and automate tasks.
+                </p>
+
+                <p class="service-item-text" data-lang="es" style="display:none;">
+                  Crear algoritmos eficientes para resolver y automatizar tareas.
                 </p>
               </div>
 
@@ -246,9 +293,14 @@
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title" data-lang="en">OOP</h4>
+                <h4 class="h4 service-item-title" data-lang="es" style="display:none;">POO</h4>
 
                 <p class="service-item-text" data-lang="en">
                   High-quality systems with Object Oriented Programming.
+                </p>
+
+                <p class="service-item-text" data-lang="es" style="display:none;">
+                  Sistemas de alta calidad con Programación Orientada a Objetos.
                 </p>
               </div>
 
@@ -262,9 +314,14 @@
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title" data-lang="en">Operating Systems</h4>
+                <h4 class="h4 service-item-title" data-lang="es" style="display:none;">Sistemas Operativos</h4>
 
                 <p class="service-item-text" data-lang="en">
                   Learning about, Operative Systems. System calls, Kernel, etc.
+                </p>
+
+                <p class="service-item-text" data-lang="es" style="display:none;">
+                  Aprendiendo sobre Sistemas Operativos, Llamadas al Sistema, Kernel, etc.
                 </p>
               </div>
 
@@ -278,9 +335,14 @@
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title" data-lang="en">Requirements, Design, and Project Management</h4>
+                <h4 class="h4 service-item-title" data-lang="es" style="display:none;">Requisitos, Diseño y Gestión de Proyectos</h4>
 
                 <p class="service-item-text" data-lang="en">
                   I'm learning about Software Engineering: Requirements, Design, and Project Management.
+                </p>
+
+                <p class="service-item-text" data-lang="es" style="display:none;">
+                  Estoy aprendiendo sobre Ingeniería de Software: Requisitos, Diseño y Gestión de Proyectos.
                 </p>
               </div>
 
@@ -298,6 +360,7 @@
         <section class="testimonials">
 
           <h3 class="h3 testimonials-title" data-lang="en">Testimonials</h3>
+          <h3 class="h3 testimonials-title" data-lang="es" style="display:none;">Testimonios</h3>
 
           <ul class="testimonials-list has-scrollbar">
 
@@ -457,6 +520,7 @@
         <section class="languages">
 
           <h3 class="h3 languages-title" data-lang="en">Languages</h3>
+          <h3 class="h3 languages-title" data-lang="es" style="display:none;">Lenguajes</h3>
 
           <ul class="languages-list has-scrollbar">
 
@@ -514,6 +578,7 @@
 
         <header>
           <h2 class="h2 article-title" data-lang="en">Resume</h2>
+          <h2 class="h2 article-title" data-lang="es" style="display:none;">Curriculum</h2>
         </header>
 
         <section class="timeline">
@@ -524,6 +589,7 @@
             </div>
 
             <h3 class="h3" data-lang="en">Education</h3>
+            <h3 class="h3" data-lang="es" style="display:none;">Educacion</h3>
           </div>
 
           <ol class="timeline-list">
@@ -533,9 +599,13 @@
               <h4 class="h4 timeline-item-title">Universidad de Buenos Aires</h4>
 
               <span data-lang="en">2022 — 2024 (Present)</span>
+              <span data-lang="es" style="display:none;">2022 — 2024 (Presente)</span>
 
               <p class="timeline-text" data-lang="en">
                 Computer Engineering 3rd year (in process)
+              </p>
+              <p class="timeline-text" data-lang="es" style="display:none;"></p>
+                Ingeniería Informática 3er curso (en curso)
               </p>
 
             </li>
@@ -552,6 +622,12 @@
                 IGCSE MATH
                 IGCSE ENGLISH
               </p>
+              <p class="timeline-text" data-lang="es" style="display:none;"></p>
+                Me recibi con especialisacion en Ciencias Naturales.
+                Exámenes internacionales:
+                IGCSE MATEMÁTICAS
+                IGCSE INGLÉS
+              </p>
 
             </li>
 
@@ -567,6 +643,7 @@
             </div>
 
             <h3 class="h3" data-lang="en">Experience</h3>
+            <h3 class="h3" data-lang="es" style="display:none;">Experiencia</h3>
           </div>
 
           <ol class="timeline-list">
@@ -574,9 +651,11 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title" data-lang="en">Python Script Developer</h4>
+              <h4 class="h4 timeline-item-title" data-lang="es" style="display:none;">Desarrollador de scripts Python</h4>
               <span>NB Engineering LLC</span>
 
               <span data-lang="en">2023 — Present</span>
+              <span data-lang="es" style="display:none;">2023 — Presente</span>
 
               <p class="timeline-text" data-lang="en">
                 As a Python Scripting Specialist, I automate pre-production tasks,
@@ -586,13 +665,23 @@
                 GrassHopper, VB, and JS. Committed to continuous learning, I strive to
                 improve task execution efficiency.
               </p>
+              <p class="timeline-text" data-lang="es" style="display:none;"></p>
+                Como especialista en scripts de Python, automatizo tareas de preproducción,
+                agilizo los flujos de trabajo de los equipos de producto y optimizo los
+                oficina mediante scripts. Actualizo y mantengo scripts de Python,
+                gestiono la documentación y utilizo varios lenguajes de scripting como
+                GrassHopper, VB y JS. Comprometido con el aprendizaje continuo, me esfuerzo por
+                mejorar la eficiencia en la ejecución de tareas.
+              </p>
 
             </li>
 
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title" data-lang="en">Internship </h4>
+              <h4 class="h4 timeline-item-title" data-lang="es" style="display:none;">Pasantia </h4>
               <span data-lang="en">Ocean Born Foundation, Madrid, Spain</span>
+              <span data-lang="es" data-lang="es" style="display:none;">Ocean Born Foundation, Madrid, España</span>
               <span>2021 — 2022</span>
 
               <p class="timeline-text" data-lang="en">
@@ -603,12 +692,21 @@
                 Additionally, I demonstrated myself as a collaborative and effective
                 member in cross-departmental teams.
               </p>
+              <p class="timeline-text" data-lang="es" style="display:none;"></p>
+                Durante mis prácticas en la Ocean Born Foundation, tuve la oportunidad de
+                de desarrollar habilidades en programación, diseño web y optimización de páginas.
+                optimización de páginas. Mejorando el posicionamiento de la web en un 20%. Destaqué
+                por mi capacidad para adaptarme rápidamente a nuevas herramientas y tecnologías.
+                Además, demostré ser un colaborador eficaz en equipos interdepartamentales.
+                en equipos interdepartamentales.
+              </p>
 
             </li>
 
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title" data-lang="en">Web designer</h4>
+              <h4 class="h4 timeline-item-title" data-lang="es" style="display:none;">Diseñador Web</h4>
 
               <span>2020 — 2021</span>
 
@@ -620,6 +718,14 @@
                 programming languages such as HTML, CSS, and JavaScript, as well as mastering 
                 popular frameworks and libraries.
               </p>
+              <p class="timeline-text" data-lang="es" style="display:none;"></p>
+                Estudié de forma independiente para convertirme en desarrollador web, dedicando tiempo a aprender 
+                las últimas tecnologías y herramientas del sector. A través de cursos en línea 
+                tutoriales y proyectos personales, adquirí los conocimientos necesarios para crear 
+                y mantener sitios web eficaces y atractivos. Me centré en aprender 
+                lenguajes de programación como HTML, CSS y JavaScript, así como el dominio de 
+                y bibliotecas populares.
+              </p>
 
             </li>
 
@@ -630,6 +736,7 @@
         <section class="skill">
 
           <h3 class="h3 skills-title" data-lang="en">My skills</h3>
+          <h3 class="h3 skills-title" data-lang="es" style="display:none;">Mis habilidades</h3>
 
           <ul class="skills-list content-card">
 
@@ -637,6 +744,7 @@
 
               <div class="title-wrapper">
                 <h5 class="h5" data-lang="en">Web design</h5>
+                <h5 class="h5" data-lang="es" style="display:none;">Diseño Web</h5>
                 <data value="50">50%</data>
               </div>
 
@@ -650,6 +758,7 @@
 
               <div class="title-wrapper">
                 <h5 class="h5" data-lang="en">OOP</h5>
+                <h5 class="h5" data-lang="es" style="display:none;">POO</h5>
                 <data value="80">80%</data>
               </div>
 
@@ -663,6 +772,7 @@
 
               <div class="title-wrapper">
                 <h5 class="h5" data-lang="en">Scripting</h5>
+                <h5 class="h5" data-lang="es" style="display:none;">Programacion</h5>
                 <data value="90">90%</data>
               </div>
 
@@ -676,6 +786,7 @@
 
               <div class="title-wrapper">
                 <h5 class="h5" data-lang="en">DataStructures & Algorithms</h5>
+                <h5 class="h5" data-lang="es" style="display:none;">Estructura de datos y algoritmos</h5>
                 <data value="90">90%</data>
               </div>
 
@@ -703,6 +814,7 @@
 
         <header>
           <h2 class="h2 article-title" data-lang="en">Portfolio</h2>
+          <h2 class="h2 article-title" data-lang="es" style="display:none;">Portafolio</h2>
         </header>
 
         <section class="projects">
@@ -711,18 +823,22 @@
 
             <li class="filter-item">
               <button class="active" data-filter-btn data-lang="en">All</button>
+              <button class="active" data-lang="es" style="display:none;" data-filter-btn>Todos</button>
             </li>
 
             <li class="filter-item">
               <button data-filter-btn data-lang="en">Games</button>
+              <button data-filter-btn data-lang="es" style="display:none;">Juegos</button>
             </li>
 
             <li class="filter-item">
               <button data-filter-btn data-lang="en">Applications</button>
+              <button data-filter-btn data-lang="es" style="display:none;">Aplicaciones</button>
             </li>
 
             <li class="filter-item">
               <button data-filter-btn data-lang="en">Proyects</button>
+              <button data-filter-btn data-lang="es" style="display:none;">Proyectos</button>
             </li>
 
           </ul>
@@ -732,6 +848,7 @@
             <button class="filter-select" data-select>
 
               <div class="select-value" data-lang="en" data-selecct-value>Select category</div>
+              <div class="select-value" data-selecct-value data-lang="es" style="display:none;">Seleccionar categoria</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
@@ -743,18 +860,22 @@
 
               <li class="select-item">
                 <button data-select-item data-lang="en">All</button>
+                <button data-select-item data-lang="es" style="display:none;">Todos</button>
               </li>
 
               <li class="select-item">
                 <button data-select-item data-lang="en">Web design</button>
+                <button data-select-item data-lang="es" style="display:none;">diseño Web</button>
               </li>
 
               <li class="select-item">
                 <button data-select-item data-lang="en">Applications</button>
+                <button data-select-item data-lang="es" style="display:none;">Aplicaciones</button>
               </li>
 
               <li class="select-item">
                 <button data-select-item data-lang="en">Proyects</button>
+                <button data-select-item data-lang="es" style="display:none;">Proyectos</button>
               </li>
 
             </ul>
@@ -775,8 +896,10 @@
                 </figure>
 
                 <h3 class="project-title" data-lang="en">GitHub Profile</h3>
+                <h3 class="project-title" data-lang="es" style="display:none;">Perfil de GitHub</h3>
 
                 <p class="project-category" data-lang="en">Proyects</p>
+                <p class="project-category" data-lang="es" style="display:none;">Proyectos</p>
 
               </a>
             </li>
@@ -793,8 +916,10 @@
                 </figure>
 
                 <h3 class="project-title" data-lang="en">SquarePartition</h3>
+                <h3 class="project-title" data-lang="es" style="display:none;">ParticionDeCuardados</h3>
 
                 <p class="project-category" data-lang="en">Proyects</p>
+                <p class="project-category" data-lang="es" style="display:none;">Proyectos</p>
 
               </a>
             </li>
@@ -811,8 +936,10 @@
                 </figure>
 
                 <h3 class="project-title" data-lang="en">AlgoTracker</h3>
+                <h3 class="project-title" data-lang="es" style="display:none;">AlgoRastreador</h3>
 
                 <p class="project-category" data-lang="en">Proyects</p>
+                <p class="project-category" data-lang="es" style="display:none;">Proyectos</p>
 
               </a>
             </li>
@@ -831,6 +958,8 @@
                 <h3 class="project-title">AlgoHoot!</h3>
 
                 <p class="project-category" data-lang="en">Games</p>
+                <p class="project-category" data-lang="es" style="display:none;">Juegos</p>
+                
 
               </a>
             </li>
@@ -849,6 +978,7 @@
                 <h3 class="project-title">Paint</h3>
 
                 <p class="project-category" data-lang="en">Applications</p>
+                <p class="project-category" data-lang="es" style="display:none;">Aplicaciones</p>
 
               </a>
             </li>
@@ -867,6 +997,7 @@
                 <h3 class="project-title">Unruly</h3>
 
                 <p class="project-category" data-lang="en">Games</p>
+                <p class="project-category" data-lang="es" style="display:none;" >Juegos</p>
 
               </a>
             </li>
@@ -884,6 +1015,7 @@
                 <h3 class="project-title">Silent Hill</h3>
 
                 <p class="project-category" data-lang="en">Web design</p>
+                <p class="project-category" data-lang="es" style="display:none;">diseño Web</p>
 
               </a>
             </li>
@@ -902,6 +1034,7 @@
 
         <header>
           <h2 class="h2 article-title" data-lang="en">Contact</h2>
+          <h2 class="h2 article-title" data-lang="es" style="display:none;">Contacto</h2>
         </header>
       
         <section class="mapbox" data-mapbox>
@@ -915,6 +1048,7 @@
         <section class="contact-form">
       
           <h3 class="h3 form-title" data-lang="en">Contact Form</h3>
+          <h3 class="h3 form-title" data-lang="es" style="display:none;">Formulario de contacto</h3>
       
           <!-- Formulario con id y campos correctos -->
           <form id="contact-form" class="form" data-form>
@@ -929,6 +1063,7 @@
             <button class="form-btn" type="button" data-form-btn onclick="sendMail()">
               <ion-icon name="paper-plane"></ion-icon>
               <span data-lang="en">Send Message</span>
+              <span data-lang="es" style="display:none;">Enviar mensaje</span>
             </button>
       
           </form>

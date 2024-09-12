@@ -163,3 +163,19 @@ function sendMail(){
   var subjectLine = document.getElementById("Subject").value;
   window.location.href = "mailto:manupuey03@gmail.com?subject="+subjectLine+"&body="+body;
 }
+
+function changeLanguage(lang) {
+  const body = document.body;
+  const currentFlag = document.getElementById('current-flag');
+  
+  // Cambiar el idioma del sitio
+  if (lang === 'en') {
+    body.classList.remove('lang-es');
+    body.classList.add('lang-en');
+    currentFlag.src = './assets/images/Bandera-Ingles.svg'; // Cambiar la imagen a la bandera de inglés
+  } else if (lang === 'es') {
+    body.classList.remove('lang-en');
+    body.classList.add('lang-es');
+    currentFlag.src = './assets/images/Bandera-Espaniol.svg'; // Cambiar la imagen a la bandera de español
+  }
+}
