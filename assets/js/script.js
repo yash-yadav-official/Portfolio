@@ -157,3 +157,9 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+function sendMail(){
+  var body = document.getElementById("Message").value;
+  var subjectLine = document.getElementById("Subject").value;
+  window.location.href = "mailto:manupuey03@gmail.com?subject="+subjectLine+"&body="+body;
+}
