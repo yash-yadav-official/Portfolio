@@ -157,3 +157,30 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  const submitButton = form.querySelector('[data-form-btn]');
+
+  form.addEventListener('input', () => {
+    const allFilled = Array.from(form.querySelectorAll('[data-form-input]')).every(input => input.value.trim() !== '');
+    submitButton.disabled = !allFilled;
+  });
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = {
+      message: "Name: " + form.from_name.value + ", email: " + form.to_name.value + ", message: " + form.message.value
+    };
+
+    emailjs.send('service_qifae27', 'template_l7q9rlu', formData)
+      .then(function(response) {
+        alert('Message sent successfully!');
+      }, function(error) {
+        console.log('FAILED...', error);
+        alert('Failed to send message. Please try again later.');
+      });
+  });
+});
