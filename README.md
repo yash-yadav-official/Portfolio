@@ -1,4 +1,4 @@
-# vCard - Personal portfolio
+# Shbenzer.github.io
 
-Personal website built using [CodeWithSadee's](https://www.twitter.com/codewithsadee) opensource vCard repository.
+Simon Benzer's personal website built using [CodeWithSadee's](https://www.twitter.com/codewithsadee) opensource vCard repository.
 
