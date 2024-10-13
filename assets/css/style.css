@@ -868,6 +868,32 @@ main {
   margin-bottom: 7px;
 }
 
+.timeline-header {
+  display: flex;
+  justify-content: space-between; /* Space between title and date */
+  align-items: center; /* Align them vertically in the center */
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+}
+
+.company-icon {
+  width: 20px; /* Adjust the size of the icon */
+  height: auto;
+  margin-right: 10px; /* Space between icon and text */
+  margin-left: 10px; /* Space between icon and text */
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.timeline-date {
+  font-size: 14px; /* Adjust size as needed */
+  color: #666; /* Optional: Change color for the date */
+}
+
+
 .timeline-list span {
   color: var(--vegas-gold);
   font-weight: var(--fw-400);
