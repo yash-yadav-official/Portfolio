@@ -1,9 +1,11 @@
+"use client"
+
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Github, Linkedin, Mail, Briefcase, GraduationCap, Code, Zap, Star, Database, Layout, Server, Cpu, ExternalLink } from "lucide-react"
+import { Github, Linkedin, Mail, Briefcase, GraduationCap, Code, Zap, Star, Database, Layout, Server, Cpu, ExternalLink, Cloud, Box } from "lucide-react"
 
 const personalInfo = {
   name: "Ian Mukua",
@@ -21,7 +23,6 @@ const skills = [
   { name: "SQL", level: 70, icon: Database },
   { name: "AWS", level: 65, icon: Cloud },
   { name: "Docker", level: 60, icon: Box },
-  { name: "GraphQL", level: 55, icon: GitBranch },
 ]
 
 const projects = [
