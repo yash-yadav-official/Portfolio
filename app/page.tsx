@@ -73,7 +73,6 @@ export default function Component() {
   })
   const itemsPerPage = 3
 
-// @ts-expect-error: Dynamic data length may vary
   const paginateData = (data: unknown[], page: number) => {
     const startIndex = (page - 1) * itemsPerPage
     return data.slice(startIndex, startIndex + itemsPerPage)
@@ -83,7 +82,6 @@ export default function Component() {
     setCurrentPage(prev => ({ ...prev, [section]: newPage }))
   }
 
-// @ts-expect-error: Dynamic data length may vary
 const pageCount = (data: unknown[]) => Math.ceil(data.length / itemsPerPage)
 
   return (
