@@ -73,6 +73,7 @@ export default function Component() {
   })
   const itemsPerPage = 3
 
+// @ts-ignore
   const paginateData = (data: any[], page: number) => {
     const startIndex = (page - 1) * itemsPerPage
     return data.slice(startIndex, startIndex + itemsPerPage)
@@ -82,6 +83,7 @@ export default function Component() {
     setCurrentPage(prev => ({ ...prev, [section]: newPage }))
   }
 
+// @ts-ignore
   const pageCount = (data: any[]) => Math.ceil(data.length / itemsPerPage)
 
   return (
@@ -121,7 +123,7 @@ export default function Component() {
         </header>
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-12">
           <TabsList className="grid w-full grid-cols-5 bg-[#001845]/50 backdrop-blur-sm">
-            {['profile', 'skills', 'projects', 'education', 'games'].map((tab, index) => (
+            {['profile', 'skills', 'projects', 'education', 'games'].map((tab) => (
               <TabsTrigger 
                 key={tab}
                 value={tab} 
