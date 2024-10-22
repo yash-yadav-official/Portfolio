@@ -1,10 +1,12 @@
 
 "use client"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Button } from "@/components/ui/button"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Github, Linkedin, Mail, Briefcase, GraduationCap, Code, Zap, Database, Layout, Server, Cpu, Gamepad, Cloud, Box, GitBranch } from "lucide-react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Github, Linkedin, Mail, Briefcase, GraduationCap, Code, Zap, Database, Layout, Server, Cpu, Gamepad, Cloud, Box, GitBranch, ExternalLink } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 
 const personalInfo = {
   name: "Ian Mukua",
@@ -142,8 +144,103 @@ export default function Component() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              {/* ... (TabsContent for each section remains largely the same, with holographic effects added) */}
-            </motion.div>
+          <TabsContent value="profile">
+            <Card className="bg-[#001845] border-[#0466C8]">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#0466C8]">Professional Summary</CardTitle>
+              </CardHeader>
+              <CardContent className="text-[#979DAC]">
+                <p>{personalInfo.summary}</p>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="skills">
+            <Card className="bg-[#001845] border-[#0466C8]">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#0466C8]">Technical Skills</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6 text-[#979DAC]">
+              {paginateData(skills, currentPage.skills).map((skill, index) => (
+                    <div key={index} className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <skill.icon className="w-5 h-5 mr-2" />
+                      <span>{skill.name}</span>
+                    </div>
+                    <div className="w-1/2 bg-[#33415C] rounded-full h-2.5">
+                      <div className="bg-[#0466C8] h-2.5 rounded-full" style={{ width: `${skill.level}%` }}></div>
+                    </div>
+                  </div>
+                ))}
+                <div className="flex justify-between mt-4">
+                  <Button 
+                    onClick={()=>updatePage('skills', currentPage.skills)} 
+                    disabled={currentPage.skills === pageCount(skills)}
+                    variant="outline"
+                    className="text-[#0466C8] border-[#0466C8]"
+                  >
+                    Previous
+                  </Button>
+                  <Button 
+                    onClick={() => updatePage('skills', Math.min(currentPage.skills + 1, pageCount(skills)))}
+                    disabled={currentPage.skills === pageCount(skills)}                    
+                    variant="outline"
+                    className="text-[#0466C8] border-[#0466C8]"
+                  >
+                    Next
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="projects">
+            <Card className="bg-[#001845] border-[#0466C8]">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#0466C8]">Featured Projects</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6 text-[#979DAC]">
+                {projects.map((project, index) => (
+                  <Card key={index} className="bg-[#002855] border-[#0466C8]">
+                    <CardContent className="p-4">
+                      <div className="flex flex-col md:flex-row gap-4">
+                        <img src={project.image} alt={project.title} className="w-full md:w-1/3 rounded-md" />
+                        <div className="flex-1">
+                          <h3 className="text-xl font-semibold text-[#0466C8] mb-2">{project.title}</h3>
+                          <p className="mb-2">{project.description}</p>
+                          <div className="flex flex-wrap gap-2 mb-2">
+                            {project.technologies.map((tech, i) => (
+                              <Badge key={i} variant="secondary" className="bg-[#33415C] text-[#979DAC]">{tech}</Badge>
+                            ))}
+                          </div>
+                          <Button variant="outline" className="text-[#0466C8] border-[#0466C8]" asChild>
+                            <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="w-4 h-4 mr-2" />
+                              View Project
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="education">
+            <Card className="bg-[#001845] border-[#0466C8]">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#0466C8]">Education</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-[#979DAC]">
+                {education.map((edu, index) => (
+                  <div key={index} className="border-b border-[#33415C] last:border-b-0 pb-4 last:pb-0">
+                    <h3 className="text-lg font-semibold">{edu.degree}</h3>
+                    <p>{edu.institution}</p>
+                    <p className="text-sm text-[#7D8597]">{edu.year}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </TabsContent>            </motion.div>
           </AnimatePresence>
         </Tabs>
         <footer className="text-center border-t border-[#0466C8] pt-4">
