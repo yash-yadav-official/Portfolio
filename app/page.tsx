@@ -1,4 +1,4 @@
-"use-client"
+"use client"
 
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
@@ -6,7 +6,7 @@ import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Github, Linkedin, Mail, Award, Briefcase, GraduationCap, Code, Zap, Star, Shield, Database, Layout, Server, Cpu } from "lucide-react"
+import { Github, Linkedin, Mail,Shield, Database,Server, Cpu } from "lucide-react"
 
 export default function Component() {
   const [activeTab, setActiveTab] = useState('profile')
