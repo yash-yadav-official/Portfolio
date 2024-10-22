@@ -6,7 +6,7 @@ import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Github, Linkedin, Mail,Shield, Database,Server, Cpu } from "lucide-react"
+import { Github, Linkedin, Mail,Shield, Database,Server, Cpu, Code, Zap } from "lucide-react"
 
 export default function Component() {
   const [activeTab, setActiveTab] = useState('profile')
@@ -185,9 +185,9 @@ export default function Component() {
           </TabsContent>
         </Tabs>
         <footer className="text-center border-t border-green-400 pt-4">
-          <p className="text-lg">
-            "The code is mightier than the sword." - Netrunner's Creed
-          </p>
+            <p className="text-lg">
+            &quot;The code is mightier than the sword.&quot; - Netrunner&apos;s Creed
+            </p>
         </footer>
       </div>
       <style jsx>{`
