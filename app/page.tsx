@@ -74,7 +74,7 @@ export default function Component() {
   const itemsPerPage = 3
 
 // @ts-expect-error: Dynamic data length may vary
-  const paginateData = (data: any[], page: number) => {
+  const paginateData = (data: unknown[], page: number) => {
     const startIndex = (page - 1) * itemsPerPage
     return data.slice(startIndex, startIndex + itemsPerPage)
   }
@@ -84,7 +84,7 @@ export default function Component() {
   }
 
 // @ts-expect-error: Dynamic data length may vary
-const pageCount = (data: any[]) => Math.ceil(data.length / itemsPerPage)
+const pageCount = (data: unknown[]) => Math.ceil(data.length / itemsPerPage)
 
   return (
     <div className="min-h-screen bg-[#001233] text-[#979DAC] p-8 font-sans relative overflow-hidden">
