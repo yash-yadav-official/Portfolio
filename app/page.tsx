@@ -3,9 +3,9 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Github, Linkedin, Mail, Briefcase, GraduationCap, Code, Zap, Star, Database, Layout, Server, Cpu, ExternalLink, Cloud, Box } from "lucide-react"
+import { Github, Linkedin, Mail, Briefcase, GraduationCap, Code, Zap, Database, Layout, Server, Cpu, ExternalLink, Cloud, Box } from "lucide-react"
 
 const personalInfo = {
   name: "Ian Mukua",
