@@ -51,6 +51,7 @@ export function ProjectsTab({ projects, currentPage, updatePage }: ProjectsTabPr
                     alt={projects[currentPage.projects - 1].title}
                     width={300}
                     height={200}
+                    className='rounded-lg'
                   />
                   <div className="w-2/3 pl-4 flex flex-col justify-center">
                     <div className="text-left">
