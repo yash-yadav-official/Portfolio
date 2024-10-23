@@ -22,55 +22,58 @@ const personalInfo: PersonalInfo = {
 }
 
 const skills: Skill[] = [
-  { name: "JavaScript", level: 90, icon: Zap },
-  { name: "React", level: 85, icon: Zap },
-  { name: "Node.js", level: 80, icon: Zap },
-  { name: "Python", level: 75, icon: Zap },
-  { name: "SQL", level: 70, icon: Zap },
-  { name: "AWS", level: 65, icon: Zap },
-  { name: "Docker", level: 60, icon: Zap },
-  { name: "GraphQL", level: 55, icon: Zap },
+  { name: "Typescript", level: 90, icon: Zap },
+  { name: "Python", level: 85, icon: Zap },
+  { name: "Javascript", level: 85, icon: Zap },
+  { name: "NextJs", level: 90, icon: Zap },
+  { name: "NestJs", level: 91, icon: Zap },
+  { name: "Django", level: 71, icon: Zap },
+  { name: "React", level: 72, icon: Zap },
+  { name: "AWS", level: 90, icon: Zap },
+  { name: "Docker", level: 92, icon: Zap },
+  { name: "GraphQL", level: 90, icon: Zap },
+  { name: "Rest", level: 90, icon: Zap },
 ]
 
 const projects: Project[] = [
   {
-    title: "E-commerce Platform",
-    description: "Developed a full-featured e-commerce platform with real-time inventory management and secure payment processing.",
+    title: "NoteNest",
+    description: "Developed a full-featured journaling platform with real-time inventory management and secure payment processing.",
     image: "/projo.jpg",
-    liveLink: "https://ecommerce-example.com",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe API"]
+    liveLink: "https://notenestd.vercel.app/",
+    technologies: ["NextJs", "NestJs", "Postgresql", "Jest"]
   },
   {
-    title: "Task Management App",
-    description: "Built a collaborative task management application with real-time updates and team communication features.",
+    title: "Anonymate",
+    description: "Mental health plaform centered on anonymity of users.",
     image: "/projo.jpg",
-    liveLink: "https://taskmanager-example.com",
-    technologies: ["Vue.js", "Express", "PostgreSQL", "Socket.io"]
+    liveLink: "https://github.com/Imukua/anonymous-mate",
+    technologies: ["NextJs", "MongoDb", "Clerk"]
   },
   {
-    title: "AI-powered Chatbot",
-    description: "Implemented an AI-powered chatbot for customer support, integrating natural language processing for improved user interactions.",
+    title: "NoteNest API",
+    description: "Journal taking API with CRUD operations, enhanced filtering and User Auth service",
     image: "/projo.jpg",
-    liveLink: "https://chatbot-example.com",
-    technologies: ["Python", "TensorFlow", "Flask", "React"]
+    liveLink: "https://notenest-backend-prod.vercel.app/",
+    technologies: ["NestJs", "Vercel", "Postgresql"]
   }
 ]
 
 const education: Education[] = [
   {
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Bachelor of Science in Biotechnology ",
     institution: "University of Nairobi",
-    year: "2015 - 2019"
+    year: "2022"
   },
   {
-    degree: "Full Stack Web Development Bootcamp",
-    institution: "Moringa School",
-    year: "2020"
+    degree: "Software Engeenering Bootcamp",
+    institution: "ALX School",
+    year: "2023"
   },
   {
-    degree: "Full Stack Web Development Bootcamp",
-    institution: "Moringa School",
-    year: "2020"
+    degree: "AWS Cloud Practitioner",
+    institution: "AWS Restart, Ajira",
+    year: "2023"
   }
 ]
 
