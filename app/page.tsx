@@ -46,14 +46,14 @@ const projects: Project[] = [
   {
     title: "Anonymate",
     description: "Mental health plaform centered on anonymity of users.",
-    image: "/anonymate.jpg",
+    image: "/anonymate.png",
     liveLink: "https://github.com/Imukua/anonymous-mate",
     technologies: ["NextJs", "MongoDb", "Clerk"]
   },
   {
     title: "NoteNest API",
     description: "Journal taking API with CRUD operations, enhanced filtering and User Auth service",
-    image: "/notenest-backend.jpg",
+    image: "/notenest-backend.png",
     liveLink: "https://notenest-backend-prod.vercel.app/",
     technologies: ["NestJs", "Vercel", "Postgresql"]
   }
