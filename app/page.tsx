@@ -60,10 +60,11 @@ const projects: Project[] = [
 ]
 
 const education: Education[] = [
+
   {
-    degree: "Bachelor of Science in Biotechnology ",
-    institution: "University of Nairobi",
-    year: "2022"
+    degree: "AWS Cloud Practitioner",
+    institution: "AWS Restart, Ajira",
+    year: "2023"
   },
   {
     degree: "Software Engeenering Bootcamp",
@@ -71,10 +72,11 @@ const education: Education[] = [
     year: "2023"
   },
   {
-    degree: "AWS Cloud Practitioner",
-    institution: "AWS Restart, Ajira",
-    year: "2023"
-  }
+    degree: "Bachelor of Science in Biotechnology ",
+    institution: "University of Nairobi",
+    year: "2022"
+  },
+
 ]
 
 export default function Portfolio() {
@@ -108,14 +110,14 @@ export default function Portfolio() {
   return (
     <div className="h-screen bg-[#001233] text-[#979DAC] p-8 font-sans relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
         className="max-w-4xl mx-auto border-2 border-[#0466C8] p-8 rounded-lg shadow-lg shadow-[#0466C8]/20 bg-[#001233]/90 backdrop-blur-md relative z-10"
       >
         <header className="text-center mb-12">
-          <motion.h1 
+          <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -123,7 +125,7 @@ export default function Portfolio() {
           >
             {personalInfo.name}
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -131,7 +133,7 @@ export default function Portfolio() {
           >
             {personalInfo.title}
           </motion.p>
-          <motion.p 
+          <motion.p
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -143,9 +145,9 @@ export default function Portfolio() {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-12">
           <TabsList className="grid w-full grid-cols-4 bg-[#001845]/50 backdrop-blur-sm">
             {['profile', 'skills', 'projects', 'education'].map((tab) => (
-              <TabsTrigger 
+              <TabsTrigger
                 key={tab}
-                value={tab} 
+                value={tab}
                 className="data-[state=active]:bg-[#0466C8] data-[state=active]:text-[#001233] text-[#979DAC] transition-all duration-300 ease-in-out hover:text-[#0466C8]"
               >
                 {tab === 'profile' && <Cpu className="w-5 h-5 mr-2" />}
@@ -157,19 +159,19 @@ export default function Portfolio() {
             ))}
           </TabsList>
           <ProfileTab personalInfo={personalInfo} />
-          <SkillsTab 
+          <SkillsTab
             skills={skills}
             currentPage={currentPage}
             updatePage={updatePage}
             pageCount={pageCount}
             paginateData={paginateData}
           />
-          <ProjectsTab 
+          <ProjectsTab
             projects={projects}
             currentPage={currentPage}
             updatePage={updatePage}
           />
-          <EducationTab 
+          <EducationTab
             education={education}
             currentPage={currentPage}
             updatePage={updatePage}
@@ -191,9 +193,9 @@ export default function Portfolio() {
                 whileTap={{ scale: 0.9 }}
               >
                 <a href={link} target="_blank" rel="noopener noreferrer">
-                  <Button 
-                    variant="outline" 
-                    size="icon" 
+                  <Button
+                    variant="outline"
+                    size="icon"
                     className={`text-white border-2 transition-all duration-300`}
                     style={{ backgroundColor: color, borderColor: color }}
                   >
