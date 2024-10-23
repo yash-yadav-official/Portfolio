@@ -39,7 +39,7 @@ const projects: Project[] = [
   {
     title: "NoteNest",
     description: "Developed a full-featured journaling platform with real-time inventory management and secure payment processing.",
-    image: "/notenest.jpg",
+    image: "/notenest.png",
     liveLink: "https://notenestd.vercel.app/",
     technologies: ["NextJs", "NestJs", "Postgresql", "Jest"]
   },
