@@ -54,7 +54,7 @@ const projects: Project[] = [
     title: "NoteNest API",
     description: "Journal taking API with CRUD operations, enhanced filtering and User Auth service",
     image: "/notenest-backend.png",
-    liveLink: "https://notenest-backend-prod.vercel.app/",
+    liveLink: "https://notenest-backend-prod.vercel.app/api-docs",
     technologies: ["NestJs", "Vercel", "Postgresql"]
   }
 ]
