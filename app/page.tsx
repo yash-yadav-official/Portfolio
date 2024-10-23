@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Cpu, Zap, Briefcase, GraduationCap, Github, Linkedin, Mail, LucideIcon } from "lucide-react"
+import { Cpu, Zap, Briefcase, GraduationCap, Github, Linkedin, Mail } from "lucide-react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ProfileTab } from '@/components/tabs/profileTab'
@@ -9,40 +9,9 @@ import { SkillsTab } from "@/components/tabs/skillsTab"
 import { ProjectsTab } from "@/components/tabs/projectsTab"
 import { EducationTab } from "@/components/tabs/educationTab"
 import { TwitterLogoIcon } from '@radix-ui/react-icons'
+import { PersonalInfo, Skill, Project, Education, PageState } from '@/lib/types/types'
 
-interface PersonalInfo {
-  name: string;
-  title: string;
-  email: string;
-  location: string;
-  summary: string;
-}
 
-interface Skill {
-  name: string;
-  level: number;
-  icon: LucideIcon;
-}
-
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  liveLink: string;
-  technologies: string[];
-}
-
-interface Education {
-  degree: string;
-  institution: string;
-  year: string;
-}
-
-interface PageState {
-  skills: number;
-  projects: number;
-  education: number;
-}
 
 const personalInfo: PersonalInfo = {
   name: "Ian Mukua",
@@ -130,8 +99,8 @@ export default function Portfolio() {
   }
 
 
-  const pageCount = (data: any[]) => Math.ceil(data.length / itemsPerPage)
-  const pageCountEdu = (data: any[]) => Math.ceil(data.length / itemsPerPageEdu)
+  const pageCount = (data: Skill[] | Project[]): number => Math.ceil(data.length / itemsPerPage)
+  const pageCountEdu = (data: Education[]): number => Math.ceil(data.length / itemsPerPageEdu)
 
   return (
     <div className="h-screen bg-[#001233] text-[#979DAC] p-8 font-sans relative overflow-hidden">

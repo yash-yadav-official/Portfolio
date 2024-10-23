@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { TabsContent } from '@/components/ui/tabs'
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
+import Image from 'next/image'
 
 interface Project {
   title: string;
@@ -45,10 +46,11 @@ export function ProjectsTab({ projects, currentPage, updatePage }: ProjectsTabPr
             >
               {projects[currentPage.projects - 1] && (
                 <div className="flex h-full w-full">
-                  <img 
-                    src={projects[currentPage.projects - 1].image} 
-                    alt={projects[currentPage.projects - 1].title} 
-                    className="w-1/3 h-full object-cover rounded-md"
+                  <Image
+                    src={projects[currentPage.projects - 1].image}
+                    alt={projects[currentPage.projects - 1].title}
+                    width={300}
+                    height={200}
                   />
                   <div className="w-2/3 pl-4 flex flex-col justify-center">
                     <div className="text-left">

@@ -1,18 +1,8 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { TabsContent } from '@/components/ui/tabs'
+import { ProfileTabProps } from '@/lib/types/types'
 
-interface PersonalInfo {
-  name: string;
-  title: string;
-  email: string;
-  location: string;
-  summary: string;
-}
-
-interface ProfileTabProps {
-  personalInfo: PersonalInfo;
-}
 
 export function ProfileTab({ personalInfo }: ProfileTabProps) {
   return (

@@ -1,29 +1,10 @@
-import { LucideIcon } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { TabsContent } from '../ui/tabs'
+import { SkillsTabProps } from '@/lib/types/types'
 
-interface Skill {
-  name: string;
-  level: number;
-  icon: LucideIcon;
-}
-
-interface PageState {
-  skills: number;
-  projects: number;
-  education: number;
-}
-
-interface SkillsTabProps {
-  skills: Skill[];
-  currentPage: PageState;
-  updatePage: (section: keyof PageState, newPage: number) => void;
-  pageCount: (data: any[]) => number;
-  paginateData: <T>(data: T[], page: number) => T[];
-}
 
 export function SkillsTab({ skills, currentPage, updatePage, pageCount, paginateData }: SkillsTabProps) {
   return (

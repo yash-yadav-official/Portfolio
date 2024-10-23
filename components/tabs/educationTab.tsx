@@ -4,26 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { TabsContent } from '@/components/ui/tabs'
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-
-interface Education {
-  degree: string;
-  institution: string;
-  year: string;
-}
-
-interface PageState {
-  skills: number;
-  projects: number;
-  education: number;
-}
-
-interface EducationTabProps {
-  education: Education[];
-  currentPage: PageState;
-  updatePage: (section: keyof PageState, newPage: number) => void;
-  pageCount: (data: any[]) => number;
-  paginateData: <T>(data: T[], page: number) => T[];
-}
+import { EducationTabProps } from '@/lib/types/types'
 
 export function EducationTab({ education, currentPage, updatePage, pageCount, paginateData }: EducationTabProps) {
   return (
