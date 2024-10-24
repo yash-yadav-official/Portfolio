@@ -1,17 +1,16 @@
 import React from 'react'
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { TabsContent } from '@/components/ui/tabs'
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { EducationTabProps } from '@/lib/types/types'
+import { ExternalLink } from 'lucide-react'
 
-export function EducationTab({ education, currentPage, updatePage, pageCount, paginateData }: EducationTabProps) {
+export function EducationTab({ education, currentPage, paginateData }: EducationTabProps) {
   return (
     <TabsContent value="education">
       <Card className="bg-[#001845] border-[#0466C8] h-[250px] overflow-hidden">
-        <CardHeader>
-          <CardTitle className="text-2xl text-[#0466C8]">Education</CardTitle>
+        <CardHeader className='pb-2'>
+          <CardTitle className="text-xl sm:text-2xl text-[#0466C8]">Education</CardTitle>
         </CardHeader>
         <CardContent className="h-[190px] overflow-hidden relative pb-12">
           <AnimatePresence mode="wait">
@@ -31,14 +30,15 @@ export function EducationTab({ education, currentPage, updatePage, pageCount, pa
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   className="mb-4 last:mb-0"
                 >
-                  <h3 className="text-lg font-semibold text-[#7EADFC]">
+                  <h3 className="text-base sm:text-sm font-semibold text-[#7EADFC] mb-1 sm:mb-2 hover:text-[#0466C8] transition-colors">
                     <a
-                      href={`https://example.com/education/${edu.institution.toLowerCase().replace(/\s+/g, '-')}`}
+                      href={edu.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-[#0466C8] transition-colors"
                     >
                       {edu.degree}
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2 inline-block" />
                     </a>
                   </h3>
                   <p className="text-[#979DAC]">{edu.institution}</p>
@@ -48,28 +48,6 @@ export function EducationTab({ education, currentPage, updatePage, pageCount, pa
             </motion.div>
           </AnimatePresence>
         </CardContent>
-        <div className="flex justify-end gap-2 mt-2 px-6 absolute bottom-4 right-0">
-          <Button 
-            onClick={() => updatePage('education', Math.max(currentPage.education - 1, 1))}
-            disabled={currentPage.education === 1}
-            variant="ghost"
-            size="icon"
-            className="text-[#FF6B6B] hover:text-[#FF4040] hover:bg-transparent"
-          >
-            <ChevronLeft className="w-6 h-6" />
-            <span className="sr-only">Previous education</span>
-          </Button>
-          <Button 
-            onClick={() => updatePage('education', Math.min(currentPage.education + 1, pageCount(education)))}
-            disabled={currentPage.education === pageCount(education)}
-            variant="ghost"
-            size="icon"
-            className="text-[#FF6B6B] hover:text-[#FF4040] hover:bg-transparent"
-          >
-            <ChevronRight className="w-6 h-6" />
-            <span className="sr-only">Next education</span>
-          </Button>
-        </div>
       </Card>
     </TabsContent>
   )
