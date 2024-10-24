@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Cpu, Zap, Briefcase, GraduationCap, Github, Linkedin, Mail, ChevronLeft, ChevronRight, UserRound, BugOff, BriefcaseBusiness } from "lucide-react"
+import { Zap, GraduationCap, Github, Linkedin, Mail,UserRound, BugOff, BriefcaseBusiness } from "lucide-react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ProfileTab } from '@/components/tabs/profileTab'
