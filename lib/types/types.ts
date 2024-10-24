@@ -26,6 +26,7 @@ export interface Education {
   degree: string;
   institution: string;
   year: string;
+  link: string;
 }
 
 export interface PageState {
@@ -38,8 +39,6 @@ export interface PageState {
 export interface EducationTabProps {
   education: Education[];
   currentPage: PageState;
-  updatePage: (section: keyof PageState, newPage: number) => void;
-  pageCount: (data: Education[]) => number;
   paginateData: <T>(data: T[], page: number) => T[];
 }
 
@@ -51,7 +50,18 @@ export interface ProfileTabProps {
 export interface SkillsTabProps {
   skills: Skill[];
   currentPage: PageState;
-  updatePage: (section: keyof PageState, newPage: number) => void;
-  pageCount: (data: Skill[]) => number;
   paginateData: <T>(data: T[], page: number) => T[];
+}
+
+export interface ProjectsTabProps {
+  projects: Project[];
+  currentPage: PageState;
+}
+
+
+export interface UpdatePageButtonProps {
+  direction: 'prev' | 'next'
+  currentPage: number
+  totalPages: number
+  onUpdate: (newPage: number) => void
 }
