@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Cpu, Zap, Briefcase, GraduationCap, Github, Linkedin, Mail } from "lucide-react"
+import { Cpu, Zap, Briefcase, GraduationCap, Github, Linkedin, Mail, ChevronLeft, ChevronRight, UserRound, BugOff, BriefcaseBusiness } from "lucide-react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ProfileTab } from '@/components/tabs/profileTab'
@@ -10,6 +10,7 @@ import { ProjectsTab } from "@/components/tabs/projectsTab"
 import { EducationTab } from "@/components/tabs/educationTab"
 import { TwitterLogoIcon } from '@radix-ui/react-icons'
 import { PersonalInfo, Skill, Project, Education, PageState } from '@/lib/types/types'
+import { UpdatePageButton } from '@/components/buttons/updatePageBtn'
 
 
 
@@ -64,20 +65,27 @@ const education: Education[] = [
   {
     degree: "AWS Cloud Practitioner",
     institution: "AWS Restart, Ajira",
-    year: "2023"
+    year: "2023",
+    link:"https://aws.amazon.com/training/restart/"
   },
   {
     degree: "Software Engeenering Bootcamp",
     institution: "ALX School",
-    year: "2023"
+    year: "2023",
+    link:"https://www.alxafrica.com/"
+
   },
   {
     degree: "Bachelor of Science in Biotechnology ",
-    institution: "University of Nairobi",
-    year: "2022"
+    institution: "J.K.U.A.T",
+    year: "2022",
+    link:"https://www.jkuat.ac.ke/bachelor-of-science-in-biotechnology/"
+
   },
 
 ]
+
+
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('profile')
@@ -103,9 +111,25 @@ export default function Portfolio() {
     setCurrentPage(prev => ({ ...prev, [section]: newPage }))
   }
 
-
   const pageCount = (data: Skill[] | Project[]): number => Math.ceil(data.length / itemsPerPage)
+  const pageCountProjects = (data: Project[]): number => Math.ceil(data.length)
   const pageCountEdu = (data: Education[]): number => Math.ceil(data.length / itemsPerPageEdu)
+
+  const getTotalPages = () => {
+    console.log("TotalPages for tab",activeTab, pageCount(activeTab === 'skills' ? skills : projects))
+    switch (activeTab) {
+      case 'skills':
+        return pageCount(skills)
+      case 'projects':
+        return pageCountProjects(projects)
+      case 'education':
+        return pageCountEdu(education)
+      default:
+        return 1
+    }
+  }
+
+
 
   return (
     <div className="h-screen bg-[#001233] text-[#979DAC] p-8 font-sans relative overflow-hidden">
@@ -133,52 +157,60 @@ export default function Portfolio() {
           >
             {personalInfo.title}
           </motion.p>
-          <motion.p
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-lg mb-4 text-[#979DAC]"
-          >
-            {personalInfo.location} | {personalInfo.email}
-          </motion.p>
+
         </header>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-12">
-          <TabsList className="grid w-full grid-cols-4 bg-[#001845]/50 backdrop-blur-sm">
-            {['profile', 'skills', 'projects', 'education'].map((tab) => (
-              <TabsTrigger
-                key={tab}
-                value={tab}
-                className="data-[state=active]:bg-[#0466C8] data-[state=active]:text-[#001233] text-[#979DAC] transition-all duration-300 ease-in-out hover:text-[#0466C8]"
-              >
-                {tab === 'profile' && <Cpu className="w-5 h-5 mr-2" />}
-                {tab === 'skills' && <Zap className="w-5 h-5 mr-2" />}
-                {tab === 'projects' && <Briefcase className="w-5 h-5 mr-2" />}
-                {tab === 'education' && <GraduationCap className="w-5 h-5 mr-2" />}
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-6">
+        <TabsList className="grid w-full grid-cols-4 bg-[#001845]/50 backdrop-blur-sm rounded-lg overflow-hidden">
+        {[
+          { name: 'profile', icon: UserRound },
+          { name: 'skills', icon: BugOff },
+          { name: 'projects', icon: BriefcaseBusiness },
+          { name: 'education', icon: GraduationCap }
+        ].map(({ name, icon: Icon }) => (
+          <TabsTrigger
+            key={name}
+            value={name}
+            className="flex flex-row items-center justify-center gap-3 py-2 px-1 data-[state=active]:bg-[#0466C8] data-[state=active]:text-[#001233] text-[#979DAC] transition-all duration-300 ease-in-out hover:text-[#0466C8]"
+          >
+              <Icon className="w-5 h-5 sm:mb-1" />
+              <span className="hidden sm:inline text-xs">
+                {name.charAt(0).toUpperCase() + name.slice(1)}
+              </span>
+          </TabsTrigger>
+        ))}
+      </TabsList>
           <ProfileTab personalInfo={personalInfo} />
           <SkillsTab
             skills={skills}
             currentPage={currentPage}
-            updatePage={updatePage}
-            pageCount={pageCount}
             paginateData={paginateData}
           />
           <ProjectsTab
             projects={projects}
             currentPage={currentPage}
-            updatePage={updatePage}
           />
           <EducationTab
             education={education}
             currentPage={currentPage}
-            updatePage={updatePage}
-            pageCount={pageCountEdu}
             paginateData={paginateDataEdu}
           />
         </Tabs>
+        {activeTab !== 'profile' && (
+          <div className="flex justify-between mb-4">
+            <UpdatePageButton
+              direction="prev"
+              currentPage={currentPage[activeTab as keyof PageState]}
+              totalPages={getTotalPages()}
+              onUpdate={(newPage) => updatePage(activeTab as keyof PageState, newPage)}
+            />
+            <UpdatePageButton
+              direction="next"
+              currentPage={currentPage[activeTab as keyof PageState]}
+              totalPages={getTotalPages()}
+              onUpdate={(newPage) => updatePage(activeTab as keyof PageState, newPage)}
+            />
+          </div>
+        )}
         <footer className="text-center border-t border-[#0466C8] pt-4">
           <div className="flex justify-center space-x-4 mb-4">
             {[
