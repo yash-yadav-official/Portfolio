@@ -5,7 +5,8 @@
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-
+const namespace = "shbenzer";
+const key = "shbenzer.github.io";
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
@@ -157,3 +158,15 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+//fetch page views
+fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    .then((response) => response.json())
+    .then((data) => {
+      // Display the view count
+      document.getElementById("page-view-counter").innerText = `Views: ${data.value}`;
+    })
+    .catch((error) => {
+      console.error("Error fetching page view count:", error);
+      document.getElementById("page-view-counter").innerText = "Error loading views";
+    });
