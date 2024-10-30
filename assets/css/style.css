@@ -341,28 +341,20 @@ main {
   #SIDEBAR
 \*-----------------------------------*/
 
-.sidebar {
-  margin-bottom: 15px;
-  max-height: 112px;
-  overflow: hidden;
-  transition: var(--transition-2);
-}
-
-.sidebar.active {
-  max-height: 405px;
-}
 
 .sidebar-info {
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
+  flex-direction: column;
 }
+
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .info-content .name {
@@ -370,7 +362,9 @@ main {
   font-size: var(--fs-3);
   font-weight: var(--fw-500);
   letter-spacing: -0.25px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .info-content .title {
@@ -381,21 +375,25 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+  padding: 5px 18px;
+  margin: auto;
 }
 
 .info_more-btn {
   position: absolute;
-  top: -15px;
-  right: -15px;
+  top: -30px;
+  right: -30px;
   border-radius: 0 15px;
   font-size: 13px;
   color: var(--orange-yellow-crayola);
   background: var(--border-gradient-onyx);
-  padding: 10px;
+  padding: 10px 15px;
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
   z-index: 1;
+  display: none;
 }
+
 
 .info_more-btn::before {
   content: "";
@@ -418,13 +416,14 @@ main {
 }
 
 .info_more-btn span {
-  display: none;
+  display: block;
+  font-size: var(--fs-8);
 }
 
 .sidebar-info_more {
-  opacity: 0;
-  visibility: hidden;
   transition: var(--transition-2);
+  opacity: 1;
+  visibility: visible;
 }
 
 .sidebar.active .sidebar-info_more {
@@ -435,8 +434,9 @@ main {
 .contacts-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 30px 15px;
 }
+
 
 .contact-item {
   min-width: 100%;
@@ -446,9 +446,10 @@ main {
 }
 
 .contact-info {
-  max-width: calc(100% - 46px);
-  width: calc(100% - 46px);
+  max-width: calc(100% - 64px);
+  width: calc(100% - 64px);
 }
+
 
 .contact-title {
   color: var(--light-gray-70);
@@ -468,11 +469,11 @@ main {
 
 .social-list {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 15px;
   padding-bottom: 4px;
   padding-left: 7px;
+  justify-content: center;
 }
 
 .social-item .social-link {
@@ -494,32 +495,39 @@ main {
 \*-----------------------------------*/
 
 .navbar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: max-content;
   background: hsla(240, 1%, 17%, 0.75);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
-  border-radius: 12px 12px 0 0;
-  box-shadow: var(--shadow-2);
+  border-radius: 0 20px;
+  box-shadow: none;
   z-index: 5;
+  padding: 0 20px;
 }
+
 
 .navbar-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 20px;
+  gap: 30px;
 }
+
 
 .navbar-link {
   color: var(--light-gray);
-  font-size: var(--fs-8);
+  font-size: 15px;
   padding: 20px 7px;
   transition: color var(--transition-1);
+  --fs-8: 15px;
+  font-weight: var(--fw-500);
 }
+
 
 .navbar-link:hover,
 .navbar-link:focus {
@@ -539,7 +547,7 @@ main {
 \*-----------------------------------*/
 
 .about .article-title {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .about-text {
@@ -547,6 +555,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  margin-bottom: 40px;
 }
 
 .about-text p {
@@ -569,9 +578,10 @@ main {
 
 .service-list {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 25px;
 }
+
 
 .service-item {
   position: relative;
@@ -870,8 +880,10 @@ main {
 
 .timeline-header {
   display: flex;
-  justify-content: space-between; /* Space between title and date */
-  align-items: center; /* Align them vertically in the center */
+  justify-content: space-between;
+  /* Space between title and date */
+  align-items: center;
+  /* Align them vertically in the center */
 }
 
 .company-info {
@@ -880,17 +892,22 @@ main {
 }
 
 .company-icon {
-  width: 20px; /* Adjust the size of the icon */
+  width: 20px;
+  /* Adjust the size of the icon */
   height: auto;
-  margin-right: 10px; /* Space between icon and text */
-  margin-left: 10px; /* Space between icon and text */
+  margin-right: 10px;
+  /* Space between icon and text */
+  margin-left: 10px;
+  /* Space between icon and text */
   margin-bottom: 10px;
   cursor: pointer;
 }
 
 .timeline-date {
-  font-size: 14px; /* Adjust size as needed */
-  color: #666; /* Optional: Change color for the date */
+  font-size: 14px;
+  /* Adjust size as needed */
+  color: #666;
+  /* Optional: Change color for the date */
 }
 
 
@@ -1499,36 +1516,10 @@ textarea.form-input::-webkit-resizer {
     max-height: 584px;
   }
 
-  .sidebar-info {
-    gap: 25px;
-  }
-
-  .avatar-box {
-    border-radius: 30px;
-  }
-
   .avatar-box img {
     width: 120px;
   }
 
-  .info-content .name {
-    margin-bottom: 15px;
-  }
-
-  .info-content .title {
-    padding: 5px 18px;
-  }
-
-  .info_more-btn {
-    top: -30px;
-    right: -30px;
-    padding: 10px 15px;
-  }
-
-  .info_more-btn span {
-    display: block;
-    font-size: var(--fs-8);
-  }
 
   .info_more-btn ion-icon {
     display: none;
@@ -1538,14 +1529,8 @@ textarea.form-input::-webkit-resizer {
     margin: 32px 0;
   }
 
-  .contacts-list {
-    gap: 20px;
-  }
 
-  .contact-info {
-    max-width: calc(100% - 64px);
-    width: calc(100% - 64px);
-  }
+
 
 
 
@@ -1553,17 +1538,7 @@ textarea.form-input::-webkit-resizer {
    * #NAVBAR
    */
 
-  .navbar {
-    border-radius: 20px 20px 0 0;
-  }
 
-  .navbar-list {
-    gap: 20px;
-  }
-
-  .navbar-link {
-    --fs-8: 14px;
-  }
 
 
 
@@ -1571,13 +1546,8 @@ textarea.form-input::-webkit-resizer {
    * #ABOUT
    */
 
-  .about .article-title {
-    margin-bottom: 20px;
-  }
 
-  .about-text {
-    margin-bottom: 40px;
-  }
+
 
   /* service */
 
@@ -1692,14 +1662,20 @@ textarea.form-input::-webkit-resizer {
   }
 
   .client-title {
-    color: #ffd76c; /* Set the text color */
-    margin-top: 5px; /* Add some spacing above the text */
-    font-size: 14px; /* Adjust the font size if needed */
-    font-weight: bold; /* Make the text bold */
-    text-align: center; /* Center the text */
-    display: block; /* Ensure it behaves like a block element for centering */
+    color: #ffd76c;
+    /* Set the text color */
+    margin-top: 5px;
+    /* Add some spacing above the text */
+    font-size: 14px;
+    /* Adjust the font size if needed */
+    font-weight: bold;
+    /* Make the text bold */
+    text-align: center;
+    /* Center the text */
+    display: block;
+    /* Ensure it behaves like a block element for centering */
   }
-  
+
 
 
   /**
@@ -1807,20 +1783,12 @@ textarea.form-input::-webkit-resizer {
    * SIDEBAR
    */
 
-  .contacts-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px 15px;
-  }
 
 
 
   /**
    * NAVBAR
    */
-
-  .navbar-link {
-    --fs-8: 15px;
-  }
 
 
 
@@ -1960,27 +1928,6 @@ textarea.form-input::-webkit-resizer {
    * NAVBAR
    */
 
-  .navbar {
-    position: absolute;
-    bottom: auto;
-    top: 0;
-    left: auto;
-    right: 0;
-    width: max-content;
-    border-radius: 0 20px;
-    padding: 0 20px;
-    box-shadow: none;
-  }
-
-  .navbar-list {
-    gap: 30px;
-    padding: 0 20px;
-  }
-
-  .navbar-link {
-    font-weight: var(--fw-500);
-  }
-
 
 
   /**
@@ -1988,11 +1935,6 @@ textarea.form-input::-webkit-resizer {
    */
 
   /* service */
-
-  .service-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 25px;
-  }
 
   /* testimonials */
 
@@ -2116,35 +2058,17 @@ textarea.form-input::-webkit-resizer {
     z-index: 1;
   }
 
-  .sidebar-info {
-    flex-direction: column;
-  }
+
 
   .avatar-box img {
     width: 150px;
   }
 
-  .info-content .name {
-    white-space: nowrap;
-    text-align: center;
-  }
 
-  .info-content .title {
-    margin: auto;
-  }
 
-  .info_more-btn {
-    display: none;
-  }
 
-  .sidebar-info_more {
-    opacity: 1;
-    visibility: visible;
-  }
 
-  .contacts-list {
-    grid-template-columns: 1fr;
-  }
+
 
   .contact-info :is(.contact-link) {
     white-space: nowrap;
@@ -2160,10 +2084,6 @@ textarea.form-input::-webkit-resizer {
   .separator:last-of-type {
     margin: 15px 0;
     opacity: 0;
-  }
-
-  .social-list {
-    justify-content: center;
   }
 
 
