@@ -46,17 +46,10 @@
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Whatley Julitar">Whatley Julitar</h1>
+          <h1 id="user-name" class="name"></h1>
 
-          <p class="title">Software Engineer</p>
+          <p id="title" class="title"></p>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
       </div>
 
       <div class="sidebar-info_more">
@@ -73,8 +66,7 @@
 
             <div class="contact-info">
               <p class="contact-title">Email</p>
-
-              <a href="mailto:whatley95@outlook.com" class="contact-link">whatley95@outlook.com</a>
+              <a href="#" id="email" class="contact-link"></a>
             </div>
 
           </li>
@@ -88,25 +80,10 @@
             <div class="contact-info">
               <p class="contact-title">LinkedIn</p>
 
-              <a href="https://whatley95.github.io/landing-page/linkedin.html" target="_blank"
-                class="contact-link">https://whatley95.github.io/landing-page/linkedin.html</a>
+              <a href="#" id="linkedin" target="_blank" class="contact-link"></a>
             </div>
 
           </li>
-
-          <!-- <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li> -->
 
           <li class="contact-item">
 
@@ -116,8 +93,7 @@
 
             <div class="contact-info">
               <p class="contact-title">Location</p>
-
-              <address>Johor, Malaysia</address>
+              <address id="location"></address>
             </div>
 
           </li>
@@ -125,28 +101,6 @@
         </ul>
 
         <div class="separator"></div>
-
-        <!-- <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul> -->
 
       </div>
 
@@ -183,10 +137,6 @@
 
       </nav>
 
-
-
-
-
       <!--
         - #ABOUT
       -->
@@ -198,15 +148,7 @@
         </header>
 
         <section class="about-text">
-          <p>
-            Energetic and ambitious Software Engineer with over five years of experience in
-            software development and team management. I consistently approach challenges with a
-            mature and responsible mindset, excelling in collaborative environments to deliver
-            high-quality solutions on time. My expertise spans across various technologies,
-            and I thrive on driving technical excellence while contributing to team success.
-          </p>
-
-
+          <p id="about"></p>
         </section>
 
 
@@ -227,12 +169,8 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  Building scalable and responsive web applications using technologies like
-                  Typescript, Angular, HTML, CSS, JavaScript, and .NET to deliver user-friendly solutions.
-                </p>
+                <h4 class="h4 service-item-title" id="expT1"></h4>
+                <p class="service-item-text" id="expDes1"></p>
               </div>
 
             </li>
@@ -245,13 +183,8 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps development</h4>
-
-                <p class="service-item-text">
-                  Creating cross-platform applications using Flutter, Java, and Xamarin,
-                  focused on delivering seamless and intuitive user experiences across both
-                  Android and iOS devices.
-                </p>
+                <h4 class="h4 service-item-title" id="expT2"></h4>
+                <p class="service-item-text" id="expDes2"></p>
               </div>
 
             </li>
@@ -264,12 +197,8 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Desktop apps development</h4>
-
-                <p class="service-item-text">
-                  Creating high-performance desktop applications using C#, Java, and .NET,
-                  focused on performance and resource efficiency.
-                </p>
+                <h4 class="h4 service-item-title" id="expT3"></h4>
+                <p class="service-item-text" id="expDes3"></p>
               </div>
 
             </li>
@@ -281,13 +210,8 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">System integration</h4>
-
-                <p class="service-item-text">
-                  Ensuring seamless communication and interoperability between diverse
-                  software applications and platforms, utilizing APIs, web services,
-                  and middleware solutions to enhance overall system efficiency.
-                </p>
+                <h4 class="h4 service-item-title" id="expT4"></h4>
+                <p class="service-item-text" id="expDes4"></p>
               </div>
 
             </li>
@@ -678,6 +602,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/profile.js"></script>
 
 </body>
 
