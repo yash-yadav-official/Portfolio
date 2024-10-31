@@ -5,12 +5,22 @@
   "linkedin": "https://whatley95.github.io/landing-page/linkedin.html",
   "location": "Johor, Malaysia",
   "about": "Energetic and ambitious Software Engineer with over five years of experience in software development and team management. I consistently approach challenges with a mature and responsible mindset, excelling in collaborative environments to deliver high-quality solutions on time. My expertise spans across various technologies, and I thrive on driving technical excellence while contributing to team success.",
-  "expT1": "Web development",
-  "expDes1": "Building scalable and responsive web applications using technologies like Typescript, Angular, HTML, CSS, JavaScript, and .NET to deliver user-friendly solutions.",
-  "expT2": "Mobile apps development",
-  "expDes2": "Creating cross-platform applications using Flutter, Java, and Xamarin, focused on delivering seamless and intuitive user experiences across both Android and iOS devices.",
-  "expT3": "Desktop apps development",
-  "expDes3": "Creating high-performance desktop applications using C#, Java, and .NET, focused on performance and resource efficiency.",
-  "expT4": "System integration",
-  "expDes4": "Ensuring seamless communication and interoperability between diverse software applications and platforms, utilizing APIs, web services, and middleware solutions to enhance overall system efficiency."
+  "experience": [
+    {
+      "type": "Web development",
+      "description": "Building scalable and responsive web applications using technologies like Typescript, Angular, HTML, CSS, JavaScript, and .NET to deliver user-friendly solutions."
+    },
+    {
+      "type": "Mobile apps development",
+      "description": "Creating cross-platform applications using Flutter, Java, and Xamarin, focused on delivering seamless and intuitive user experiences across both Android and iOS devices."
+    },
+    {
+      "type": "Desktop apps development",
+      "description": "Creating high-performance desktop applications using C#, Java, and .NET, focused on performance and resource efficiency."
+    },
+    {
+      "type": "System integration",
+      "description": "Ensuring seamless communication and interoperability between diverse software applications and platforms, utilizing APIs, web services, and middleware solutions to enhance overall system efficiency."
+    }
+  ]
 }
