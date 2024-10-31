@@ -16,9 +16,26 @@ fetch('./assets/profile.json')
         document.getElementById('about').textContent = data.about;
 
         // Loop through experience array
-        data.experience.forEach((exp, index) => {
-            document.getElementById(`expT${index + 1}`).textContent = exp.type;
-            document.getElementById(`expDes${index + 1}`).textContent = exp.description;
+        data.generalSkill.forEach((gs, index) => {
+            document.getElementById(`expT${index + 1}`).textContent = gs.type;
+            document.getElementById(`expDes${index + 1}`).textContent = gs.description;
         });
+
+        data.experience.forEach((exp, index) => {
+            document.getElementById(`expCompany${index + 1}`).textContent = exp.company;
+            document.getElementById(`expPosition${index + 1}`).textContent = exp.position;
+            document.getElementById(`expDuration${index + 1}`).textContent = exp.duration;
+
+            exp.responsibilities.forEach((responsibility, respIndex) => {
+                const element = document.getElementById(`expResponsibility${index + 1}-${respIndex + 1}`);
+                if (element) {
+                    element.textContent = responsibility;
+                } else {
+                    console.warn(`Element with ID expResponsibility${index + 1}-${respIndex + 1} not found.`);
+                }
+            });
+
+        });
+
     })
     .catch(error => console.error('Error fetching the JSON file:', error));
