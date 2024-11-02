@@ -15,20 +15,36 @@ fetch('./assets/profile.json')
         document.getElementById('location').textContent = data.location;
         document.getElementById('about').textContent = data.about;
 
-        data.experience.forEach((exp, index) => {
-            document.getElementById(`expCompany${index + 1}`).textContent = exp.company;
-            document.getElementById(`expPosition${index + 1}`).textContent = exp.position;
-            document.getElementById(`expDuration${index + 1}`).textContent = exp.duration;
+        // Get the timeline list container
+        const timelineList = document.getElementById('timeline-list-experience-data');
 
-            exp.responsibilities.forEach((responsibility, respIndex) => {
-                const element = document.getElementById(`expResponsibility${index + 1}-${respIndex + 1}`);
-                if (element) {
-                    element.textContent = responsibility;
-                } else {
-                    console.warn(`Element with ID expResponsibility${index + 1}-${respIndex + 1} not found.`);
-                }
+        // Populate the timeline from JSON data
+        data.experience.forEach(exp => {
+            const expItem = document.createElement('li');
+            expItem.classList.add('timeline-item');
+
+            // Create the header and add basic info
+            expItem.innerHTML = `
+                <div class="timeline-header">
+                    <div class="company-info">
+                    <h4 class="h4 timeline-item-title">${exp.company}</h4>
+                    <img src="${exp.logo}" alt="${exp.company} Logo" class="company-icon" onclick="window.open('${exp.link}', '_blank')">
+                    </div>
+                    <span class="timeline-date">${exp.duration}</span>
+                </div>
+                <span style="font-weight: bold;">${exp.position}</span>
+                `;
+
+            // Add responsibilities
+            exp.responsibilities.forEach(responsibility => {
+                const pElement = document.createElement('p');
+                pElement.classList.add('timeline-text');
+                pElement.textContent = responsibility;
+                expItem.appendChild(pElement);
             });
 
+            // Append the experience item to the timeline list
+            timelineList.appendChild(expItem);
         });
 
         data.education.forEach((dt, index) => {
