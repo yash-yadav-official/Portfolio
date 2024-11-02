@@ -15,12 +15,6 @@ fetch('./assets/profile.json')
         document.getElementById('location').textContent = data.location;
         document.getElementById('about').textContent = data.about;
 
-        // Loop through experience array
-        data.generalSkill.forEach((gs, index) => {
-            document.getElementById(`expT${index + 1}`).textContent = gs.type;
-            document.getElementById(`expDes${index + 1}`).textContent = gs.description;
-        });
-
         data.experience.forEach((exp, index) => {
             document.getElementById(`expCompany${index + 1}`).textContent = exp.company;
             document.getElementById(`expPosition${index + 1}`).textContent = exp.position;

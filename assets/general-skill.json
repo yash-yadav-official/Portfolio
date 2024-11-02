@@ -1,0 +1,28 @@
+{
+    "generalSkill": [
+        {
+            "type": "Web development",
+            "description": "Building scalable and responsive web applications using technologies like Typescript, Angular, HTML, CSS, JavaScript, and .NET to deliver user-friendly solutions.",
+            "icon": "./assets/images/icon-dev.svg",
+            "alt": "Web development icon"
+        },
+        {
+            "type": "Mobile apps development",
+            "description": "Creating cross-platform applications using Flutter, Java, and Xamarin, focused on delivering seamless and intuitive user experiences across both Android and iOS devices.",
+            "icon": "./assets/images/icon-dev.svg",
+            "alt": "Mobile apps development icon"
+        },
+        {
+            "type": "Desktop apps development",
+            "description": "Creating high-performance desktop applications using C#, Java, and .NET, focused on performance and resource efficiency.",
+            "icon": "./assets/images/icon-dev.svg",
+            "alt": "Desktop apps development icon"
+        },
+        {
+            "type": "System integration",
+            "description": "Ensuring seamless communication and interoperability between diverse software applications and platforms, utilizing APIs, web services, and middleware solutions to enhance overall system efficiency.",
+            "icon": "./assets/images/icon-dev.svg",
+            "alt": "System integration icon"
+        }
+    ]
+}
