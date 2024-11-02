@@ -1,0 +1,110 @@
+[
+    {
+        "href": "https://spring.io/projects/spring-boot",
+        "imgSrc": "./assets/images/icons8-spring-boot-144.png",
+        "altText": "Spring Boot",
+        "title": "Spring Boot"
+    },
+    {
+        "href": "https://www.java.com/en/",
+        "imgSrc": "./assets/images/icons8-java-144.png",
+        "altText": "Java",
+        "title": "Java"
+    },
+    {
+        "href": "https://flutter.dev/",
+        "imgSrc": "./assets/images/icons8-flutter-144.png",
+        "altText": "Flutter",
+        "title": "Flutter"
+    },
+    {
+        "href": "https://https://v17.angular.io/start/",
+        "imgSrc": "./assets/images/icons8-angular-144.png",
+        "altText": "Angular",
+        "title": "Angular"
+    },
+    {
+        "href": "https://developer.android.com/studio",
+        "imgSrc": "./assets/images/icons8-android-studio-144.png",
+        "altText": "Android Studio",
+        "title": "Android Studio"
+    },
+    {
+        "href": "https://dart.dev/",
+        "imgSrc": "./assets/images/icons8-dart-144.png",
+        "altText": "Dart",
+        "title": "Dart"
+    },
+    {
+        "href": "https://www.typescriptlang.org/",
+        "imgSrc": "./assets/images/icons8-typescript-144.png",
+        "altText": "Typescript",
+        "title": "Typescript"
+    },
+    {
+        "href": "https://www.w3schools.com/html/",
+        "imgSrc": "./assets/images/icons8-html-144.png",
+        "altText": "HTML",
+        "title": "HTML"
+    },
+    {
+        "href": "https://code.visualstudio.com/",
+        "imgSrc": "./assets/images/icons8-visual-studio-code-2019-144.png",
+        "altText": "Visual Studio Code",
+        "title": "Visual Studio Code"
+    },
+    {
+        "href": "https://dotnet.microsoft.com/en-us/",
+        "imgSrc": "./assets/images/icons8-.net-framework-144.png",
+        "altText": ".NET",
+        "title": ".NET"
+    },
+    {
+        "href": "https://firebase.google.com/",
+        "imgSrc": "./assets/images/icons8-google-firebase-console-144.png",
+        "altText": "Firebase",
+        "title": "Firebase"
+    },
+    {
+        "href": "https://dotnet.microsoft.com/en-us/",
+        "imgSrc": "./assets/images/dotnet_icon.png",
+        "altText": "C#",
+        "title": "C#"
+    },
+    {
+        "href": "https://www.mysql.com/",
+        "imgSrc": "./assets/images/icons8-mysql-144.png",
+        "altText": "MySql",
+        "title": "MySql"
+    },
+    {
+        "href": "https://www.microsoft.com/en-us/sql-server/",
+        "imgSrc": "./assets/images/icons8-microsoft-sql-server-144.png",
+        "altText": "MSSQL",
+        "title": "MSSQL"
+    },
+    {
+        "href": "https://play.google.com/store/apps",
+        "imgSrc": "./assets/images/icons8-play-store-144.png",
+        "altText": "Play Store",
+        "title": "Play Store"
+    },
+    {
+        "href": "https://www.apple.com/app-store/",
+        "imgSrc": "./assets/images/icons8-app-store-144.png",
+        "altText": "App Store",
+        "title": "App Store"
+    },
+    {
+        "href": "https://visualstudio.microsoft.com/",
+        "imgSrc": "./assets/images/icons8-visual-studio-144.png",
+        "altText": "Visual Studio",
+        "title": "Visual Studio"
+    },
+    {
+        "href": "https://dotnet.microsoft.com/en-us/",
+        "imgSrc": "./assets/images/icons8-xamarin-144.png",
+        "altText": "Xamarin",
+        "title": "Xamarin"
+    }
+]
