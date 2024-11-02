@@ -16,7 +16,7 @@ fetch('./assets/profile.json')
         document.getElementById('about').textContent = data.about;
 
         // Get the timeline list container
-        const timelineList = document.getElementById('timeline-list-experience-data');
+        const timelineListExperience = document.getElementById('timeline-list-experience-data');
 
         // Populate the timeline from JSON data
         data.experience.forEach(exp => {
@@ -44,15 +44,26 @@ fetch('./assets/profile.json')
             });
 
             // Append the experience item to the timeline list
-            timelineList.appendChild(expItem);
+            timelineListExperience.appendChild(expItem);
         });
 
+        const timelineListEducation = document.getElementById('timeline-list-education-data');
         data.education.forEach((dt, index) => {
-            document.getElementById(`schPlace${index + 1}`).textContent = dt.place;
-            document.getElementById(`schCourse${index + 1}`).textContent = dt.course;
-            document.getElementById(`schDuration${index + 1}`).textContent = dt.duration;
-            document.getElementById(`schDescription${index + 1}`).textContent = dt.description;
+            const eduItem = document.createElement('li');
+            eduItem.classList.add('timeline-item');
+            eduItem.innerHTML = `
+            <div class="timeline-header">
+                <div class="company-info">
+                <h4 class="h4 timeline-item-title">${dt.place}</h4>
+                <img src="${dt.logo}" alt="${dt.place} Logo" class="company-icon" onclick="window.open('${dt.link}', '_blank')">
+                </div>
+                <span class="timeline-date">${dt.duration}</span>
+            </div>
+            <span style="font-weight: bold;">${dt.course}</span>
+             <p class="timeline-text">${dt.description}</p>
+            `;
 
+            timelineListEducation.appendChild(eduItem);
         });
 
     })

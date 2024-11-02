@@ -59,12 +59,16 @@
   "education": [
     {
       "place": "Universiti Malaysia Pahang",
+      "logo": "./assets/images/universiti-malaysia-pahang-logo.png",
+      "link": "https://www.umpsa.edu.my/en",
       "course": "Bachelor of Computer Science and Software Engineering",
       "duration": "2014 - 2018",
       "description": "With a focus on the principles of software engineering, computer science, and application development. This program equipped me with a robust understanding of programming languages, software development methodologies, system analysis, and design."
     },
     {
       "place": "Labuan Matriculation College",
+      "logo": "./assets/images/5698532.jpg",
+      "link": "https://matrikulasi.moe.gov.my/system/index.cfm",
       "course": "Matriculation Programme",
       "duration": "2013 - 2014",
       "description": "Pre-university program focusing on [Science/Mathematics/Tech], designed to prepare students for university studies in STEM or related fields."
