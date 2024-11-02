@@ -37,5 +37,13 @@ fetch('./assets/profile.json')
 
         });
 
+        data.education.forEach((dt, index) => {
+            document.getElementById(`schPlace${index + 1}`).textContent = dt.place;
+            document.getElementById(`schCourse${index + 1}`).textContent = dt.course;
+            document.getElementById(`schDuration${index + 1}`).textContent = dt.duration;
+            document.getElementById(`schDescription${index + 1}`).textContent = dt.description;
+
+        });
+
     })
     .catch(error => console.error('Error fetching the JSON file:', error));

@@ -53,5 +53,19 @@
         "7 . Managed and created databases using MSSQL and Azure MSSQL to support application functionality, ensuring data integrity and securityManaged and created databases using MSSQL and Azure MSSQL to support application functionality, ensuring data integrity and security."
       ]
     }
+  ],
+  "education": [
+    {
+      "place": "Universiti Malaysia Pahang",
+      "course": "Bachelor of Computer Science and Software Engineering",
+      "duration": "2014 - 2018",
+      "description": "With a focus on the principles of software engineering, computer science, and application development. This program equipped me with a robust understanding of programming languages, software development methodologies, system analysis, and design."
+    },
+    {
+      "place": "Labuan Matriculation College",
+      "course": "Matriculation Programme",
+      "duration": "2013 - 2014",
+      "description": "Pre-university program focusing on [Science/Mathematics/Tech], designed to prepare students for university studies in STEM or related fields."
+    }
   ]
 }
