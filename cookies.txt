@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+vidmate.tools	TRUE	/	FALSE	1999999999	PHPSESSID	cdc8c6028efb1641ed70a14997df82a4
+
