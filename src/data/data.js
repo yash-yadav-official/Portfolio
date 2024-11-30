@@ -56,49 +56,16 @@ const Data = {
   ],
   projects: [
     {
-      title: "Finance",
+      title: "Sorting Algorithms",
       category: "Web development",
-      img: "./assets/images/project-1.jpg",
+      img: "./assets/images/sorting-algorithm.png",
+      link: "https://sean-cunniffe.github.io/visual-sorting-algorithms/"
     },
     {
-      title: "Orizon",
+      title: "Controller Shop",
       category: "Web development",
-      img: "./assets/images/project-2.png",
-    },
-    {
-      title: "Fundo",
-      category: "Web design",
-      img: "./assets/images/project-3.jpg",
-    },
-    {
-      title: "Brawlhalla",
-      category: "Applications",
-      img: "./assets/images/project-4.png",
-    },
-    {
-      title: "DSM.",
-      category: "Web design",
-      img: "./assets/images/project-5.png",
-    },
-    {
-      title: "MetaSpark",
-      category: "Web design",
-      img: "./assets/images/project-6.png",
-    },
-    {
-      title: "Summary",
-      category: "Web development",
-      img: "./assets/images/project-7.png",
-    },
-    {
-      title: "Task Manager",
-      category: "Applications",
-      img: "./assets/images/project-8.jpg",
-    },
-    {
-      title: "Arrival",
-      category: "Web development",
-      img: "./assets/images/project-9.png",
+      img: "./assets/images/controller.png",
+      link: "https://github.com/sean-cunniffe/CustomController"
     },
   ],
   education: [
