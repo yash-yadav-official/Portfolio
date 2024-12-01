@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import './App.css';
 import Data from './data/data';
 import About from './components/About';
@@ -7,9 +7,17 @@ import Portfolio from './components/Portfolio';
 import Chatbot from './components/chat/Chatbot'; // Import the new Chatbot component
 
 function App() {
-  const [activeTab, setActiveTab] = useState(3);
   const [sidebarActive, setSidebarActive] = useState(false);
   const [modalActive, setModelActive] = useState(false);
+  const pathname = window.location.pathname;
+  let active = 0
+  switch(pathname){
+    case '/chatbot': active=3;break;
+    case '/portfolio': active=2;break;
+    case '/resume': active=1;break;
+    default: active=0;
+  }
+  const [activeTab, setActiveTab] = useState(active);
   const [testimonial, setTestimonial] = useState(Data.testimonials[0]);
 
   return (
@@ -144,7 +152,7 @@ function App() {
 
         </nav>
 
-        {activeTab === 0 && <About Data={Data} setTestimonial={setTestimonial} setModelActive={setModelActive} testimonial={testimonial} modalActive={modalActive} setModelActive={setModelActive} />}
+        {activeTab === 0 && <About Data={Data} setTestimonial={setTestimonial} setModelActive={setModelActive} testimonial={testimonial} modalActive={modalActive} />}
         {activeTab === 1 && <Resume Data={Data} />}
         {activeTab === 2 && <Portfolio Data={Data} />}
         {activeTab === 3 && <Chatbot />}

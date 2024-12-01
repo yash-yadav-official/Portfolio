@@ -12,38 +12,26 @@ if (!window.grecaptcha) {
   document.body.appendChild(script)
 }
 
-let messageFeed = [
-  {
-    host: true,
-    message:
-      "Hello, I'm SeanAI! Ask me any questions you might have about Sean's professional career and I'll try help.",
-  },
-  {
-    host: false,
-    message: "What is Sean's work experience?",
-  },
-  {
-    host: true,
-    message:
-      'Great question! Sean have 2.5 years experience with Ericsson and half a year with Retail Solutions, altogether he has 3 years experience in the field.',
-  },
-]
-
 function Chatbot() {
   const [currentMessage, setCurrentMessage] = React.useState('');
   const [typingMessage, setTypingMessage] = React.useState(false);
+  const [messageFeed, setMessageFeed] =React.useState([
+    {
+      host: true,
+      message:
+        "Hello, I'm SeanAI! Ask me any questions you might have about Sean's professional career and I'll try help.",
+    },
+  ])
 
   async function getCapcthaToken() {
       return await window.grecaptcha.execute(process.env.REACT_APP_SITE_KEY, { action: 'submit' })
   }
 
-  async function sendMessage(msg) {
+  async function sendMessage(newMsgFeed, msg) {
     let token = await getCapcthaToken();
-    console.log("token: ", token)
-    messageFeed = messageFeed.concat({ host: false, message: msg });
     let url = process.env.REACT_APP_CHATBOT_ENDPOINT
     let body = {
-      question : currentMessage
+      question : msg
     }
     let response = await fetch(url, {
       method: 'POST',
@@ -55,6 +43,8 @@ function Chatbot() {
     });
     setTypingMessage(false)
     let data = await response.json();
+    console.log(data)
+    setMessageFeed(newMsgFeed.concat({ host: true, message: data.answer }))
   }
 
   return (
@@ -89,12 +79,16 @@ function Chatbot() {
           />
           <button
             className="form-btn max-w-fit"
-            onClick={() => {
+            onClick={ () => {
               if (currentMessage.trim() !== '') {
-                messageFeed = messageFeed.concat({ host: false, message: currentMessage });
-                sendMessage(currentMessage)
+                let msg = currentMessage
+                let newMessageFeed = messageFeed.concat({ host: false, message: currentMessage })
+                setMessageFeed(newMessageFeed)
+                sendMessage(newMessageFeed, msg)
                 setCurrentMessage('');
-                setTypingMessage(true)
+                setTimeout(()=>{
+                  setTypingMessage(true)
+                }, 1500)
               }
             }}
           >

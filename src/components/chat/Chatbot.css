@@ -1,11 +1,13 @@
 @import url('../../App.css');
 
 .host-message {
+    animation: slide-in forwards 1s;
     background-color: var(--jet);
     color: var(--light-gray)
 }
 
 .guest-message {
+    animation: slide-in forwards 1s;
     background-color: #67B26A;
     color: var(--light-gray)
 }
@@ -30,24 +32,42 @@
 }
 
 .typing-dots div:nth-child(1) {
+    bottom: 8px;
     left: 8px;
     animation-delay: -0.32s;
 }
 
 .typing-dots div:nth-child(2) {
+    bottom: 8px;
     left: 32px;
     animation-delay: -0.16s;
 }
 
 .typing-dots div:nth-child(3) {
+    bottom: 8px;
     left: 56px;
 }
 
 @keyframes typing-dots {
     0%, 80%, 100% {
-        transform: scale(0);
+        transform: translateY(8px)
     }
     40% {
-        transform: scale(1);
+        transform: translateY(0)
     }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.message-slide-in {
+    animation: slide-in 0.5s ease-out;
 }
