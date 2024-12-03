@@ -15,7 +15,7 @@ if (!window.grecaptcha) {
 function Chatbot() {
   const [currentMessage, setCurrentMessage] = React.useState('');
   const [typingMessage, setTypingMessage] = React.useState(false);
-  const [messageFeed, setMessageFeed] =React.useState([
+  const [messageFeed, setMessageFeed] = React.useState([
     {
       host: true,
       message:
@@ -29,15 +29,16 @@ function Chatbot() {
 
   async function sendMessage(newMsgFeed, msg) {
     let token = await getCapcthaToken();
+    console.log("retrived token", token)
     let url = process.env.REACT_APP_CHATBOT_ENDPOINT
     let body = {
-      question : msg
+      question: msg
     }
     let response = await fetch(url, {
       method: 'POST',
       headers: {
-      'Content-Type': 'application/json',
-      'g-recaptcha-response': token
+        'Content-Type': 'application/json',
+        'g-recaptcha-response': token
       },
       body: JSON.stringify(body)
     });
@@ -45,6 +46,19 @@ function Chatbot() {
     let data = await response.json();
     console.log(data)
     setMessageFeed(newMsgFeed.concat({ host: true, message: data.answer }))
+  }
+
+  function submitQuestion() {
+    if (currentMessage.trim() !== '') {
+      let msg = currentMessage
+      let newMessageFeed = messageFeed.concat({ host: false, message: currentMessage })
+      setMessageFeed(newMessageFeed)
+      sendMessage(newMessageFeed, msg)
+      setCurrentMessage('');
+      setTimeout(() => {
+        setTypingMessage(true)
+      }, 1500)
+    }
   }
 
   return (
@@ -61,36 +75,31 @@ function Chatbot() {
             </div>
           ))}
           <div className={`m-2 p-2 rounded-lg ml-auto ${typingMessage ? 'block' : 'hidden'} `}>
-              <div className="typing-dots ml-auto w-fit">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
+            <div className="typing-dots ml-auto w-fit">
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
+          </div>
         </div>
         <div className="flex flex-row">
           <input
             type="text"
             name="fullname"
             className="form-input"
+            disabled={typingMessage}
             placeholder="Type message..."
             value={currentMessage}
             onChange={(e) => setCurrentMessage(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                submitQuestion();
+              }
+            }}
           />
           <button
             className="form-btn max-w-fit"
-            onClick={ () => {
-              if (currentMessage.trim() !== '') {
-                let msg = currentMessage
-                let newMessageFeed = messageFeed.concat({ host: false, message: currentMessage })
-                setMessageFeed(newMessageFeed)
-                sendMessage(newMessageFeed, msg)
-                setCurrentMessage('');
-                setTimeout(()=>{
-                  setTypingMessage(true)
-                }, 1500)
-              }
-            }}
+            onClick={() => submitQuestion()}
           >
             <ion-icon name="paper-plane"></ion-icon>
             <span className="max-w-min md:min-w-max hidden md:flex">Send Message</span>
