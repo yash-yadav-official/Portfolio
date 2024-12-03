@@ -20,14 +20,15 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
+    - name: Create .env file
+      run: |
+        echo "REACT_APP_CHATBOT_ENDPOINT=${{ vars.REACT_APP_CHATBOT_ENDPOINT }}" >> .env
+        echo "REACT_APP_SITE_KEY=${{ vars.REACT_APP_SITE_KEY }}" >> .env
+        cat .env
     - name: Build project
       run: npm run build
 
     - name: Deploy to GitHub Pages
-      env:
-        REACT_APP_CHATBOT_ENDPOINT: ${{ vars.REACT_APP_CHATBOT_ENDPOINT }}
-        REACT_APP_SITE_KEY: ${{ vars.REACT_APP_SITE_KEY }}
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
