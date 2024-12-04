@@ -62,7 +62,7 @@
 }
 
 @keyframes slide-in {
-    0%, 50% {
+    0% {
         transform: translateY(100%);
         opacity: 0;
     }

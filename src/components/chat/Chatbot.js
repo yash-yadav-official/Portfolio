@@ -39,6 +39,7 @@ function Chatbot() {
       question: msg
     }
     try {
+      setTypingMessage(true)
       let response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -80,7 +81,6 @@ function Chatbot() {
       setMessageFeed(newMessageFeed)
       sendMessage(newMessageFeed, msg)
       setCurrentMessage('');
-      setTypingMessage(true)
       scrollChatlog()
     }
   }
