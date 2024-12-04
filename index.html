@@ -245,7 +245,7 @@
 
               <div class="service-icon-box">
                 <div class="icon-box">
-                  <a href="./assets/files/Simon-Benzer-Resume.pdf" download class="resume">
+                  <a href="./assets/files/Simon-Benzer-Resume.pdf" download class="resume" onclick="trackClickResume()">
                     <ion-icon name="document-attach-outline" color="#03fc84"></ion-icon>
                   </a>
                 </div>
@@ -265,7 +265,7 @@
 
               <div class="service-icon-box">
                 <div class="icon-box">
-                  <a href="./assets/files/CV_Simon_Benzer.pdf" download class="resume">
+                  <a href="./assets/files/CV_Simon_Benzer.pdf" download class="resume" onclick="trackClickCV()">
                     <ion-icon name="document-attach-outline" color="#03fc84"></ion-icon>
                   </a>
                 </div>
@@ -1124,6 +1124,61 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!--
+    - click tracker
+  -->
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbx6fnXXoAobVc0tQRlHuuX6GbOv-Vh0hMp6E7v17XNls2V_3rBMGgu74__cn6Lx_UD4QQ/exec";
+    async function trackClickResume() {
+      try {
+        const ipResponse = await fetch("https://api.ipify.org?format=json");
+        const ipData = await ipResponse.json();
+        const ipAddress = ipData.ip;
+
+        const data = {
+          ip: ipAddress,
+          timestamp: new Date().toISOString(),
+          action: "Resume",
+        };
+
+        const response = await fetch(scriptURL, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+
+      } catch (error) {
+          console.error("Error logging click:", error);
+      }
+    }
+    async function trackClickCV() {
+      try {
+        const ipResponse = await fetch("https://api.ipify.org?format=json");
+        const ipData = await ipResponse.json();
+        const ipAddress = ipData.ip;
+
+        const data = {
+          ip: ipAddress,
+          timestamp: new Date().toISOString(),
+          action: "CV",
+        };
+
+        const response = await fetch(scriptURL, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+
+      } catch (error) {
+          console.error("Error logging click:", error);
+      }
+    }
+  </script>
 
 </body>
 
