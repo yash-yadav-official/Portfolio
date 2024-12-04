@@ -24,7 +24,7 @@ jobs:
       run: |
         echo "REACT_APP_CHATBOT_ENDPOINT=${{ vars.REACT_APP_CHATBOT_ENDPOINT }}" >> .env
         echo "REACT_APP_SITE_KEY=${{ vars.REACT_APP_SITE_KEY }}" >> .env
-        echo "REACT_APP_SITE_KEY=${{ vars.PUBLIC_URL }}" >> .env
+        echo "PUBLIC_URL=${{ vars.PUBLIC_URL }}" >> .env
     - name: Build project
       run: npm run build
     - name: Deploy to GitHub Pages
