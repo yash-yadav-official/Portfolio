@@ -906,7 +906,7 @@
           <ul class="blog-posts-list">
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="javascript:void(0);" onclick="showPost('post-1')">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
@@ -1045,36 +1045,68 @@
               </a>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
 
           </ul>
 
+        </section>
+
+        <section id="post-1" class="post-detail" style="display:none;">
+          <div class="post-container">
+            <div class="post-header">
+              <h2 class="post-title">Design conferences in 2022</h2>
+              <div class="post-meta">
+                <span class="post-category">Design</span>
+                <span class="dot"></span>
+                <time datetime="2022-02-23">Fab 23, 2022</time>
+              </div>
+            </div>
+            <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" class="post-image">
+            <div class="post-content">
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <p>Full content for Design conferences in 2022...</p>
+              <p>More details about the event, speakers, and trends...</p>
+              <div class="post-tags">
+                <span class="tag">Design</span>
+                <span class="tag">Conference</span>
+                <span class="tag">2022</span>
+              </div>
+            </div>
+            <button onclick="hidePost('post-1')" class="close-button">Close</button>
+          </div>
         </section>
 
       </article>
@@ -1138,7 +1170,115 @@
   <!--
     - custom js link
   -->
+
+  <script>
+    function showPost(postId) {
+      // Hide all post details first
+      document.querySelectorAll('.post-detail').forEach(post => {
+        post.style.display = 'none';
+      });
+      
+      // Show the selected post
+      const postElement = document.getElementById(postId);
+      if (postElement) {
+        postElement.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+    }
+    
+    function hidePost(postId) {
+      const postElement = document.getElementById(postId);
+      if (postElement) {
+        postElement.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+      }
+    }
+    
+    // Close post detail when clicking outside the content
+    document.querySelectorAll('.post-detail').forEach(post => {
+      post.addEventListener('click', (e) => {
+        if (e.target === post) {
+          post.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+    </script>
   <script src="./assets/js/script.js"></script>
+
+  <style>
+    .post-detail {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    
+    .post-container {
+      background: white;
+      max-width: 800px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2rem;
+      border-radius: 8px;
+      position: relative;
+    }
+    
+    .post-header {
+      margin-bottom: 1.5rem;
+    }
+    
+    .post-title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .post-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+    }
+    
+    .post-content {
+      line-height: 1.6;
+    }
+    
+    .post-tags {
+      margin-top: 1.5rem;
+    }
+    
+    .tag {
+      background: #f0f0f0;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .close-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #333;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .close-button:hover {
+      background: #555;
+    }
+    </style>
 
   <!--
     - ionicon link
