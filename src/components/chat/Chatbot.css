@@ -9,11 +9,15 @@
 .guest-message {
     animation: slide-in forwards 1s;
     background-color: #67B26A;
-    color: var(--light-gray)
+    color: var(--light-gray);
 }
 
 .h-screen-1\/2{
     height: 50vh;
+}
+
+.max-w-2\/3{
+    max-width: 66.6667%;
 }
 
 .typing-dots {
@@ -58,7 +62,7 @@
 }
 
 @keyframes slide-in {
-    0% {
+    0%, 50% {
         transform: translateY(100%);
         opacity: 0;
     }

@@ -6,9 +6,6 @@ if (!window.grecaptcha) {
   script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.REACT_APP_SITE_KEY}`
   script.async = true
   script.defer = true
-  script.onload = () => {
-    console.log('reCAPTCHA script loaded')
-  }
   document.body.appendChild(script)
 }
 
@@ -19,17 +16,22 @@ function Chatbot() {
     {
       host: true,
       message:
-        "Hello, I'm SeanAI! Ask me any questions you might have about Sean's professional career and I'll try help.",
+        "Hi, I'm SeanAI! Feel free to ask me anything about Sean's professional career, and I'll do my best to help.",
+    },
+    {
+      host: true,
+      message:
+        "Please note, this feature is still in alpha, so occasional bugs might occur.",
     },
   ])
 
   async function getCapcthaToken() {
-      return await window.grecaptcha.execute(process.env.REACT_APP_SITE_KEY, { action: 'submit' })
+    await window.grecaptcha.ready(function () { })
+    return await window.grecaptcha.execute(process.env.REACT_APP_SITE_KEY, { action: 'submit' })
   }
 
   async function sendMessage(newMsgFeed, msg) {
     let token = await getCapcthaToken();
-    console.log("retrived token", token)
     let url = process.env.REACT_APP_CHATBOT_ENDPOINT
     let body = {
       question: msg
@@ -44,12 +46,21 @@ function Chatbot() {
     });
     setTypingMessage(false)
     let data = await response.json();
-    console.log(data)
     setMessageFeed(newMsgFeed.concat({ host: true, message: data.answer }))
+  }
+
+  function scrollChatlog(){
+    setTimeout(() => {
+      const chatlog = document.getElementById('chatlog');
+      if (chatlog) {
+        chatlog.scrollTop = chatlog.scrollHeight;
+      }
+    })
   }
 
   function submitQuestion() {
     if (currentMessage.trim() !== '') {
+      scrollChatlog()
       let msg = currentMessage
       let newMessageFeed = messageFeed.concat({ host: false, message: currentMessage })
       setMessageFeed(newMessageFeed)
@@ -57,6 +68,7 @@ function Chatbot() {
       setCurrentMessage('');
       setTimeout(() => {
         setTypingMessage(true)
+        scrollChatlog()
       }, 1500)
     }
   }
@@ -68,14 +80,14 @@ function Chatbot() {
         <h2 className="h2 article-title">Chatbot</h2>
       </header>
       <section className="flex flex-col mt-auto">
-        <div className="overflow-y-scroll has-scrollbar h-screen-1/2">
+        <div id="chatlog" className="overflow-y-scroll has-scrollbar h-screen-1/2">
           {messageFeed.map((message, index) => (
-            <div key={index} className={`m-2 p-2 rounded-lg ${message.host ? 'ml-auto host-message' : 'mr-auto guest-message'} w-2/3`}>
+            <div key={index} className={`m-2 p-2 rounded-lg ${message.host ? 'mr-auto host-message' : 'ml-auto guest-message'} max-w-2/3 w-fit`}>
               <span className="message">{message.message}</span>
             </div>
           ))}
           <div className={`m-2 p-2 rounded-lg ml-auto ${typingMessage ? 'block' : 'hidden'} `}>
-            <div className="typing-dots ml-auto w-fit">
+            <div className="typing-dots mr-auto w-fit">
               <div></div>
               <div></div>
               <div></div>

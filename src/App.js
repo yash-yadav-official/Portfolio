@@ -9,12 +9,13 @@ import Chatbot from './components/chat/Chatbot'; // Import the new Chatbot compo
 function App() {
   const [sidebarActive, setSidebarActive] = useState(false);
   const [modalActive, setModelActive] = useState(false);
-  const pathname = window.location.pathname;
+  const pathname = window.location.pathname.toLowerCase();
+  const homepage = process.env.PUBLIC_URL
   let active = 0
   switch(pathname){
-    case '/chatbot': active=3;break;
-    case '/portfolio': active=2;break;
-    case '/resume': active=1;break;
+    case homepage+'/chatbot': active=3;break;
+    case homepage+'/portfolio': active=2;break;
+    case homepage+'/resume': active=1;break;
     default: active=0;
   }
   const [activeTab, setActiveTab] = useState(active);
@@ -27,7 +28,7 @@ function App() {
         <div className="sidebar-info">
 
           <figure className="avatar-box">
-            <img src={Data.personalInfo.avatar} alt={Data.personalInfo.name} width="80" />
+            <img src={ Data.personalInfo.avatar} alt={Data.personalInfo.name} width="80" />
           </figure>
 
           <div className="info-content">
