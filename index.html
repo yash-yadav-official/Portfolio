@@ -1132,7 +1132,7 @@
     const scriptURL = "https://script.google.com/macros/s/AKfycbxRg-37Iljk94FB5iQSknNsfr1NyFHbhg9t1xl59HNutYRCHXV_jScb5T_pXZThGhzx6w/exec";
     async function trackClickResume() {
       try {
-        event.preventDefault();
+        // event.preventDefault(); //pause download until after logging
         const ipResponse = await fetch("https://api.ipify.org?format=json");
         const ipData = await ipResponse.json();
         const ipAddress = ipData.ip;
@@ -1152,22 +1152,13 @@
           mode: 'no-cors',
         });
 
-        if (response.ok) {
-          console.log("CV click logged successfully!");
-
-          // Now initiate the download
-          window.location.href = event.target.href;
-        } else {
-          console.error("Failed to log CV click.");
-        }
-
       } catch (error) {
           console.error("Error logging click:", error);
       }
     }
     async function trackClickCV() {
       try {
-        event.preventDefault();
+        // event.preventDefault(); //pause download until after logging
         const ipResponse = await fetch("https://api.ipify.org?format=json");
         const ipData = await ipResponse.json();
         const ipAddress = ipData.ip;
@@ -1186,15 +1177,6 @@
           body: JSON.stringify(data),
           mode: 'no-cors',
         });
-
-        if (response.ok) {
-          console.log("CV click logged successfully!");
-
-          // Now initiate the download
-          window.location.href = event.target.href;
-        } else {
-          console.error("Failed to log CV click.");
-        }
 
       } catch (error) {
           console.error("Error logging click:", error);
