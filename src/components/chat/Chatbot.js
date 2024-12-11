@@ -39,7 +39,12 @@ function Chatbot() {
       return val.error === false
     })
     localStorage.setItem('messageFeed', JSON.stringify(newMessageFeed));
+    scrollChatlog()
   }, [messageFeed]);
+
+  React.useEffect(() => {
+    scrollChatlog()
+  }, [typingMessage]);
 
   async function getCapcthaToken() {
     await window.grecaptcha.ready(function () { })
@@ -91,13 +96,11 @@ function Chatbot() {
 
   function submitQuestion() {
     if (currentMessage.trim() !== '') {
-      scrollChatlog()
       let msg = currentMessage
       let newMessageFeed = messageFeed.concat({ host: false, message: currentMessage })
       setMessageFeed(newMessageFeed)
       sendMessage(newMessageFeed, msg)
       setCurrentMessage('');
-      scrollChatlog()
     }
   }
 
