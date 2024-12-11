@@ -9,23 +9,37 @@ if (!window.grecaptcha) {
   document.body.appendChild(script)
 }
 
+const rawMsg = localStorage.getItem('messageFeed')
+let savedMessages = JSON.parse(rawMsg)
+if (rawMsg === '' || rawMsg === null) {
+  savedMessages = [{
+    host: true,
+    error: false,
+    message:
+      "Hi, I'm SeanAI! Feel free to ask me anything about Sean's professional career, and I'll do my best to help.",
+  },
+  {
+    error: false,
+    host: true,
+    message:
+      "Please note, this feature is still in alpha, so occasional bugs might occur.",
+  }]
+  localStorage.setItem('messageFeed', savedMessages)
+}
+
 function Chatbot() {
   const [currentMessage, setCurrentMessage] = React.useState('');
   const [typingMessage, setTypingMessage] = React.useState(false);
-  const [messageFeed, setMessageFeed] = React.useState([
-    {
-      host: true,
-      error: false,
-      message:
-        "Hi, I'm SeanAI! Feel free to ask me anything about Sean's professional career, and I'll do my best to help.",
-    },
-    {
-      error: false,
-      host: true,
-      message:
-        "Please note, this feature is still in alpha, so occasional bugs might occur.",
-    },
-  ])
+  const [messageFeed, setMessageFeed] = React.useState(savedMessages)
+
+
+  React.useEffect(() => {
+    let newMessageFeed = []
+    newMessageFeed = messageFeed.filter((val, index)=>{
+      return val.error === false
+    })
+    localStorage.setItem('messageFeed', JSON.stringify(newMessageFeed));
+  }, [messageFeed]);
 
   async function getCapcthaToken() {
     await window.grecaptcha.ready(function () { })
@@ -54,7 +68,9 @@ function Chatbot() {
         throw Error("received:" + response.status)
       }
       let data = await response.json();
-      setMessageFeed(newMsgFeed.concat({ host: true, message: data.answer }))
+      // we received the message successfully
+      newMsgFeed[newMsgFeed.length - 1].error = false;
+      setMessageFeed(newMsgFeed.concat({ host: true, message: data.answer, error: false }))
       scrollChatlog()
     } catch (error) {
       newMsgFeed[newMsgFeed.length - 1].error = true;
@@ -70,7 +86,7 @@ function Chatbot() {
       if (chatlog) {
         chatlog.scrollTop = chatlog.scrollHeight;
       }
-    })
+    }, 100)
   }
 
   function submitQuestion() {
@@ -94,7 +110,7 @@ function Chatbot() {
       <section className="flex flex-col mt-auto">
         <div id="chatlog" className="overflow-y-scroll has-scrollbar h-screen-1/2">
           {messageFeed.map((message, index) => (
-            <div key={index} className={`max-w-2/3 w-fit ${message.host ? 'mr-auto' : 'ml-auto'}`}>
+            <div key={index} className={`message-wrapper w-fit ${message.host ? 'mr-auto' : 'ml-auto'}`}>
               <span className={`text-red-400 mx-2 text-sm ${message.error ? 'block' : 'hidden'}`}>Error sending message! Please try again.</span>
               <div className={`m-2 p-2 rounded-lg ${message.host ? 'host-message' : 'guest-message'}`}>
                 <span className="message">{message.message}</span>

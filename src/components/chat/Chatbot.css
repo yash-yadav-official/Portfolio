@@ -16,8 +16,14 @@
     height: 50vh;
 }
 
-.max-w-2\/3{
+.message-wrapper{
     max-width: 66.6667%;
+}
+
+@media (max-width: 640px) {
+    .message-wrapper {
+        max-width: 87%;
+    }
 }
 
 .typing-dots {
