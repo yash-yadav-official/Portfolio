@@ -945,12 +945,11 @@ main {
 
 .nested-timeline strong {
   font-weight: var(--fw-400); /* Use consistent font weight */
-  color: var(--vegas-gold); /* Align with title or highlighted text style */
+  color: var(--white-2); /* Align with title or highlighted text style */
 }
 
 .nested-timeline a {
   display: inline; /* Ensure links do not cause line breaks */
-  color: var(--vegas-gold); /* Ensure link color is consistent */
 }
 
 /**
