@@ -945,7 +945,7 @@ main {
 }
 
 .nested-timeline strong {
-  font-weight: bold; /* Use consistent font weight */
+  font-weight: var(--fw-400); /* Use consistent font weight */
   color: var(--white-2); /* Use the same color as headings */
 }
 
