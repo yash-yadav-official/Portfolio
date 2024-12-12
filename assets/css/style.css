@@ -930,6 +930,20 @@ main {
   line-height: 1.6;
 }
 
+.nested-timeline {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.nested-timeline div {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.nested-timeline strong {
+  font-weight: bold;
+  font-size: 1em;
+}
 
 /**
  * skills 
