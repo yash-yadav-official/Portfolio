@@ -930,6 +930,7 @@ main {
   line-height: 1.6;
 }
 
+/* Nested timeline styles */
 .nested-timeline {
   margin-top: 10px;
   padding-left: 15px; /* Align with existing margin-left of timeline-list */
@@ -939,11 +940,17 @@ main {
   margin-bottom: 10px; /* Consistent spacing between items */
   font-size: var(--fs-6); /* Use the same font size as the timeline-list */
   line-height: 1.6; /* Match the line height with timeline-text */
+  color: var(--white-2); /* Ensure text color is consistent */
 }
 
 .nested-timeline strong {
   font-weight: var(--fw-400); /* Use consistent font weight */
   color: var(--vegas-gold); /* Align with title or highlighted text style */
+}
+
+.nested-timeline a {
+  display: inline; /* Ensure links do not cause line breaks */
+  color: var(--vegas-gold); /* Ensure link color is consistent */
 }
 
 /**
