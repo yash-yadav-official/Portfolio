@@ -11,6 +11,7 @@ if (!window.grecaptcha) {
 
 const rawMsg = localStorage.getItem('messageFeed')
 let savedMessages = JSON.parse(rawMsg)
+// first time visiting set the first two messages
 if (rawMsg === '' || rawMsg === null) {
   savedMessages = [{
     host: true,
@@ -33,6 +34,7 @@ function Chatbot() {
   const [messageFeed, setMessageFeed] = React.useState(savedMessages)
 
 
+  // When messageFeed changes add the new messages to the localStorage
   React.useEffect(() => {
     let newMessageFeed = []
     newMessageFeed = messageFeed.filter((val, index)=>{
@@ -42,6 +44,7 @@ function Chatbot() {
     scrollChatlog()
   }, [messageFeed]);
 
+  // scroll down the message log when bot starts typing
   React.useEffect(() => {
     scrollChatlog()
   }, [typingMessage]);

@@ -1,7 +1,8 @@
 
 import React from 'react';
+import Data from '../data/data';
 
-function Portfolio({ Data }) {
+function Portfolio() {
   return (
     <article className="portfolio active" data-page="portfolio">
       <header>

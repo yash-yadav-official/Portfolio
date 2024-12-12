@@ -1,7 +1,8 @@
 
 import React from 'react';
+import Data from './data/data';
 
-function Sidebar({ Data, sidebarActive, setSidebarActive }) {
+function Sidebar({sidebarActive, setSidebarActive }) {
   return (
     <aside className={`sidebar ${sidebarActive ? 'active' : ''}`} data-sidebar>
       <div className="sidebar-info">

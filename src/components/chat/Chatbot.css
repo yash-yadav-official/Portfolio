@@ -1,13 +1,11 @@
 @import url('../../App.css');
 
 .host-message {
-    animation: slide-in forwards 1s;
     background-color: var(--jet);
     color: var(--light-gray)
 }
 
 .guest-message {
-    animation: slide-in forwards 1s;
     background-color: #67B26A;
     color: var(--light-gray);
 }

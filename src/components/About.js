@@ -1,7 +1,11 @@
 
 import React from 'react';
+import Data from '../data/data';
 
-function About({ Data, setTestimonial, setModelActive, testimonial, modalActive }) {
+function About() {
+  let [modalActive, setModelActive] = React.useState(false)
+  const [testimonial, setTestimonial] = React.useState(Data.testimonials[0]);
+
   return (
     <article className="about active" data-page="about">
       <header>

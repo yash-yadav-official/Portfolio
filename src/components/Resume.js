@@ -1,7 +1,8 @@
 
 import React from 'react';
+import Data from '../data/data';
 
-function Resume({ Data }) {
+function Resume() {
   return (
     <article className="resume active" data-page="resume">
       <header>

@@ -1,25 +1,39 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import { Outlet, useLocation, useNavigate } from 'react-router';
 import Data from './data/data';
-import About from './components/About';
-import Resume from './components/Resume';
-import Portfolio from './components/Portfolio';
-import Chatbot from './components/chat/Chatbot'; // Import the new Chatbot component
+
 
 function App() {
   const [sidebarActive, setSidebarActive] = useState(false);
-  const [modalActive, setModelActive] = useState(false);
-  const pathname = window.location.pathname.toLowerCase();
-  const homepage = process.env.PUBLIC_URL
-  let active = 0
-  switch(pathname){
-    case homepage+'/chatbot': active=3;break;
-    case homepage+'/portfolio': active=2;break;
-    case homepage+'/resume': active=1;break;
-    default: active=0;
+  let [active, setActive] = useState(useLocation().pathname)
+
+  console.log(useLocation())
+  const components = [
+    {
+      title: "About",
+      nav: "/about",
+    },
+    {
+      title: "Resume",
+      nav: "/resume",
+    },
+    {
+      title: "Portfolio",
+      nav: "/portfolio",
+    },
+    {
+      title: "Chatbot",
+      nav: "/chatbot",
+    },
+  ]
+  let nav = useNavigate()
+
+  function NavigateToModal(modal) {
+    setActive(modal.nav)
+    nav(modal.nav)
   }
-  const [activeTab, setActiveTab] = useState(active);
-  const [testimonial, setTestimonial] = useState(Data.testimonials[0]);
+
 
   return (
     <main>
@@ -28,7 +42,7 @@ function App() {
         <div className="sidebar-info">
 
           <figure className="avatar-box">
-            <img src={ Data.personalInfo.avatar} alt={Data.personalInfo.name} width="80" />
+            <img src={Data.personalInfo.avatar} alt={Data.personalInfo.name} width="80" />
           </figure>
 
           <div className="info-content">
@@ -132,31 +146,18 @@ function App() {
         <nav className="navbar">
 
           <ul className="navbar-list">
-
-            <li className="navbar-item">
-              <button className={`navbar-link ${activeTab === 0 ? 'active' : ''}`} onClick={() => setActiveTab(0)} data-nav-link>About</button>
-            </li>
-
-            <li className="navbar-item">
-              <button className={`navbar-link ${activeTab === 1 ? 'active' : ''}`} onClick={() => setActiveTab(1)} data-nav-link>Resume</button>
-            </li>
-
-            <li className="navbar-item">
-              <button className={`navbar-link ${activeTab === 2 ? 'active' : ''}`} onClick={() => setActiveTab(2)} data-nav-link>Portfolio</button>
-            </li>
-
-            <li className="navbar-item">
-              <button className={`navbar-link ${activeTab === 3 ? 'active' : ''}`} onClick={() => setActiveTab(3)} data-nav-link>Chatbot</button>
-            </li>
-
+            {
+              components.map((component, index) => (
+                <li className="navbar-item">
+                  <button className={`navbar-link ${active === component.nav ? 'active' : ''}`} onClick={() => NavigateToModal(component)}>{component.title}</button>
+                </li>
+              ))
+            }
           </ul>
 
         </nav>
+        <Outlet/>
 
-        {activeTab === 0 && <About Data={Data} setTestimonial={setTestimonial} setModelActive={setModelActive} testimonial={testimonial} modalActive={modalActive} />}
-        {activeTab === 1 && <Resume Data={Data} />}
-        {activeTab === 2 && <Portfolio Data={Data} />}
-        {activeTab === 3 && <Chatbot />}
       </div>
     </main>
   );
