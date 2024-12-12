@@ -934,7 +934,6 @@ main {
 .nested-timeline {
   margin-top: 10px;
   padding-left: 15px; /* Align with existing margin-left of timeline-list */
-  color: var(--white-2); /* Use the same color as headings */
 }
 
 .nested-timeline div {
@@ -942,11 +941,12 @@ main {
   font-size: var(--fs-6); /* Use the same font size as the timeline-list */
   font-weight: var(--fw-300); /* Use the same font weight as the timeline-text */
   line-height: 1.6; /* Match the line height with timeline-text */
+  color: var(--light-gray); /* Align with title or highlighted text style */
 }
 
 .nested-timeline strong {
   font-weight: bold; /* Use consistent font weight */
-  color: var(--light-gray); /* Align with title or highlighted text style */
+  color: var(--white-2); /* Use the same color as headings */
 }
 
 .nested-timeline a {
