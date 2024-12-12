@@ -940,12 +940,12 @@ main {
   margin-bottom: 10px; /* Consistent spacing between items */
   font-size: var(--fs-6); /* Use the same font size as the timeline-list */
   line-height: 1.6; /* Match the line height with timeline-text */
-  color: var(--white-2); /* Ensure text color is consistent */
+  color: var(--light-gray); /* Ensure text color is consistent */
 }
 
 .nested-timeline strong {
   font-weight: var(--fw-400); /* Use consistent font weight */
-  color: var(--white-2); /* Align with title or highlighted text style */
+  color: var(--light-gray); /* Align with title or highlighted text style */
 }
 
 .nested-timeline a {
