@@ -932,17 +932,18 @@ main {
 
 .nested-timeline {
   margin-top: 10px;
-  padding-left: 20px;
+  padding-left: 15px; /* Align with existing margin-left of timeline-list */
 }
 
 .nested-timeline div {
-  margin-bottom: 10px;
-  line-height: 1.5;
+  margin-bottom: 10px; /* Consistent spacing between items */
+  font-size: var(--fs-6); /* Use the same font size as the timeline-list */
+  line-height: 1.6; /* Match the line height with timeline-text */
 }
 
 .nested-timeline strong {
-  font-weight: bold;
-  font-size: 1em;
+  font-weight: var(--fw-400); /* Use consistent font weight */
+  color: var(--vegas-gold); /* Align with title or highlighted text style */
 }
 
 /**
