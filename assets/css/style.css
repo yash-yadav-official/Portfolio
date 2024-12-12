@@ -934,6 +934,7 @@ main {
 .nested-timeline {
   margin-top: 10px;
   padding-left: 15px; /* Align with existing margin-left of timeline-list */
+  color: var(--white-2); /* Use the same color as headings */
 }
 
 .nested-timeline div {
