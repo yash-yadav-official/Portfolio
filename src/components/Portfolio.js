@@ -1,8 +1,10 @@
 
 import React from 'react';
 import Data from '../data/data';
+import { useNavigate } from 'react-router';
 
 function Portfolio() {
+  let nav = useNavigate()
   return (
     <article className="portfolio active" data-page="portfolio">
       <header>
@@ -13,7 +15,12 @@ function Portfolio() {
         <ul className="project-list">
           {Data.projects.map((project, index) => (
             <li className="project-item active" data-filter-item data-category={project.category.toLowerCase()} key={index}>
-              <a href={project.link} target="_blank" rel="noreferrer">
+              <a href={project.link} target={project.redirect ? "_blank":''} rel="noreferrer" onClick={(e)=>{
+                e.preventDefault()
+                nav(project.link)
+              }
+
+              }>
                 <figure className="project-img">
                   <div className="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>

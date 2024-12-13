@@ -45,7 +45,7 @@ function About() {
             }}>
               <div className="content-card" data-testimonials-item>
                 <figure className="testimonials-avatar-box">
-                  <img src={testimonial.img} alt={testimonial.name} width="60" data-testimonials-avatar />
+                  <img src={testimonial.img} alt={testimonial.name} width="60" className="scale-50" data-testimonials-avatar />
                 </figure>
                 <h4 className="h4 testimonials-item-title" data-testimonials-title>{testimonial.name}</h4>
                 <div className="testimonials-text" data-testimonials-text>
@@ -64,13 +64,11 @@ function About() {
             <ion-icon name="close-outline"></ion-icon>
           </button>
           <div className="modal-img-wrapper">
-            <figure className="modal-avatar-box">
-              <img src={`${testimonial.img}`} alt={`${testimonial.name}`} width="80" data-modal-img />
-            </figure>
             <img src="./assets/images/icon-quote.svg" alt="quote icon" />
           </div>
           <div className="modal-content">
             <h4 className="h3 modal-title" data-modal-title>{testimonial.name}</h4>
+            <h5 className="h5 modal-title" data-modal-title>{testimonial.relationship}</h5>
             <time dateTime="2021-06-14">{testimonial.datatime}</time>
             <div data-modal-text>
               <p>{testimonial.testimonial}</p>

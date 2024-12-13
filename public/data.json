@@ -1,32 +1,22 @@
 {
     "description": [
-        "I am a Backend Developer with a passion for crafting efficient, secure, and robust solutions. With extensive experience in cloud-based large-scale systems, I also enjoy the flexibility and innovation that comes with implementing smaller projects.",
+        "Hi, I'm Sean 👋 A Backend Developer with extensive real-world experience in developing, testing, and deploying microservices for cloud-based, large-scale systems. I have a passion for crafting efficient, secure, and robust solutions. I also enjoy the flexibility and innovation that comes with implementing smaller projects, allowing me to stay at the forefront of new technology.",
         "I thrive on challenges, both in the realm of software development and in life, always seeking opportunities to grow and push boundaries."
     ],
     "testimonials": [
         {
-            "name": "Daniel lewis",
-            "img": "./assets/images/avatar-1.png",
-            "datatime": "14 June, 2021",
-            "testimonial": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has alot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+            "name": "Tom O'Neill",
+            "relationship": "Line Manager @ Ericcson",
+            "img": "./assets/images/icon-quote.svg",
+            "datatime": "12 Dec, 2024",
+            "testimonial": "I had the pleasure of managing Sean, and I highly commend his exceptional skills in microservice development and DevOps. He consistently delivered high-quality work in software development and demonstrated project planning as an epic driver. He also showed he was a supportive team player and a capable leader, always ready to assist colleagues and help drive projects. A truly invaluable asset to any team."
         },
         {
-            "name": "Jessica miller",
-            "img": "./assets/images/avatar-2.png",
-            "datatime": "14 June, 2021",
-            "testimonial": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has alot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
-        },
-        {
-            "name": "Emily evans",
-            "img": "./assets/images/avatar-3.png",
-            "datatime": "14 June, 2021",
-            "testimonial": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has alot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
-        },
-        {
-            "name": "Henry william",
-            "img": "./assets/images/avatar-4.png",
-            "datatime": "14 June, 2021",
-            "testimonial": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has alot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+            "name": "Darragh Egan",
+            "relationship": "Senior Scrum Master @ Ericcson",
+            "img": "./assets/images/icon-quote.svg",
+            "datatime": "13 Dec, 2024",
+            "testimonial": "I had the privilege of working with Sean as part of my team for the past two years, during which time he consistently proved himself to be an exceptional developer. Sean has a remarkable ability to collaborate effectively within a team, always contributing positively and fostering a supportive working environment. I wholeheartedly recommend Sean and am confident he will excel in any endeavor he chooses to pursue."
         }
     ],
     "services": [
@@ -56,7 +46,7 @@
             "url": "https://www.linkedin.com/in/seancunniffe0/"
         },
         {
-            "name": "file",
+            "name": "document-text-outline",
             "url": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-b463f.appspot.com/o/SeanCunniffeCV1.pdf?alt=media&token=604f2163-fbea-4928-9792-5f5bb47290d1"
         }
     ],
@@ -65,55 +55,63 @@
             "title": "SeanAI Chatbot",
             "category": "Microservice Development",
             "img": "./assets/images/chatbot.jpeg",
-            "link": "./chatbot"
+            "link": "/chatbot",
+            "redirect": false
         },
         {
             "category": "Microservice Development",
             "img": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-b463f.appspot.com/o/userservice.png?alt=media&token=7d199f6b-fee6-41bf-ae8e-fc89a0bacc4c",
             "link": "https://github.com/sean-cunniffe/user-service",
-            "title": "User Service"
+            "title": "User Service",
+            "redirect": true
         },
         {
             "category": "Web Development",
             "img": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-b463f.appspot.com/o/controller.JPG?alt=media&token=149b4cab-9369-4e3f-8fc8-a98cc62f5be4",
             "link": "https://github.com/sean-cunniffe/CustomController",
-            "title": "Custom Controllers Shop"
+            "title": "Custom Controllers Shop",
+            "redirect": true
         },
         {
             "category": "Backend Development",
             "img": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-b463f.appspot.com/o/Network-management-tool.png?alt=media&token=006435de-1742-4494-807a-9a311c6c0cde",
             "title": "Network Management Tool",
-            "link": "#"
+            "link": "#",
+            "redirect": true
         },
         {
             "category": "Backend Development",
             "img": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-b463f.appspot.com/o/greenway.jpg?alt=media&token=eb4128fe-89a9-41bf-b1cb-466f2063dd04",
-            "title": "Greenway Bicycles"
+            "title": "Greenway Bicycles",
+            "redirect": true
         },
         {
             "category": "Backend Development",
             "img": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-b463f.appspot.com/o/fitness-tracker-smaller.jpg?alt=media&token=4f3031cf-6c85-4afe-a771-a75f4717837b",
             "link": "https://github.com/sean-cunniffe/exercise-tracking-api",
-            "title": "Exercise Tracker API"
+            "title": "Exercise Tracker API",
+            "redirect": true
         },
         {
             "category": "Frontend Development",
             "img": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-b463f.appspot.com/o/sorting-algo.jpg?alt=media&token=2e373751-5342-4932-b362-595ff52f3fea",
             "link": "https://sean-cunniffe.github.io/visual-sorting-algorithms/",
-            "title": "Visual Sorting Algorithms"
+            "title": "Visual Sorting Algorithms",
+            "redirect": true
         },
         {
             "category": "Machine Learning",
             "img": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-b463f.appspot.com/o/decision-tree.png?alt=media&token=47fcf4a1-0551-4ae7-8d16-acbc01b31ed9",
             "link": "https://github.com/sean-cunniffe/python-CART",
-            "title": "Cart.py"
+            "title": "Cart.py",
+            "redirect": true
         }
     ],
     "education": [
         {
             "title": "Applied Software Engineering (TUS Athlone)",
             "timespan": "Sept 2021 — Jun 2022",
-            "description": "The software engineering master's program was specifically designed to prepare students for careers at Ericsson. The curriculum covered a wide range of essential topics, including advanced Java development, various database design methodologies, coding patterns, Continuous Integration and Continuous Deployment (CICD), as well as instruction in Kubernetes and Docker development. Additionally, the program culminated in a final team project, providing hands-on experience in real-world application development scenarios."
+            "description": "The software engineering master's program was specifically designed to prepare students for careers at Ericsson. The curriculum covered a wide range of essential topics, including advanced Java development, various database design methodologies, coding patterns, Continuous Integration and Continuous Deployment (CICD), as well as a 6 week course in Kubernetes and Docker development. Additionally, the program ended with a final team project, providing hands-on experience in real-world application development scenarios."
         },
         {
             "title": "Certificate of Software Engineering (TUS Athlone)",
@@ -215,13 +213,13 @@
     "experience": [
         {
             "title": "Ericsson",
-            "timespan": "Jun 2022 — Present",
-            "description": "I am currently employed at Ericsson in Athlone, working in cloud RAN. My role involves developing microservices using Go Lang to enhance performance monitoring and fault management. These microservices are meticulously crafted to comply with stringent security design guidelines and ensure scalability."
+            "timespan": "Jun 2022 — Nov 2024",
+            "description": "I worked at Ericsson as a software engineer in the cloud RAN division. My role involved developing microservices using Go for performance monitoring and fault management, as well as creating CI/CD pipelines. I participated in many projects, primarily as a developer, but also took on roles such as Epic Driver and test lead. As an Epic Driver, I broke down tasks into manageable units, organized meetings to estimate story points, and created timelines with milestones to track project progression. As the test lead, I attended meetings to discuss test improvements and gathered new requirements for microservices. At Ericsson, I learnt many technical skills, teamwork, and how to utilise a team while also encouraging team members to step outside their comfort zones."
         },
         {
             "title": "Retail Solutions",
             "timespan": "Jan 2021 — Jun 2021",
-            "description": "Retail Solutions operates as an EPOS (electronic point of sales) development firm. I began my journey with the company as a software technician, responsible for configuring software for customers upon receipt of their EPOS systems. This role encompassed database management and the detection and resolution of hardware and software bugs."
+            "description": "Retail Solutions operates as an EPOS (electronic point of sale) development firm. I began my journey with the company as a software technician, responsible for configuring software for customers upon receipt of their EPOS systems. This role encompassed database management and the detection and resolution of software bugs. I also worked with customers to resolve issues such as parts of the system going down or overall poor performance of the equipment."
         }
     ]
 }
