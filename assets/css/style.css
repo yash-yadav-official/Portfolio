@@ -1500,17 +1500,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .skills-item:not(:last-child) { margin-bottom: 25px; }
 
-  .header-download-icon {
+  /* Scoped Download Icon Style */
+  header .header-download-icon {
     margin-left: 10px; /* Space between text and icon */
     font-size: 1.2em; /* Adjust icon size */
     color: inherit; /* Inherit text color */
     text-decoration: none; /* Remove underline */
   }
-  
-  .header-download-icon:hover {
+
+  header .header-download-icon:hover {
     color: #007BFF; /* Highlight color on hover */
     cursor: pointer;
   }
+
   
 
   /**
