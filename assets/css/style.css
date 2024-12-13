@@ -1488,9 +1488,14 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #RESUME
    */
 
-  .timeline-list { margin-left: 65px; }
+  /* Timeline styling */
+  .timeline-list {
+    margin-left: 65px;
+  }
 
-  .timeline-item:not(:last-child)::before { left: -40px; }
+  .timeline-item:not(:last-child)::before {
+    left: -40px;
+  }
 
   .timeline-item::after {
     height: 8px;
@@ -1498,22 +1503,56 @@ textarea.form-input::-webkit-resizer { display: none; }
     left: -43px;
   }
 
-  .skills-item:not(:last-child) { margin-bottom: 25px; }
+  /* Skills item margin */
+  .skills-item:not(:last-child) {
+    margin-bottom: 25px;
+  }
 
   /* Scoped Download Icon Style */
-  header .header-download-icon {
+  .resume header {
+    display: flex; /* Ensure the text and icon are properly aligned */
+    align-items: center; /* Vertically center align the icon and text */
+    gap: 10px; /* Add space between the text and the icon */
+  }
+
+  .resume header h2 {
+    display: flex; /* Aligns header elements in a row */
+    align-items: center;
+  }
+
+  .resume header .header-download-icon {
     margin-left: 10px; /* Space between text and icon */
     font-size: 1.2em; /* Adjust icon size */
     color: inherit; /* Inherit text color */
     text-decoration: none; /* Remove underline */
+    display: flex; /* Make the icon inline-flex for better alignment */
+    align-items: center;
   }
 
-  header .header-download-icon:hover {
+  .resume header .header-download-icon:hover {
     color: #007BFF; /* Highlight color on hover */
     cursor: pointer;
   }
 
-  
+  /* Download Resume Button */
+  .download-resume {
+    margin-top: 20px; /* Adds space between header and button */
+  }
+
+  .download-resume a {
+    font-size: 1em;
+    text-decoration: none;
+    color: #007BFF; /* Default color for the button */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adds space between icon and text */
+  }
+
+  .download-resume a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Add an underline for hover effect */
+  }
+
 
   /**
    * #PORTFOLIO, BLOG
