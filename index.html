@@ -1347,141 +1347,105 @@
         <section id="post-4" class="post-detail" style="display:none;">
           <div class="post-container">
             <div class="post-header">
-              <h2 class="post-title">Aerial Vehicle for Mars</h2>
+              <h2 class="post-title">Deep Learning Approach to Finite Element Analysis</h2>
               <div class="post-meta">
-                <span class="post-category">Design</span>
+                <span class="post-category">Research</span>
                 <span class="dot"></span>
-                <time datetime="2022-02-23">Feb 23, 2022</time>
+                <time datetime="2023-12-12">Dec 12, 2023</time>
               </div>
             </div>
-            <img src="./assets/images/Project 4.png" alt="BioProsthetic Heart Valve" class="post-image">
+            <img src="./assets/images/Project_DeepLearning_FEA.png" alt="Deep Learning Finite Element Analysis" class="post-image">
             <div class="post-content">
               <p>
-                This project was developed as part of the International Planetary Aerial Systems Challenge (IPASC), a prestigious design competition organized by the Mars Society South Asia (MSSA). The challenge required designing an astronaut-assistive Unmanned Aerial Vehicle (UAV) tailored for Mars operations. This UAV had to be fully equipped and mission-ready, capable of performing critical tasks in Mars' unique atmospheric conditions. The project was an intensive exercise in multidisciplinary design, requiring careful planning and optimization of subsystems while adhering to the constraints imposed by Mars' thin atmosphere and challenging terrain.
+                This project explores the integration of Deep Learning with Finite Element Analysis (FEA) to develop a surrogate modeling framework, significantly reducing computational overhead while maintaining accuracy. Specifically, the research focuses on Bioprosthetic Heart Valves (BHVs), addressing challenges in their design and analysis using Graph Neural Networks (GNNs). The work has far-reaching implications for personalized medical applications and efficient engineering solutions.
               </p>
         
               <h3>Introduction</h3>
               <p>
-                Mars exploration presents a range of challenges, including its low atmospheric pressure, extreme temperature fluctuations, and rugged terrain. These conditions necessitate innovative solutions to support astronauts during surface missions. The objective of this project was to design a UAV capable of assisting astronauts by:
-              </p>
-              <ul>
-                <li>Providing aerial reconnaissance and mapping of Martian terrain.</li>
-                <li>Transporting lightweight payloads such as tools or samples.</li>
-                <li>Monitoring environmental conditions to ensure astronaut safety.</li>
-                <li>Performing autonomous operations to minimize astronaut workload.</li>
-              </ul>
-              <p>
-                To achieve these goals, the UAV design had to account for Mars' thin atmosphere (approximately 1% of Earth’s atmospheric density), reduced gravity (about 38% of Earth’s gravity), and harsh environmental conditions.
+                Finite Element Analysis (FEA) is critical for understanding mechanical properties like stress and strain but is often computationally prohibitive for real-time decision-making. This research introduces a Deep Learning-based FEA (DLFEA) framework to accelerate simulations while preserving accuracy. Using GNNs, this framework predicts deformation and coaptation metrics in Bioprosthetic Heart Valves (BHVs), essential for their efficient design and performance optimization.
               </p>
         
               <h3>Methods</h3>
               <p>
-                The project was executed in several phases, each focusing on the development and integration of specific UAV subsystems.
+                The methodology involved dataset preparation, baseline modeling, and implementing advanced GNN architectures.
               </p>
         
-              <h4>Aerodynamic Design</h4>
-              <p>
-                Given Mars' thin atmosphere, achieving sufficient lift was a primary design challenge. Key aerodynamic considerations included:
-              </p>
+              <h4>Dataset Preparation</h4>
               <ul>
                 <li>
-                  <strong>Wing Design:</strong> A high aspect ratio fixed-wing configuration was chosen to maximize lift-to-drag ratio. The wings were equipped with advanced airfoils specifically designed for low Reynolds number flow conditions.
+                  Data sourced from 18,000 simulations of BHVs conducted using Isogeometric Analysis (IGA), capturing deformation under varying physiological conditions.
                 </li>
                 <li>
-                  <strong>Propulsion System:</strong> Electric propulsion was selected for its reliability and efficiency in low-density air. High RPM motors with large-diameter, low-pitch propellers were used to generate adequate thrust.
-                </li>
-                <li>
-                  <strong>Stability Enhancements:</strong> Stabilizers and control surfaces were designed to ensure smooth and stable flight, even in gusty conditions.
+                  Parameters included valve thickness, material stiffness, and transvalvular pressure. Data split: Training (60%), Validation (20%), Testing (20%).
                 </li>
               </ul>
         
-              <h4>Structural Design</h4>
-              <p>
-                The UAV's structure needed to be lightweight yet robust to withstand Mars’ environmental stressors. Design features included:
-              </p>
+              <h4>Baseline Model</h4>
               <ul>
                 <li>
-                  <strong>Material Selection:</strong> Carbon fiber composites were used for the frame and wings to minimize weight while ensuring strength.
-                </li>
-                <li>
-                  <strong>Payload Bay:</strong> A modular payload compartment was integrated to accommodate scientific instruments, sensors, or small cargo.
-                </li>
-                <li>
-                  <strong>Thermal Insulation:</strong> The structure was insulated to protect sensitive components from temperature extremes.
+                  Implemented a Convolutional Neural Network (CNN) as a baseline, leveraging NURBS-aware convolutions for geometrical accuracy.
                 </li>
               </ul>
         
-              <h4>Avionics and Autonomy</h4>
-              <p>
-                The UAV was equipped with advanced avionics systems to enable autonomous operation and reliable communication in Mars' environment:
-              </p>
+              <h4>GNN Architectures</h4>
               <ul>
                 <li>
-                  <strong>Navigation System:</strong> Inertial Measurement Units (IMUs), GPS simulators, and vision-based SLAM were integrated to ensure precise navigation in GPS-denied environments.
+                  <strong>Graph Convolution Networks (GCNs):</strong> Aggregated local node features to predict deformations.
                 </li>
                 <li>
-                  <strong>Autonomous Control:</strong> AI-driven algorithms were implemented for obstacle avoidance, path planning, and task prioritization.
-                </li>
-                <li>
-                  <strong>Communication:</strong> A long-range radio-frequency communication system was designed to maintain connectivity with astronaut teams or base stations.
+                  <strong>MeshGraphNets:</strong> Specialized in handling complex mesh-based data, integrating both local and global dependencies for superior performance.
                 </li>
               </ul>
         
-              <h4>Testing and Validation</h4>
-              <p>
-                A scaled prototype was developed for Earth-based testing, simulating Mars-like conditions wherever possible:
-              </p>
+              <h4>Training and Evaluation</h4>
               <ul>
                 <li>
-                  Wind tunnel tests were conducted to validate aerodynamic performance under low-density air conditions.
+                  Models trained using the Adam optimizer with a batch size of 512.
                 </li>
                 <li>
-                  Environmental chambers simulated Martian temperatures to test the thermal insulation and component durability.
-                </li>
-                <li>
-                  Flight trials were performed in high-altitude areas with thin air to approximate Martian atmospheric conditions.
+                  Evaluation metrics included R<sup>2</sup> Score, Euclidean Distance, Hausdorff Distance, and Procrustes Distance.
                 </li>
               </ul>
         
               <h3>Results</h3>
-              <p>
-                The UAV successfully demonstrated its capability to meet the design objectives. Key results included:
-              </p>
               <ul>
                 <li>
-                  <strong>Lift Generation:</strong> The high aspect ratio wings and optimized propellers provided sufficient lift, with performance exceeding initial predictions by 15%.
+                  <strong>R<sup>2</sup> Scores:</strong> CNN: 0.9328, GCN: 0.9492, MeshGraphNets: 0.9589.
                 </li>
                 <li>
-                  <strong>Payload Capacity:</strong> The UAV could carry payloads up to 5 kg, making it suitable for various astronaut-assistive tasks.
-                </li>
-                <li>
-                  <strong>Autonomy:</strong> Autonomous navigation and task execution were achieved with 95% reliability during simulated missions.
-                </li>
-                <li>
-                  <strong>Durability:</strong> The UAV withstood simulated Martian environmental conditions, including temperature cycles and low-density air.
+                  <strong>Distance Metrics:</strong>
+                  <ul>
+                    <li>Euclidean Distance: MeshGraphNets (0.0148) < GCN (0.0160) < CNN (0.0173).</li>
+                    <li>Hausdorff Distance: MeshGraphNets (0.0712) < GCN (0.0772) < CNN (0.0830).</li>
+                    <li>Procrustes Distance: MeshGraphNets (0.0099) < GCN (0.0120) < CNN (0.0210).</li>
+                  </ul>
                 </li>
               </ul>
         
               <h3>Discussion and Conclusion</h3>
               <p>
-                This project demonstrated the feasibility of designing a UAV for Mars operations by leveraging innovative aerodynamic, structural, and autonomous systems. The UAV's success in simulated Mars-like conditions validates its potential for real-world deployment in future exploration missions.
+                The DLFEA framework demonstrated substantial improvements in computational efficiency and accuracy for modeling BHV deformation. MeshGraphNets consistently outperformed other architectures, highlighting the value of preserving spatial topology in complex simulations. Future enhancements include dynamic valve simulations, fatigue life prediction, and hybrid model integration to optimize performance.
               </p>
+        
               <p>
-                The design approach showcased the importance of multidisciplinary collaboration, combining expertise in aerodynamics, materials science, electronics, and artificial intelligence. The UAV's modularity and scalability make it adaptable to various mission requirements, from reconnaissance and sample collection to environmental monitoring.
+                This research provides a robust foundation for accelerating computational mechanics, especially in biomedical applications, enabling real-time, patient-specific solutions that enhance surgical outcomes and design efficiency.
               </p>
+        
+              <h3>GitHub Repository</h3>
               <p>
-                Future enhancements could include incorporating solar panels for extended operational range, improving battery efficiency, and optimizing AI algorithms for even greater autonomy. These developments would further enhance the UAV's utility in supporting human exploration of Mars and other extraterrestrial environments.
+                All associated codes and datasets are available here: <a href="https://github.com/vhsingh/IDL-Final" target="_blank">IDL-Final GitHub Repository</a>.
               </p>
         
               <div class="post-tags">
-                <span class="tag">Aerospace</span>
-                <span class="tag">Mars</span>
-                <span class="tag">2022</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Finite Element Analysis</span>
+                <span class="tag">2023</span>
               </div>
             </div>
-            <button onclick="hidePost('post-3')" class="close-button">Close</button>
+            <button onclick="hidePost('post-4')" class="close-button">Close</button>
           </div>
         </section>
+        
         
 
       </article>
