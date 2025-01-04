@@ -336,6 +336,30 @@ main {
   border-radius: 20px;
 }
 
+.skills-content {
+  max-width: 1024px; /* Adjust the max width as needed */
+}
+
+.skills-content .title {
+  color: var(--white-1);
+  background: var(--onyx);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  width: max-content;
+  padding: 3px 12px;
+  border-radius: 8px;
+}
+
+.skills-content .skills-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: row; /* Stack items vertically */
+  flex-wrap: wrap;
+  gap: 5px; /* Space between items */
+}
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
@@ -352,6 +376,15 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+}
+
+.info-content .titles-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px; /* Space between items */
 }
 
 .info_more-btn {
@@ -731,11 +764,11 @@ main {
 .clients-list {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
-  margin: 0 -15px;
-  padding: 25px;
-  padding-bottom: 25px;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 45px;
+  padding-right: 45px;
   overflow-x: auto;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
@@ -829,6 +862,41 @@ main {
   line-height: 1.6;
 }
 
+.publications-item-journal{
+  text-align: justify;
+  text-justify: inter-word;
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-3);
+  line-height: 1.6;
+}
+
+.publications-item-journal-link { 
+  text-align: justify;
+  text-justify: inter-word;
+  color: var(--vegas-gold);
+  display: inline;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-3);
+  line-height: 1.6;
+}
+
+.timeline-text-small {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: var(--fs-8);
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  display:inline;
+}
+
+.p-pre{
+  padding: 0.2rem;
+  text-align: justify;
+}
 
 /**
  * skills 
@@ -1234,6 +1302,10 @@ textarea.form-input::-webkit-resizer { display: none; }
  */
 
 @media (min-width: 450px) {
+  .info-content .titles-list {
+    flex-direction: row; /* Switch to horizontal layout */
+    justify-content: center; /* Center horizontally */
+  }
 
   /**
    * client
@@ -1261,6 +1333,11 @@ textarea.form-input::-webkit-resizer { display: none; }
  */
 
 @media (min-width: 580px) {
+
+  .info-content .titles-list {
+    flex-direction: row; /* Switch to horizontal layout */
+    justify-content: center; /* Center horizontally */
+  }
 
   /**
    * CUSTOM PROPERTY
@@ -1476,7 +1553,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .clients-list {
     gap: 50px;
     margin: 0 -30px;
-    padding: 45px;
     scroll-padding-inline: 45px;
   }
 
@@ -1550,6 +1626,11 @@ textarea.form-input::-webkit-resizer { display: none; }
  */
 
 @media (min-width: 768px) {
+
+  .info-content .titles-list {
+    flex-direction: row; /* Keep horizontal layout */
+    justify-content: space-between; /* Spread items */
+  }
 
   /**
    * REUSED STYLE
@@ -1650,6 +1731,12 @@ textarea.form-input::-webkit-resizer { display: none; }
  */
 
 @media (min-width: 1024px) {
+
+  .info-content .titles-list {
+
+    flex-direction: row; /* Keep horizontal layout */
+    justify-content: space-between; /* Spread items */
+  }
 
   /**
    * CUSTOM PROPERTY
@@ -1766,6 +1853,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 @media (min-width: 1250px) {
 
+  .info-content .titles-list {
+      flex-direction: column; /* Remain vertical */
+      align-items: center; /* Optionally center-align items */
+  }
+
   /**
    * RESET
    */
@@ -1836,6 +1928,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .sidebar-info { flex-direction: column; }
 
   .avatar-box img { width: 150px; }
+
 
   .info-content .name {
     white-space: nowrap;
