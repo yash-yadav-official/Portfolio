@@ -610,9 +610,27 @@
       <h2 class="h2 article-title">Blog</h2>
     </header>
     <section class="blog-posts">
+	        <ul class="filter-list">
+      <li class="filter-item">
+        <button class="active" data-filter-btn>All</button>
+      </li>
+      <li class="filter-item">
+        <button data-filter-btn>Machine Learning</button>
+      </li>
+      <li class="filter-item">
+        <button data-filter-btn>Data Science</button>
+      </li>
+      <li class="filter-item">
+        <button data-filter-btn>Web Development</button>
+      </li>
+      <li class="filter-item">
+        <button data-filter-btn>Design</button>
+      </li>
+    </ul>
+	    
       <ul class="blog-posts-list">
 
-        <li class="blog-post-item">
+        <li class="blog-post-item" data-filter-item data-category="Machine Learning">
           <a href="https://medium.com/@3sripathi/key-takeaways-from-the-shell-hackathon-for-cyber-threat-protection-060f841b697e">
             <figure class="blog-banner-box">
               <img src="./assets/images/blog-1.jpg" alt="cyberthreat" loading="lazy">
