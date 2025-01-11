@@ -1902,13 +1902,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-top: 20px;
 }
 
-.certifications-title {
-  color: var(--white-2);
-  font-size: var(--fs-2);
-  font-weight: var(--fw-600);
-  margin-bottom: 20px;
-  position: relative;
-}
+.certifications-title  { margin-bottom: 20px; }
 
 .certifications-title::after {
   content: "";
