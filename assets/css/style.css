@@ -1934,6 +1934,21 @@ textarea.form-input::-webkit-resizer { display: none; }
   text-decoration: none;
 }
 
+.blog-link {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+  transition: color var(--transition-1);
+}
+
+.blog-link:hover .highlight {
+  color: var(--vegas-gold);
+}
+
+.highlight {
+  font-weight: var(--fw-600);
+}
+
 
 
 
