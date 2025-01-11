@@ -1927,40 +1927,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   gap: 15px;
 }
 
-.certification-item {
-  display: flex;
-  align-items: center;
-  background: var(--border-gradient-onyx);
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
-  z-index: 1;
-  position: relative;
-}
-
-.certification-item:hover {
-  background: var(--bg-gradient-onyx);
-  box-shadow: var(--shadow-3);
-}
-
-.certification-item::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: var(--eerie-black-1);
-  border-radius: inherit;
-  z-index: 0; /* Change from -1 to 0 */
-}
-.certification-item .icon-box {
-  flex-shrink: 0;
-  margin-right: 20px;
-  font-size: 20px;
-  background: var(--bg-gradient-yellow-1);
-  color: var(--smoky-black);
-  box-shadow: var(--shadow-1);
-}
-
 .certification-info {
   flex-grow: 1;
 }
@@ -1983,10 +1949,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-size: var(--fs-7);
   font-weight: var(--fw-500);
   text-decoration: none;
-}
-
-.certification-info a:hover {
-  text-decoration: underline;
 }
 
 
