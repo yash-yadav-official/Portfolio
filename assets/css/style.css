@@ -1893,6 +1893,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
+strong {
+  color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-600);
+  background: var(--bg-gradient-yellow-1);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
 
 
   /**
