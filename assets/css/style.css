@@ -1898,7 +1898,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-weight: var(--fw-600);
   }
 
-	.certifications {
+.certifications {
   margin-top: 20px;
 }
 
@@ -1936,6 +1936,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
   z-index: 1;
+  position: relative;
 }
 
 .certification-item:hover {
@@ -1949,9 +1950,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   inset: 1px;
   background: var(--eerie-black-1);
   border-radius: inherit;
-  z-index: -1;
+  z-index: 0; /* Change from -1 to 0 */
 }
-
 .certification-item .icon-box {
   flex-shrink: 0;
   margin-right: 20px;
@@ -1988,6 +1988,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .certification-info a:hover {
   text-decoration: underline;
 }
+
 
 
 
