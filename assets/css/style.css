@@ -1904,17 +1904,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .certifications-title  { margin-bottom: 20px; }
 
-.certifications-title::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background: var(--text-gradient-yellow);
-  border-radius: 2px;
-}
-
 .certifications-list {
   display: flex;
   flex-direction: column;
