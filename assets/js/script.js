@@ -158,3 +158,25 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form[data-form]');
+  const popupModal = document.getElementById('popupModal');
+  const closePopup = document.getElementById('closePopup');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form submission
+    popupModal.style.display = 'block'; // Show the popup
+  });
+
+  closePopup.addEventListener('click', function () {
+    popupModal.style.display = 'none'; // Close the popup
+    form.submit(); // Submit the form after closing the popup
+  });
+
+  window.addEventListener('click', function (event) {
+    if (event.target == popupModal) {
+      popupModal.style.display = 'none'; // Close the popup if clicking outside
+      form.submit(); // Submit the form after closing the popup
+    }
+  });
+});
