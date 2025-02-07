@@ -786,6 +786,22 @@ main {
   box-shadow: var(--shadow-2);
 }
 
+.avatar-box {
+  background: var(--bg-gradient-onyx);
+  border-radius: 20px;
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  overflow: hidden; /* Ensure image doesn't spill outside container */
+}
+
+.avatar-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* Makes image cover the container */
+  object-position: center 0%; /* Move image up by positioning from top */
+}
+
 .modal-img-wrapper>img {
   display: none;
 }
@@ -1440,8 +1456,6 @@ ion-icon {
     /*min-width: calc(33.33% - 10px);*/
   }
 
-
-
   /**
    * #PORTFOLIO, BLOG
    */
@@ -1452,9 +1466,6 @@ ion-icon {
   }
 
 }
-
-
-
 
 
 /**
@@ -1482,8 +1493,6 @@ ion-icon {
     --fs-8: 12px;
 
   }
-
-
 
   /**
    * #REUSED STYLE
@@ -1544,11 +1553,18 @@ ion-icon {
   }
 
   .avatar-box {
-    border-radius: 30px;
+    background: var(--bg-gradient-onyx);
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden; /* Ensure image doesn't spill outside container */
   }
 
   .avatar-box img {
-    width: 120px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Makes image cover the container */
+    object-position: center 0%; /* Move image up by positioning from top */
   }
 
   .info-content .name {
@@ -2191,8 +2207,15 @@ ion-icon {
     flex-direction: column;
   }
 
+  .avatar-box {
+    width: 100%;
+    height: auto;
+  }
+
   .avatar-box img {
-    width: 150px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will make the image fill the container while maintaining aspect ratio */
   }
 
   .info-content .name {
