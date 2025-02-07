@@ -65,6 +65,7 @@
   --bittersweet-shimmer: #6CAE75;
   /*hsl(146, 63%, 37%);*/
   /*--bittersweet-shimmer: hsl(0, 43%, 51%);*/
+  --dark-green: hsl(146, 20%, 23%);
 
   /**
    * typography
@@ -567,7 +568,7 @@ main {
 
 
 /**
- * #service 
+ * #service
  */
 
 .service {
@@ -627,7 +628,7 @@ main {
 
 
 /**
- * #testimonials 
+ * #testimonials
  */
 
 .testimonials {
@@ -809,7 +810,7 @@ main {
 
 
 /**
- * #clients 
+ * #clients
  */
 
 .clients {
@@ -863,7 +864,7 @@ main {
 
 
 /**
- * education and experience 
+ * education and experience
  */
 
 .timeline {
@@ -954,7 +955,7 @@ main {
 }
 
 /**
- * skills 
+ * skills
  */
 
 .skills-title {
@@ -1004,8 +1005,9 @@ main {
   #PORTFOLIO
 \*-----------------------------------*/
 
+
 .filter-list {
-  display: none;
+  display: none; /* Hide buttons by default on mobile */
 }
 
 .filter-select-box {
@@ -1441,7 +1443,7 @@ ion-icon {
 
 
   /**
-   * #PORTFOLIO, BLOG 
+   * #PORTFOLIO, BLOG
    */
 
   .project-img,
@@ -1871,33 +1873,6 @@ ion-icon {
     padding-bottom: 20px;
   }
 
-  .filter-select-box {
-    display: none;
-  }
-
-  .filter-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    padding-left: 5px;
-    margin-bottom: 30px;
-  }
-
-  .filter-item button {
-    color: var(--light-gray);
-    font-size: var(--fs-5);
-    transition: var(--transition-1);
-  }
-
-  .filter-item button:hover {
-    color: var(--light-gray-70);
-  }
-
-  .filter-item button.active {
-    color: var(--orange-yellow-crayola);
-  }
-
   /* portfolio and blog grid */
 
   .project-list,
@@ -1936,6 +1911,78 @@ ion-icon {
    * CUSTOM PROPERTY
    */
 
+   .filter-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    padding: 0 5px;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  .filter-select-box {
+    display: none;
+  }
+
+
+  .filter-item {
+    flex: 1;
+    min-width: 0;
+    display: flex; /* Added to ensure button fills container */
+  }
+
+  .filter-item button {
+    color: var(--light-gray);
+    width: 100%;
+    padding: 8px 12px;
+    line-height: 1.2;
+    text-align: center;
+    border: 1px solid var(--onyx);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: var(--eerie-black-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Fluid typography */
+    font-size: clamp(10px, 1.5vw, 14px);
+    /* Allow line breaks only at whitespace */
+    white-space: pre-wrap; /* Changed from nowrap to pre-wrap */
+    word-break: keep-all; /* Prevent word breaks */
+    overflow-wrap: normal; /* Prevent word wrapping */
+    min-height: 44px;
+  }
+
+  .filter-item button:hover {
+    background: var(--onyx); /* Slightly lighter background on hover */
+  }
+
+  .filter-item button.active {
+    border: 1px solid var(--dark-green); /* Green border */
+    background: var(--dark-green); /* Same green for background */
+    color: var(--white-1); /* Keep text white */
+    font-weight: var(--fw-500); /* Make text bold */
+}
+
+.filter-item:first-child button {
+  border: 1px solid var(--onyx);
+  background: var(--onyx); /* Slightly different background */
+  font-weight: var(--fw-500); /* Make it a bit bolder */
+}
+
+.filter-item:first-child button:hover {
+  background: var(--eerie-black-2);
+  border-color: var(--light-gray-70); /* More visible border on hover */
+}
+
+.filter-item:first-child button.active {
+  border: 1px solid var(--dark-green);
+  background: var(--dark-green);
+  color: var(--white-1);
+}
+
+
   :root {
 
     /**
@@ -1963,7 +2010,7 @@ ion-icon {
 
 
   /**
-   * MAIN 
+   * MAIN
    */
 
   main {
