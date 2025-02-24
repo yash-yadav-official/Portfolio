@@ -411,7 +411,7 @@
         - #FOR FUN
       -->
 
-      <article class="fun" data-page="fun">
+      <article class="fun" data-page="for fun">
         <header>
           <h2 class="h2 article-title">For Fun</h2>
         </header>
@@ -515,6 +515,31 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <!-- Backup navigation script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Page navigation variables
+      const navigationLinks = document.querySelectorAll("[data-nav-link]");
+      const pages = document.querySelectorAll("[data-page]");
+
+      // Add 'active' class to clicked navigation link
+      for (let i = 0; i < navigationLinks.length; i++) {
+        navigationLinks[i].addEventListener("click", function() {
+          for (let j = 0; j < pages.length; j++) {
+            if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
+              pages[j].classList.add("active");
+              navigationLinks[i].classList.add("active");
+              window.scrollTo(0, 0);
+            } else {
+              pages[j].classList.remove("active");
+              navigationLinks[j].classList.remove("active");
+            }
+          }
+        });
+      }
+    });
+  </script>
   
   <!-- BibTeX Parser for Publications Page -->
   <script>
@@ -654,7 +679,47 @@
 
   <!-- Additional styles for publications and fun pages -->
   <style>
-    /* Publications page styles */
+    /* CV page styles */
+    .cv-container {
+      width: 100%;
+      height: 800px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: var(--border-gradient-onyx);
+    }
+    
+    .google-doc {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: white;
+    }
+    
+    .cv-download {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .cv-download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--orange-yellow-crayola);
+      color: var(--eerie-black-1);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+    
+    .cv-download-btn:hover {
+      background-color: var(--vegas-gold);
+    }
+    
+    /* For Fun page styles */
     .publications-container {
       display: flex;
       flex-direction: column;
