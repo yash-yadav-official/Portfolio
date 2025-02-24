@@ -46,7 +46,7 @@
         <div class="info-content">
           <h1 class="name" title="Bella Fascendini">Bella Fascendini</h1>
 
-          <p class="title">PhD Student</p>
+          <p class="title">PhD Candidate</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -101,7 +101,7 @@
 
           <li class="social-item">
             <a href="https://x.com/BellaFascendini" class="social-link" target="_blank">
-              <ion-icon name="logo-twitter"></ion-icon>
+              <img src="./assets/images/x.png" alt="X (Twitter)" style="width: 20px; height: 20px; margin-top: 2px;">
             </a>
           </li>
 
@@ -476,22 +476,125 @@
         </header>
 
         <section class="publications-section">
-          <h3 class="h3">Journal Articles & Book Chapters</h3>
+          <h3 class="h3">Journal Articles & Proceedings</h3>
           
           <div class="publications-container">
-            <pre id="bibtex-container" class="bibtex-container"></pre>
-            
-            <div class="publications-list" id="publications-list">
-              <!-- Publications will be dynamically generated from BibTeX -->
+            <div class="publications-list">
+              <div class="publication-item">
+                <p class="publication-authors">Yan, X., Fascendini, B., Tung, S., Chen, Y.D., Norcia, A.M., Grill-Spector, K. (2024)</p>
+                <p class="publication-title">When do category representations emerge in infants' brains?</p>
+                <p class="publication-journal"><em>eLife</em>, 13</p>
+                <div class="publication-links">
+                  <a href="https://doi.org/10.7554/eLife.100260.2" target="_blank" class="publication-link">DOI</a>
+                </div>
+              </div>
+
+              <div class="publication-item">
+                <p class="publication-authors">Fascendini, B., Ni, Q., Moll, H. (2023)</p>
+                <p class="publication-title">The relation between the development of counterfactual thinking and piagetian conservation</p>
+                <p class="publication-journal"><em>Proceedings of the 45th Annual Conference of the Cognitive Science Society</em>, Austin, TX: Cognitive Science Society</p>
+              </div>
+
+              <div class="publication-item">
+                <p class="publication-authors">Ni, Q., Fascendini, B., Shoyer, J., Moll, H. (2022)</p>
+                <p class="publication-title">No signs of automatic perspective-taking or its modulation by joint attention in toddlers using an object retrieval task</p>
+                <p class="publication-journal"><em>Royal Society Open Science</em>, 9(8), 220347</p>
+                <div class="publication-links">
+                  <a href="https://doi.org/10.1098/rsos.220347" target="_blank" class="publication-link">DOI</a>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="h3 mt-5">Manuscripts in Preparation/Under Review</h3>
+
+            <div class="publications-list">
+              <div class="publication-item">
+                <p class="publication-authors">Fascendini, B., Zhao, B., Vélez, N. (in prep)</p>
+                <p class="publication-title">Toddlers' intrinsic motivation to understand their own competence</p>
+              </div>
+
+              <div class="publication-item">
+                <p class="publication-authors">Ni, Q., Fascendini, B., Miao, L., Chen, J., Moll, H. (under review)</p>
+                <p class="publication-title">The role of experiential records in toddlers' false belief understanding</p>
+              </div>
+
+              <div class="publication-item">
+                <p class="publication-authors">Kubota, E., Yan, X., Tung, S., Fascendini, B., Tyagi, C., Duhameau, S., Ortiz, D., Grotheer, M., Natu, V., Keil, B., Grill-Spector, K. (submitted)</p>
+                <p class="publication-title">White matter connections of human ventral temporal cortex are organized by cytoarchitecture, eccentricity, and category-selectivity from birth</p>
+              </div>
             </div>
             
-            <div class="upload-container">
-              <h4 class="h4">Import Publications</h4>
-              <p>Paste your BibTeX entries below to automatically format your publications:</p>
-              <textarea id="bibtex-input" class="bibtex-input" placeholder="Paste BibTeX here..."></textarea>
-              <button id="parse-bibtex" class="form-btn">
-                <ion-icon name="document-text-outline"></ion-icon>
-                <span>Format Publications</span>
+            <div class="bibtex-section mt-5">
+              <h4 class="h4">BibTeX Format</h4>
+              <p>You can download the BibTeX entries for all publications:</p>
+              <div class="bibtex-container">
+<pre class="bibtex-content">@article{fascendini2024toddlers,
+  author = {Fascendini, Bella and Zhao, B. and Vélez, N.},
+  title = {Toddlers' intrinsic motivation to understand their own competence},
+  journal = {},
+  year = {2024},
+  volume = {},
+  number = {},
+  pages = {},
+  note = {in preparation}
+}
+
+@article{ni2024experiential,
+  author = {Ni, Q. and Fascendini, Bella and Miao, L. and Chen, J. and Moll, H.},
+  title = {The role of experiential records in toddlers' false belief understanding},
+  journal = {},
+  year = {2024},
+  volume = {},
+  number = {},
+  pages = {},
+  note = {under review}
+}
+
+@article{kubota2024white,
+  author = {Kubota, E. and Yan, X. and Tung, S. and Fascendini, Bella and Tyagi, C. and Duhameau, S. and Ortiz, D. and Grotheer, M. and Natu, V. and Keil, B. and Grill-Spector, K.},
+  title = {White matter connections of human ventral temporal cortex are organized by cytoarchitecture, eccentricity, and category-selectivity from birth},
+  journal = {},
+  year = {2024},
+  volume = {},
+  number = {},
+  pages = {},
+  note = {submitted}
+}
+
+@article{yan2024category,
+  author = {Yan, X. and Fascendini, Bella and Tung, S. and Chen, Y.D. and Norcia, A.M. and Grill-Spector, K.},
+  title = {When do category representations emerge in infants' brains?},
+  journal = {eLife},
+  year = {2024},
+  volume = {13},
+  number = {},
+  pages = {},
+  doi = {10.7554/eLife.100260.2}
+}
+
+@inproceedings{fascendini2023counterfactual,
+  author = {Fascendini, Bella and Ni, Q. and Moll, H.},
+  title = {The relation between the development of counterfactual thinking and piagetian conservation},
+  booktitle = {Proceedings of the 45th Annual Conference of the Cognitive Science Society},
+  year = {2023},
+  address = {Austin, TX},
+  publisher = {Cognitive Science Society}
+}
+
+@article{ni2022perspective,
+  author = {Ni, Q. and Fascendini, Bella and Shoyer, J. and Moll, H.},
+  title = {No signs of automatic perspective-taking or its modulation by joint attention in toddlers using an object retrieval task},
+  journal = {Royal Society Open Science},
+  year = {2022},
+  volume = {9},
+  number = {8},
+  pages = {220347},
+  doi = {10.1098/rsos.220347}
+}</pre>
+              </div>
+              <button id="copy-bibtex" class="form-btn mt-3">
+                <ion-icon name="copy-outline"></ion-icon>
+                <span>Copy BibTeX</span>
               </button>
             </div>
           </div>
@@ -620,6 +723,31 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <!-- BibTeX Copy Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyBibtexBtn = document.getElementById('copy-bibtex');
+      if (copyBibtexBtn) {
+        copyBibtexBtn.addEventListener('click', function() {
+          const bibtexContent = document.querySelector('.bibtex-content').innerText;
+          navigator.clipboard.writeText(bibtexContent)
+            .then(() => {
+              // Change button text temporarily
+              const originalText = copyBibtexBtn.querySelector('span').innerText;
+              copyBibtexBtn.querySelector('span').innerText = 'Copied!';
+              setTimeout(() => {
+                copyBibtexBtn.querySelector('span').innerText = originalText;
+              }, 2000);
+            })
+            .catch(err => {
+              console.error('Failed to copy BibTeX: ', err);
+              alert('Failed to copy BibTeX. Please try again or select and copy manually.');
+            });
+        });
+      }
+    });
+  </script>
   
   <!-- Backup navigation script -->
   <script>
@@ -784,6 +912,83 @@
 
   <!-- Additional styles for publications and fun pages -->
   <style>
+    /* Publication styles */
+    .publications-container {
+      padding: 1rem 0;
+    }
+    
+    .publications-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .publication-item {
+      padding: 1.2rem;
+      border-left: 3px solid var(--orange-yellow-crayola);
+      background-color: var(--border-gradient-onyx);
+      border-radius: 0 5px 5px 0;
+    }
+    
+    .publication-authors {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+    
+    .publication-title {
+      margin-bottom: 0.3rem;
+      color: var(--white-2);
+    }
+    
+    .publication-journal {
+      margin-bottom: 0.5rem;
+      color: var(--light-gray);
+    }
+    
+    .publication-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.8rem;
+    }
+    
+    .publication-link {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      background-color: var(--onyx);
+      color: var(--orange-yellow-crayola);
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: 0.25s ease;
+    }
+    
+    .publication-link:hover {
+      background-color: var(--jet);
+    }
+    
+    .bibtex-container {
+      padding: 1rem;
+      background-color: var(--eerie-black-2);
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    
+    .bibtex-content {
+      white-space: pre-wrap;
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--light-gray);
+    }
+    
+    .mt-3 {
+      margin-top: 0.75rem;
+    }
+    
+    .mt-5 {
+      margin-top: 2rem;
+    }
+    
     /* Skills section styles */
     .skills-container {
       display: grid;
