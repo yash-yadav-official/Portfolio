@@ -21,6 +21,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Inline style for Publications page text color -->
+  <style>
+    /* Ensure all text on the Publications page is white */
+    .publications,
+    .publications * {
+      color: #ffffff !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -101,7 +110,7 @@
 
           <li class="social-item">
             <a href="https://x.com/BellaFascendini" class="social-link" target="_blank">
-              <ion-icon name="logo-twitter"></ion-icon>
+              <img src="./assets/images/x.png" alt="X (Twitter)" style="width: 20px; height: 20px; margin-top: 2px;">
             </a>
           </li>
 
@@ -116,10 +125,6 @@
       </div>
 
     </aside>
-
-
-
-
 
     <!--
       - #main-content
@@ -159,10 +164,6 @@
 
       </nav>
 
-
-
-
-
       <!--
         - #ABOUT
       -->
@@ -190,10 +191,7 @@
           </p>
         </section>
 
-
-
       </article>
-
 
       <!--
         - #CV
@@ -461,11 +459,7 @@
 
       </article>
 
-
-
-
-
-          <!--
+      <!--
         - #PUBLICATIONS
       -->
 
@@ -476,29 +470,57 @@
         </header>
 
         <section class="publications-section">
-          <h3 class="h3">Journal Articles & Book Chapters</h3>
+          <h3 class="h3">Journal Articles & Proceedings</h3>
           
           <div class="publications-container">
-            <pre id="bibtex-container" class="bibtex-container"></pre>
-            
-            <div class="publications-list" id="publications-list">
-              <!-- Publications will be dynamically generated from BibTeX -->
+            <div class="publications-list">
+              <div class="publication-item">
+                <p class="publication-authors">Yan, X., Fascendini, B., Tung, S., Chen, Y.D., Norcia, A.M., Grill-Spector, K. (2024)</p>
+                <p class="publication-title">When do category representations emerge in infants' brains?</p>
+                <p class="publication-journal"><em>eLife</em>, 13</p>
+                <div class="publication-links">
+                  <a href="https://doi.org/10.7554/eLife.100260.2" target="_blank" class="publication-link">DOI</a>
+                </div>
+              </div>
+
+              <div class="publication-item">
+                <p class="publication-authors">Fascendini, B., Ni, Q., Moll, H. (2023)</p>
+                <p class="publication-title">The relation between the development of counterfactual thinking and piagetian conservation</p>
+                <p class="publication-journal"><em>Proceedings of the 45th Annual Conference of the Cognitive Science Society</em>, Austin, TX: Cognitive Science Society</p>
+              </div>
+
+              <div class="publication-item">
+                <p class="publication-authors">Ni, Q., Fascendini, B., Shoyer, J., Moll, H. (2022)</p>
+                <p class="publication-title">No signs of automatic perspective-taking or its modulation by joint attention in toddlers using an object retrieval task</p>
+                <p class="publication-journal"><em>Royal Society Open Science</em>, 9(8), 220347</p>
+                <div class="publication-links">
+                  <a href="https://doi.org/10.1098/rsos.220347" target="_blank" class="publication-link">DOI</a>
+                </div>
+              </div>
             </div>
-            
-            <div class="upload-container">
-              <h4 class="h4">Import Publications</h4>
-              <p>Paste your BibTeX entries below to automatically format your publications:</p>
-              <textarea id="bibtex-input" class="bibtex-input" placeholder="Paste BibTeX here..."></textarea>
-              <button id="parse-bibtex" class="form-btn">
-                <ion-icon name="document-text-outline"></ion-icon>
-                <span>Format Publications</span>
-              </button>
+
+            <h3 class="h3 mt-5">Manuscripts in Preparation/Under Review</h3>
+
+            <div class="publications-list">
+              <div class="publication-item">
+                <p class="publication-authors">Fascendini, B., Zhao, B., Vélez, N. (in prep)</p>
+                <p class="publication-title">Toddlers' intrinsic motivation to understand their own competence</p>
+              </div>
+
+              <div class="publication-item">
+                <p class="publication-authors">Ni, Q., Fascendini, B., Miao, L., Chen, J., Moll, H. (under review)</p>
+                <p class="publication-title">The role of experiential records in toddlers' false belief understanding</p>
+              </div>
+
+              <div class="publication-item">
+                <p class="publication-authors">Kubota, E., Yan, X., Tung, S., Fascendini, B., Tyagi, C., Duhameau, S., Ortiz, D., Grotheer, M., Natu, V., Keil, B., Grill-Spector, K. (submitted)</p>
+                <p class="publication-title">White matter connections of human ventral temporal cortex are organized by cytoarchitecture, eccentricity, and category-selectivity from birth</p>
+              </div>
             </div>
           </div>
         </section>
 
       </article>
-
 
       <!--
         - #FOR FUN
@@ -570,7 +592,6 @@
         </section>
       </article>
 
-
       <!--
         - #CONTACT
       -->
@@ -620,6 +641,31 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <!-- BibTeX Copy Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyBibtexBtn = document.getElementById('copy-bibtex');
+      if (copyBibtexBtn) {
+        copyBibtexBtn.addEventListener('click', function() {
+          const bibtexContent = document.querySelector('.bibtex-content').innerText;
+          navigator.clipboard.writeText(bibtexContent)
+            .then(() => {
+              // Change button text temporarily
+              const originalText = copyBibtexBtn.querySelector('span').innerText;
+              copyBibtexBtn.querySelector('span').innerText = 'Copied!';
+              setTimeout(() => {
+                copyBibtexBtn.querySelector('span').innerText = originalText;
+              }, 2000);
+            })
+            .catch(err => {
+              console.error('Failed to copy BibTeX: ', err);
+              alert('Failed to copy BibTeX. Please try again or select and copy manually.');
+            });
+        });
+      }
+    });
+  </script>
   
   <!-- Backup navigation script -->
   <script>
@@ -781,150 +827,23 @@
       }
     });
   </script>
-
+  
   <!-- Additional styles for publications and fun pages -->
   <style>
-    /* Skills section styles */
-    .skills-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      padding: 1.5rem;
-    }
-    
-    .skills-group {
-      margin-bottom: 1.5rem;
-    }
-    
-    .skills-group h4 {
-      margin-bottom: 0.8rem;
-      color: var(--orange-yellow-crayola);
-    }
-    
-    .skills-list-new {
-      list-style: none;
-    }
-    
-    .skills-list-new li {
-      position: relative;
-      padding-left: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: var(--light-gray);
-    }
-    
-    .skills-list-new li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--orange-yellow-crayola);
-    }
-    
-    /* Pet gallery styles */
-    .pet-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-bottom: 30px;
-    }
-    
-    .pet-row {
-      display: flex;
-      gap: 20px;
-      width: 100%;
-    }
-    
-    .pet-item {
-      flex: 1;
-      aspect-ratio: 1/1;
-      overflow: hidden;
-      border-radius: 8px;
-      border: 2px solid var(--jet);
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    }
-    
-    .pet-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    
-    .pet-item img:hover {
-      transform: scale(1.05);
-    }
-    
-    .adventure-text {
-      margin: 20px 0;
-      line-height: 1.6;
-      color: var(--light-gray);
-    }
-    
-    /* Responsive layout adjustments */
-    @media (max-width: 768px) {
-      .pet-row {
-        flex-direction: column;
-      }
-      
-      .pet-item {
-        margin-bottom: 15px;
-      }
-    }
-    
-    /* CV page styles */
-    .cv-container {
-      width: 100%;
-      height: 800px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      overflow: hidden;
-      background-color: var(--border-gradient-onyx);
-    }
-    
-    .google-doc {
-      width: 100%;
-      height: 100%;
-      border: none;
-      background-color: white;
-    }
-    
-    .cv-download {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-    }
-    
-    .cv-download-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background-color: var(--orange-yellow-crayola);
-      color: var(--eerie-black-1);
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 500;
-      transition: 0.3s ease;
-    }
-    
-    .cv-download-btn:hover {
-      background-color: var(--vegas-gold);
-    }
-    
-    /* For Fun page styles */
+    /* Publication styles */
     .publications-container {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+      padding: 1rem 0;
     }
     
     .publications-list {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      margin-bottom: 2rem;
     }
     
     .publication-item {
-      padding: 1rem;
+      padding: 1.2rem;
       border-left: 3px solid var(--orange-yellow-crayola);
       background-color: var(--border-gradient-onyx);
       border-radius: 0 5px 5px 0;
@@ -937,6 +856,7 @@
     
     .publication-title {
       margin-bottom: 0.3rem;
+      color: var(--white-2);
     }
     
     .publication-journal {
@@ -947,6 +867,7 @@
     .publication-links {
       display: flex;
       gap: 1rem;
+      margin-top: 0.8rem;
     }
     
     .publication-link {
@@ -963,69 +884,12 @@
       background-color: var(--jet);
     }
     
-    .bibtex-input {
-      width: 100%;
-      min-height: 150px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border: 1px solid var(--jet);
-      background-color: var(--eerie-black-1);
-      color: var(--light-gray);
-      border-radius: 5px;
-      font-family: monospace;
-      resize: vertical;
+    .mt-3 {
+      margin-top: 0.75rem;
     }
     
-    .upload-container {
+    .mt-5 {
       margin-top: 2rem;
-      padding: 1.5rem;
-      background-color: var(--border-gradient-onyx);
-      border-radius: 5px;
-    }
-    
-    /* For Fun page styles */
-    .pet-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
-    
-    .pet-row {
-      display: flex;
-      gap: 15px;
-      width: 100%;
-    }
-    
-    .pet-item {
-      flex: 1;
-      aspect-ratio: 1/1;
-      overflow: hidden;
-      border-radius: 5px;
-    }
-    
-    .pet-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    
-    .pet-item img:hover {
-      transform: scale(1.05);
-    }
-    
-    .adventure-text {
-      margin-top: 15px;
-      margin-bottom: 30px;
-      color: var(--light-gray);
-      line-height: 1.6;
-    }
-    
-    @media (max-width: 768px) {
-      .pet-row {
-        flex-direction: column;
-      }
     }
   </style>
 
