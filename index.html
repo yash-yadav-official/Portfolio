@@ -74,19 +74,7 @@
 
           </li>
 
-          <li class="contact-item">
 
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-            </div>
-
-          </li>
 
           <li class="contact-item">
 
@@ -110,19 +98,13 @@
 
           <li class="social-item">
             <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
             <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+              <ion-icon name="cloud-outline"></ion-icon>
             </a>
           </li>
 
@@ -155,11 +137,11 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link>CV</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link>Publications</button>
           </li>
 
           <li class="navbar-item">
@@ -209,13 +191,13 @@
 
 
       <!--
-        - #RESUME
+        - #CV
       -->
 
-      <article class="resume" data-page="resume">
+      <article class="cv" data-page="cv">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title">CV</h2>
         </header>
 
         <section class="timeline">
@@ -390,114 +372,36 @@
 
 
 
-      <!--
-        - #PORTFOLIO
+          <!--
+        - #PUBLICATIONS
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="publications" data-page="publications">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title">Publications</h2>
         </header>
 
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Publications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Presentations</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Projects</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Publications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Presentations</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Projects</button>
-              </li>
-
-            </ul>
-
+        <section class="publications-section">
+          <h3 class="h3">Journal Articles & Book Chapters</h3>
+          
+          <div class="publications-container">
+            <pre id="bibtex-container" class="bibtex-container"></pre>
+            
+            <div class="publications-list" id="publications-list">
+              <!-- Publications will be dynamically generated from BibTeX -->
+            </div>
+            
+            <div class="upload-container">
+              <h4 class="h4">Import Publications</h4>
+              <p>Paste your BibTeX entries below to automatically format your publications:</p>
+              <textarea id="bibtex-input" class="bibtex-input" placeholder="Paste BibTeX here..."></textarea>
+              <button id="parse-bibtex" class="form-btn">
+                <ion-icon name="document-text-outline"></ion-icon>
+                <span>Format Publications</span>
+              </button>
+            </div>
           </div>
-
-          <ul class="project-list">
-
-            <li class="project-item active" data-filter-item data-category="publications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="research paper" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Developmental Trajectories</h3>
-
-                <p class="project-category">Publications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="presentations">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="conference" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">SRCD 2023</h3>
-
-                <p class="project-category">Presentations</p>
-
-              </a>
-            </li>
-
-            <!-- Add more portfolio items as needed -->
-
-          </ul>
-
         </section>
 
       </article>
@@ -513,39 +417,51 @@
         </header>
 
         <section class="fun-content">
-          <h3 class="h3">Hobbies & Interests</h3>
+          <h3 class="h3">Furrends!</h3>
           
-          <div class="content-card">
-            <div class="fun-item">
-              <h4 class="h4">My Furry Friends</h4>
-              <p>
-                Meet my adorable pets! They're the best companions a researcher could ask for.
-              </p>
-              <figure class="fun-img">
-                <img src="./assets/images/pets.jpg" alt="My pets" loading="lazy">
-              </figure>
+          <div class="pet-gallery">
+            <div class="pet-row">
+              <div class="pet-item">
+                <img src="./assets/images/cat_woody_cuddle.png" alt="Cat and Woody cuddling" loading="lazy">
+              </div>
+              <div class="pet-item">
+                <img src="./assets/images/woody_belly.png" alt="Woody showing belly" loading="lazy">
+              </div>
+              <div class="pet-item">
+                <img src="./assets/images/puppy_beach.png" alt="Puppy at the beach" loading="lazy">
+              </div>
             </div>
-
-            <div class="fun-item">
-              <h4 class="h4">Camping Adventures</h4>
-              <p>
-                Some of my favorite camping spots and hiking trails from around the country.
-              </p>
-              <figure class="fun-img">
-                <img src="./assets/images/camping.jpg" alt="Camping" loading="lazy">
-              </figure>
+            
+            <div class="pet-row">
+              <div class="pet-item">
+                <img src="./assets/images/cat_selfie.png" alt="Cat selfie" loading="lazy">
+              </div>
+              <div class="pet-item">
+                <img src="./assets/images/kitty_chair.png" alt="Kitty on chair" loading="lazy">
+              </div>
+              <div class="pet-item">
+                <img src="./assets/images/dog_camping.jpg" alt="Dog camping" loading="lazy">
+              </div>
             </div>
-
-            <div class="fun-item">
-              <h4 class="h4">Podcast Highlights</h4>
-              <p>
-                Some of my favorite moments from co-hosting the Stanford Psychology Podcast.
-              </p>
-              <figure class="fun-img">
-                <img src="./assets/images/podcast.jpg" alt="Podcast" loading="lazy">
-              </figure>
+            
+            <div class="pet-row">
+              <div class="pet-item">
+                <img src="./assets/images/cat_woody_chair.jpg" alt="Cat and Woody on chair" loading="lazy">
+              </div>
+              <div class="pet-item">
+                <img src="./assets/images/dog_car.JPG" alt="Dog in car" loading="lazy">
+              </div>
+              <div class="pet-item">
+                <img src="./assets/images/bridge_puppy.JPG" alt="Puppy by bridge" loading="lazy">
+              </div>
             </div>
           </div>
+          
+          <h3 class="h3">Camping & Outdoor Adventures</h3>
+          <p class="adventure-text">
+            When I'm not in the lab, you'll find me exploring nature with my furry companions!
+            I love hiking, camping, and discovering new scenic spots.
+          </p>
         </section>
       </article>
 
@@ -599,6 +515,263 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <!-- BibTeX Parser for Publications Page -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const parseButton = document.getElementById('parse-bibtex');
+      if (parseButton) {
+        parseButton.addEventListener('click', function() {
+          parseBibtex();
+        });
+      }
+      
+      // Function to parse BibTeX and generate formatted citations
+      function parseBibtex() {
+        const bibtexInput = document.getElementById('bibtex-input').value;
+        if (!bibtexInput.trim()) {
+          alert('Please paste BibTeX entries first.');
+          return;
+        }
+        
+        const publicationsList = document.getElementById('publications-list');
+        publicationsList.innerHTML = '';
+        
+        // Very simple BibTeX parser - for a production site, consider using a proper BibTeX parser library
+        const entries = bibtexInput.split('@');
+        
+        entries.forEach(entry => {
+          if (!entry.trim()) return;
+          
+          const entryType = entry.substring(0, entry.indexOf('{')).trim().toLowerCase();
+          if (!entryType) return;
+          
+          const bibItem = document.createElement('div');
+          bibItem.className = 'publication-item';
+          
+          // Extract key fields (very simplified parsing)
+          const author = extractField(entry, 'author') || 'Unknown Author';
+          const title = extractField(entry, 'title') || 'Untitled';
+          const year = extractField(entry, 'year') || '';
+          const journal = extractField(entry, 'journal') || extractField(entry, 'booktitle') || '';
+          const volume = extractField(entry, 'volume') || '';
+          const number = extractField(entry, 'number') || '';
+          const pages = extractField(entry, 'pages') || '';
+          const doi = extractField(entry, 'doi') || '';
+          const url = extractField(entry, 'url') || '';
+          
+          // Format citation based on entry type
+          let citation = '';
+          
+          // Format authors (remove braces, split by 'and')
+          const formattedAuthors = formatAuthors(author);
+          
+          // Basic APA-like formatting
+          citation += `<p class="publication-authors">${formattedAuthors} (${year})</p>`;
+          citation += `<p class="publication-title">${cleanBibTeX(title)}</p>`;
+          
+          if (journal) {
+            citation += `<p class="publication-journal"><em>${cleanBibTeX(journal)}</em>`;
+            if (volume) citation += `, ${volume}`;
+            if (number) citation += `(${number})`;
+            if (pages) citation += `, ${pages}`;
+            citation += `</p>`;
+          }
+          
+          if (doi || url) {
+            citation += '<div class="publication-links">';
+            if (doi) {
+              citation += `<a href="https://doi.org/${doi}" target="_blank" class="publication-link">DOI</a>`;
+            }
+            if (url) {
+              citation += `<a href="${url}" target="_blank" class="publication-link">URL</a>`;
+            }
+            citation += '</div>';
+          }
+          
+          bibItem.innerHTML = citation;
+          publicationsList.appendChild(bibItem);
+        });
+        
+        // If no publications were added, show a message
+        if (publicationsList.children.length === 0) {
+          publicationsList.innerHTML = '<p>No valid BibTeX entries found. Please check your input format.</p>';
+        }
+      }
+      
+      // Helper function to extract a field from BibTeX entry
+      function extractField(entry, fieldName) {
+        const regex = new RegExp(fieldName + '\\s*=\\s*[{"]([^}"]*)["\\}]', 'i');
+        const match = entry.match(regex);
+        return match ? match[1] : null;
+      }
+      
+      // Format authors from BibTeX format to APA-like format
+      function formatAuthors(authors) {
+        if (!authors) return '';
+        
+        // Remove braces
+        authors = authors.replace(/{|}/g, '');
+        
+        // Split by 'and'
+        const authorList = authors.split(' and ');
+        
+        if (authorList.length > 3) {
+          // First author et al. format
+          const firstAuthor = formatAuthor(authorList[0]);
+          return `${firstAuthor} et al.`;
+        } else {
+          // Format each author
+          return authorList.map(author => formatAuthor(author)).join(', ');
+        }
+      }
+      
+      // Format individual author
+      function formatAuthor(author) {
+        // Handle last name, first name format
+        if (author.includes(',')) {
+          const [lastName, firstName] = author.split(',').map(s => s.trim());
+          return `${lastName}, ${firstName.charAt(0)}.`;
+        }
+        
+        // Handle first name last name format
+        const nameParts = author.trim().split(' ');
+        if (nameParts.length === 1) return nameParts[0];
+        
+        const lastName = nameParts.pop();
+        const initials = nameParts.map(name => `${name.charAt(0)}.`).join(' ');
+        
+        return `${lastName}, ${initials}`;
+      }
+      
+      // Clean BibTeX formatting (remove braces, etc.)
+      function cleanBibTeX(text) {
+        if (!text) return '';
+        return text.replace(/{|}/g, '');
+      }
+    });
+  </script>
+
+  <!-- Additional styles for publications and fun pages -->
+  <style>
+    /* Publications page styles */
+    .publications-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .publications-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .publication-item {
+      padding: 1rem;
+      border-left: 3px solid var(--orange-yellow-crayola);
+      background-color: var(--border-gradient-onyx);
+      border-radius: 0 5px 5px 0;
+    }
+    
+    .publication-authors {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+    
+    .publication-title {
+      margin-bottom: 0.3rem;
+    }
+    
+    .publication-journal {
+      margin-bottom: 0.5rem;
+      color: var(--light-gray);
+    }
+    
+    .publication-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .publication-link {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      background-color: var(--onyx);
+      color: var(--orange-yellow-crayola);
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: 0.25s ease;
+    }
+    
+    .publication-link:hover {
+      background-color: var(--jet);
+    }
+    
+    .bibtex-input {
+      width: 100%;
+      min-height: 150px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--jet);
+      background-color: var(--eerie-black-1);
+      color: var(--light-gray);
+      border-radius: 5px;
+      font-family: monospace;
+      resize: vertical;
+    }
+    
+    .upload-container {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background-color: var(--border-gradient-onyx);
+      border-radius: 5px;
+    }
+    
+    /* For Fun page styles */
+    .pet-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    
+    .pet-row {
+      display: flex;
+      gap: 15px;
+      width: 100%;
+    }
+    
+    .pet-item {
+      flex: 1;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+    
+    .pet-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .pet-item img:hover {
+      transform: scale(1.05);
+    }
+    
+    .adventure-text {
+      margin-top: 15px;
+      margin-bottom: 30px;
+      color: var(--light-gray);
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+      .pet-row {
+        flex-direction: column;
+      }
+    }
+  </style>
 
 </body>
 
