@@ -10,14 +10,10 @@
   <!-- Remove favicon or replace with empty favicon to prevent default logo -->
   <link rel="icon" href="data:," />
 
-  <!--
-    - custom css link
-  -->
+  <!-- custom css link -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!--
-    - google font link
-  -->
+  <!-- google font link -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -25,36 +21,36 @@
     rel="stylesheet"
   />
 
-  <!-- Inline style to ensure Publications page text is white -->
+  <!-- Inline styles -->
   <style>
+    /* Ensure Publications page text is white */
     .publications,
     .publications * {
       color: #ffffff !important;
+    }
+
+    /* Ensure links in the About section are white */
+    .about a {
+      color: #ffffff !important;
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
-  <!--
-    - #MAIN
-  -->
+  <!-- #MAIN -->
   <main>
-    <!--
-      - #SIDEBAR
-    -->
+    <!-- #SIDEBAR -->
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
         <figure class="avatar-box">
-          <img
-            src="./assets/images/portrait.jpg"
-            alt="Bella Fascendini"
-            width="80"
-          />
+          <img src="./assets/images/portrait.jpg" alt="Bella Fascendini" width="80" />
         </figure>
 
         <div class="info-content">
           <h1 class="name" title="Bella Fascendini">Bella Fascendini</h1>
           <p class="title">PhD Student</p>
+          <p class="affiliation">Princeton University</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -73,11 +69,7 @@
             </div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
-              <a
-                href="mailto:bfascendini@princeton.edu"
-                class="contact-link"
-                >bfascendini@princeton.edu</a
-              >
+              <a href="mailto:bfascendini@princeton.edu" class="contact-link">bfascendini@princeton.edu</a>
             </div>
           </li>
 
@@ -96,58 +88,30 @@
 
         <ul class="social-list">
           <li class="social-item">
-            <a
-              href="https://x.com/BellaFascendini"
-              class="social-link"
-              target="_blank"
-            >
-              <img
-                src="./assets/images/x.png"
-                alt="X (Twitter)"
-                style="width: 20px; height: 20px; margin-top: 2px;"
-              />
+            <a href="https://x.com/BellaFascendini" class="social-link" target="_blank">
+              <img src="./assets/images/x.png" alt="X (Twitter)" style="width: 20px; height: 20px; margin-top: 2px;">
             </a>
           </li>
 
           <li class="social-item">
-            <a
-              href="https://bsky.app/profile/bellafascendini.bsky.social"
-              class="social-link"
-              target="_blank"
-            >
-              <img
-                src="./assets/images/bsky.png"
-                alt="Bluesky"
-                style="width: 20px; height: 20px; margin-top: 2px;"
-              />
+            <a href="https://bsky.app/profile/bellafascendini.bsky.social" class="social-link" target="_blank">
+              <img src="./assets/images/bsky.png" alt="Bluesky" style="width: 20px; height: 20px; margin-top: 2px;">
             </a>
           </li>
 
-          <!-- New Google Scholar social link -->
+          <!-- Google Scholar Link -->
           <li class="social-item">
-            <a
-              href="https://scholar.google.com/citations?user=qYvdNGoAAAAJ&hl=en"
-              class="social-link"
-              target="_blank"
-            >
-              <img
-                src="https://scholar.google.com/favicon.ico"
-                alt="Google Scholar"
-                style="width: 20px; height: 20px; margin-top: 2px;"
-              />
+            <a href="https://scholar.google.com/citations?user=qYvdNGoAAAAJ&hl=en" class="social-link" target="_blank">
+              <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 20px; height: 20px; margin-top: 2px;">
             </a>
           </li>
         </ul>
       </div>
     </aside>
 
-    <!--
-      - #main-content
-    -->
+    <!-- #main-content -->
     <div class="main-content">
-      <!--
-        - #NAVBAR
-      -->
+      <!-- #NAVBAR -->
       <nav class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item">
@@ -168,9 +132,7 @@
         </ul>
       </nav>
 
-      <!--
-        - #ABOUT
-      -->
+      <!-- #ABOUT -->
       <article class="about active" data-page="about">
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -178,68 +140,48 @@
 
         <section class="about-text">
           <p>
-            Hello! My name is Bella Fascendini. I'm a PhD student at Princeton
-            University, working with <a href="https://velezlab.org" target="_blank">Prof. Natalia Vélez</a> in the Psychology Department.
-            I'm interested in studying how children reason and learn about themselves and the world around them. I'm particularly
-            interested in children's causal reasoning and learning, and how they use it to make sense of the world.
+            Hello! My name is Bella Fascendini. I'm a PhD student at Princeton University, working with
+            <a href="https://velezlab.org" target="_blank">Prof. Natalia Vélez</a> in the Psychology Department.
+            I'm interested in studying how children reason and learn about themselves and the world around them.
+            I'm particularly interested in children's causal reasoning and learning, and how they use it to make sense of the world.
           </p>
 
           <p>
-            Before joining Princeton, I worked with Prof. Kalanit Grill-Spector
-            at Stanford University, where I studied how infants' brains develop
-            in the first year of life. I also worked with Prof. Henrike Moll at
-            USC, where I studied children's theory of mind development and
-            causal reasoning. I received my BA in Psychology from Boston
-            University.
+            Before joining Princeton, I worked with Prof. Kalanit Grill-Spector at Stanford University, where I studied how infants' brains develop in the first year of life.
+            I also worked with Prof. Henrike Moll at USC, where I studied children's theory of mind development and causal reasoning.
+            I received my BA in Psychology from Boston University.
           </p>
 
           <p>
-            Outside of research, I enjoy spending time in nature (I LOVE
-            camping!), reading, doing soothing art projects and hanging out with
-            my furrends (check out their photos in "For Fun"!).
-            From 2021 to 2023, I also served as a co-host for the Stanford
-            Psychology Podcast - it was one of the coolest experiences I've ever
-            had! If you are interested, check it out <a href="https://open.spotify.com/show/1Gjst3RPtlLnOQoj3Kqb2M" target="_blank">here</a>!
+            Outside of research, I enjoy spending time in nature (I LOVE camping!), reading, doing soothing art projects and hanging out with my furrends (check out their photos in "For Fun"!).
+            From 2021 to 2023, I also served as a co-host for the Stanford Psychology Podcast - it was one of the coolest experiences I've ever had!
+            If you are interested, check it out <a href="https://open.spotify.com/show/1Gjst3RPtlLnOQoj3Kqb2M" target="_blank">here</a>!
           </p>
         </section>
       </article>
 
-      <!-- The rest of your code remains unchanged -->
+      <!-- The rest of your content remains unchanged -->
       <!-- ... -->
     </div>
   </main>
 
-  <!--
-    - custom js link
-  -->
+  <!-- custom js link -->
   <script src="./assets/js/script.js"></script>
 
-  <!--
-    - ionicon link
-  -->
-  <script
-    type="module"
-    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-  ></script>
+  <!-- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <!-- Backup navigation script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Page navigation variables
       const navigationLinks = document.querySelectorAll("[data-nav-link]");
       const pages = document.querySelectorAll("[data-page]");
 
-      // Add 'active' class to clicked navigation link
       for (let i = 0; i < navigationLinks.length; i++) {
         navigationLinks[i].addEventListener("click", function () {
           for (let j = 0; j < pages.length; j++) {
-            if (
-              this.innerHTML.toLowerCase() === pages[j].dataset.page
-            ) {
+            if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
               pages[j].classList.add("active");
               navigationLinks[i].classList.add("active");
               window.scrollTo(0, 0);
