@@ -504,6 +504,11 @@ main {
   line-height: 1.6;
 }
 
+/* Force inline display for links inside the about-text */
+.about-text a {
+  display: inline !important;
+}
+
 .about-text p { margin-bottom: 15px; }
 
 
@@ -1874,8 +1879,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-	 * RESUME
-	 */
+   * RESUME
+   */
 
   .timeline-text { max-width: 700px; }
 
