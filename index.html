@@ -1,210 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bella Fascendini - Personal Website</title>
-
-  <!-- Remove favicon or replace with empty favicon to prevent default logo -->
-  <link rel="icon" href="data:," />
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Inline style to ensure Publications page text is white -->
-  <style>
-    .publications,
-    .publications * {
-      color: #ffffff !important;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Fascendini - PhD Student at Princeton University</title>
+    <!-- Add Academicons for Google Scholar icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <!-- Assuming you have your other icon library already included for Twitter & Bluesky -->
+    <style>
+        /* Fix for hyperlinks to display inline */
+        a {
+            display: inline;
+            text-decoration: none;
+        }
+        
+        /* Ensure paragraph text flows normally */
+        p {
+            white-space: normal;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        /* Style for social icons */
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+        
+        /* Container styling */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
 </head>
-
 <body>
-  <!--
-    - #MAIN
-  -->
-  <main>
-    <!--
-      - #SIDEBAR
-    -->
-    <aside class="sidebar" data-sidebar>
-      <div class="sidebar-info">
-        <figure class="avatar-box">
-          <img
-            src="./assets/images/portrait.jpg"
-            alt="Bella Fascendini"
-            width="80"
-          />
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Bella Fascendini">Bella Fascendini</h1>
-          <p class="title">PhD Student</p>
-          <!-- Added Princeton University centered and in white -->
-          <p style="text-align: center; color: white;">Princeton University</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-      </div>
-
-      <div class="sidebar-info_more">
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a
-                href="mailto:bfascendini@princeton.edu"
-                class="contact-link"
-                >bfascendini@princeton.edu</a
-              >
-            </div>
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Princeton, New Jersey, USA</address>
-            </div>
-          </li>
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-          <li class="social-item">
-            <a
-              href="https://x.com/BellaFascendini"
-              class="social-link"
-              target="_blank"
-            >
-              <img
-                src="./assets/images/x.png"
-                alt="X (Twitter)"
-                style="width: 20px; height: 20px; margin-top: 2px;"
-              />
-            </a>
-          </li>
-          <li class="social-item">
-            <a
-              href="https://bsky.app/profile/bellafascendini.bsky.social"
-              class="social-link"
-              target="_blank"
-            >
-              <img
-                src="./assets/images/bsky.png"
-                alt="Bluesky"
-                style="width: 20px; height: 20px; margin-top: 2px;"
-              />
-            </a>
-          </li>
-          <!-- Added Google Scholar icon -->
-          <li class="social-item">
-            <a
-              href="https://scholar.google.com/citations?user=qYvdNGoAAAAJ&hl=en&oi=ao"
-              class="social-link"
-              target="_blank"
-            >
-              <img
-                src="./assets/images/google-scholar.png"
-                alt="Google Scholar"
-                style="width: 20px; height: 20px; margin-top: 2px;"
-              />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
-
-    <!--
-      - #main-content
-    -->
-    <div class="main-content">
-      <!--
-        - #NAVBAR
-      -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>CV</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Publications</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>For Fun</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-        </ul>
-      </nav>
-
-      <!--
-        - #ABOUT
-      -->
-      <article class="about active" data-page="about">
+    <div class="container">
         <header>
-          <h2 class="h2 article-title">About me</h2>
+            <h1>Bella Fascendini</h1>
+            <!-- Social icons section with fixed Google Scholar icon -->
+            <div class="social-icons">
+                <a href="https://twitter.com/your_handle" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                <a href="https://bsky.app/profile/your_handle" aria-label="Bluesky"><i class="icon-bluesky"></i></a>
+                <a href="https://scholar.google.com/citations?user=your_id" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+            </div>
         </header>
-
-        <section class="about-text">
-          <p>
-            Hello! My name is Bella Fascendini. I'm a PhD student at Princeton
-            University, working with 
-            <a href="http://velezlab.org" style="color: white; text-decoration: none;">Prof. Natalia Vélez</a>
-            in the Psychology Department. I'm interested in studying how children reason and learn
-            about themselves and the world around them. I'm particularly
-            interested in children's causal reasoning and learning, and how they
-            use it to make sense of the world.
-          </p>
-
-          <p>
-            Before joining Princeton, I worked with Prof. Kalanit Grill-Spector
-            at Stanford University, where I studied how infants' brains develop
-            in the first year of life. I also worked with Prof. Henrike Moll at
-            USC, where I studied children's theory of mind development and
-            causal reasoning. I received my BA in Psychology from Boston
-            University.
-          </p>
-
-          <p>
-            Outside of research, I enjoy spending time in nature (I LOVE
-            camping!), reading, doing soothing art projects and hanging out with
-            my furrends (check out their photos in "For Fun"!).
-            From 2021 to 2023, I also served as a co-host for the Stanford
-            Psychology Podcast - it was one of the coolest experiences I've ever
-            had! If you are interested, check it out 
-            <a href="https://open.spotify.com/show/1Gjst3RPtlLnOQoj3Kqb2M" style="color: white; text-decoration: none;">here</a>!
-          </p>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is Bella Fascendini. I'm a PhD student at Princeton University, working with 
+                <a href="https://scholar.princeton.edu/nvelez" target="_blank">Prof. Natalia Vélez</a>
+                in the Psychology Department. I'm interested in studying how children reason and learn about themselves and 
+                the world around them. I'm particularly interested in children's causal reasoning and learning, and how they use 
+                it to make sense of the world.
+            </p>
+            
+            <p>
+                Before joining Princeton, I worked with Prof. Kalanit Grill-Spector at Stanford University, where I studied how infants' 
+                brains develop in the first year of life. I also worked with Prof. Henrike Moll at USC, where I studied children's theory 
+                of mind development and causal reasoning. I received my BA in Psychology from Boston University.
+            </p>
+            
+            <p>
+                Outside of research, I enjoy spending time in nature (I LOVE camping!), reading, doing soothing art projects and 
+                hanging out with my furrends (check out their photos in "For Fun"!). From 2021 to 2023, I also served as a co-host 
+                for the Stanford Psychology Podcast - it was one of the coolest experiences I've ever had! If you are interested, 
+                <a href="https://podcast.stanford.edu" target="_blank">check it out here</a>!
+            </p>
         </section>
       </article>
 
