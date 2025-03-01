@@ -43,55 +43,30 @@
     </main>
 
     <script>
-      // Load sidebar
-      fetch("./assets/components/sidebar.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("sidebar-container").innerHTML = data;
-        });
-      // Load navbar
-      fetch("./assets/components/navbar.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("navbar-container").innerHTML = data;
-        });
-      // Load about page
-      fetch("./assets/components/aboutpage.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("about-container").innerHTML = data;
-        });
-      // Load resume page
-      fetch("./assets/components/resumepage.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("resume-container").innerHTML = data;
-        });
-      // Load portopolio page
-      fetch("./assets/components/portopoliopage.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("portopolio-container").innerHTML = data;
-        });
-      // Load blog page
-      fetch("./assets/components/blogpage.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("blog-container").innerHTML = data;
-        });
-      // Load contact page
-      fetch("./assets/components/contactpage.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("contact-container").innerHTML = data;
+      // Load all components
+      Promise.all([
+        fetch("/assets/components/sidebar.html").then(response => response.text()),
+        fetch("./assets/components/navbar.html").then(response => response.text()),
+        fetch("./assets/components/aboutpage.html").then(response => response.text()),
+        fetch("./assets/components/resumepage.html").then(response => response.text()),
+        fetch("./assets/components/portopoliopage.html").then(response => response.text()),
+        fetch("./assets/components/blogpage.html").then(response => response.text()),
+        fetch("./assets/components/contactpage.html").then(response => response.text())
+      ]).then(data => {
+        document.getElementById("sidebar-container").innerHTML = data[0];
+        document.getElementById("navbar-container").innerHTML = data[1];
+        document.getElementById("about-container").innerHTML = data[2];
+        document.getElementById("resume-container").innerHTML = data[3];
+        document.getElementById("portopolio-container").innerHTML = data[4];
+        document.getElementById("blog-container").innerHTML = data[5];
+        document.getElementById("contact-container").innerHTML = data[6];
 
-          // Load script.js after sidebar is loaded
-          const script = document.createElement("script");
-          script.src = "./assets/js/script.js";
-          document.body.appendChild(script);
-        });
+        // Load script.js after all components are loaded
+        const script = document.createElement("script");
+        script.src = "./assets/js/script.js";
+        document.body.appendChild(script);
+      });
     </script>
-    <!-- <script src="./assets/js/script.js"></script> -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
