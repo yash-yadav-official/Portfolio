@@ -42,7 +42,6 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
     testimonialsModalFunc();
 
   });
@@ -120,6 +119,8 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
+
+
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
@@ -134,6 +135,27 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+
+document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Evita o envio tradicional do formulário
+
+  // Captura os valores dos campos
+  let name = document.getElementById("fullname").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  // Formata a mensagem para o WhatsApp
+  let whatsappMessage = `Olá! Estou entrando em contato pelo seu site. Meu nome é ${name}%0AEmail: ${email}%0AMensagem: ${message}`;
+
+  // Substitua pelo seu número de WhatsApp (formato internacional, sem "+")
+  let phoneNumber = "559123456789"; // Exemplo: 55 (Brasil) + número
+
+  // Cria o link para o WhatsApp
+  let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+  // Redireciona para o WhatsApp
+  window.open(whatsappURL, "_blank");
+});
 
 
 // page navigation variables

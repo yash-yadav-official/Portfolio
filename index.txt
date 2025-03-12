@@ -2,39 +2,71 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Yan Cleiton
+Yan Cleiton
 Web developer
 
 Show Contacts
 
 Email
-richard@example.com
+yancleiton7@hotmail.com
 
 Phone
-+1 (213) 352-2795
+(71) 98525-1971
 
-Birthday
-June 23, 1982
+Nascimento
+10 Setembro 1997
 
 Location
-Sacramento, California, USA
+Salvador, Bahia, Brasil
 
 # navbar
 
-About
-Resume
+Sobre
+Curriculo
 Portfolio
-Blog
 Contact
 
 # about
 
-About me
+Sobre mim
 
-I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
+Com 4+ anos de experiência, desenvolvo soluções end-to-end em dados focadas em eficiência operacional e tomada de decisão ágil para obter impacto estratégico. Minha expertise inclui:
 
-My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.
+✅ Engenharia de Dados:
+
+Construção de pipelines ETL/ELT (Python, SQL)
+
+Automatização de processos de negocio (redução de 70% no tempo de entrega)
+
+Integração de dados de fontes externas (FTP, APIs externas, Bancos de Dados)
+
+✅ Analytics & Business Intelligence:
+
+Desenvolvimento de insights e métricas para compreensão do Negócio
+
+Tradução de KPIs em dashboards executivos (80% de adoção pelos gestores)
+
+Modelagem semântica com DAX/Power Query (+20 dashboards entregues)
+
+Análise de dados e Machine Learning (Clasificação , Regressão, Clusterização)
+
+✅ Governança & Colaboração:
+
+Monitoramento de qualidade dos dados e implementação de boas práticas para garantir sua confiabilidade e consistência
+
+Colaboração com stakeholders e áreas de negócio para entender necessidades e fornecer soluções analíticas
+
+Apoio a área de négocio em estudos analíticos e desevolvimento de novos projetos
+
+Cooperação com equipe de dados em resolução de problemas e no desenvolvimento de melhorias
+
+Últimos resultados:
+🔹 Automatização de relatórios com Python/Power BI (+20h/mês economizadas)
+🔹 Desenvolvimento de Dashboard que permitiu ações que melhoraram a performance operacional
+
+Tecnologias-chave:
+Power BI | DAX | Python | SQL | ETL/ELT | Data Modeling | KPIs | Data Visualization
 
 
 ## service
@@ -58,30 +90,15 @@ Photography
 I make high-quality photos of any category at a professional level.
 
 
-## testimonials
+## Depoimentos
 
-Testimonials
+Depoimentos
 
-alt = Daniel lewis
-Daniel lewis
-Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-
-alt = Jessica miller
-Jessica miller
-Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-
-alt = Emily evans
-Emily evans
-Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-
-alt = Henry william
-Henry william
-Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
 
 
 ## clients
 
-Clients
+Habilidades & Tecnologias
 
 alt = client logo
 
