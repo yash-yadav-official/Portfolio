@@ -53,6 +53,36 @@ modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
 
+// get projects by json
+document.addEventListener("DOMContentLoaded", () => {
+  const projectList = document.getElementById("project-list");
+
+  projectsData.forEach(project => {
+    const li = document.createElement("li");
+    li.className = "project-item active";
+    li.setAttribute("data-filter-item", "");
+    li.setAttribute("data-category", project.category);
+
+    li.innerHTML = `
+      <a href="${project.href}" target="_blank">
+        <figure class="project-img">
+          <div class="project-item-icon-box">
+            <ion-icon name="eye-outline"></ion-icon>
+          </div>
+          <img src="${project.image}" alt="${project.alt}" loading="lazy">
+        </figure>
+        <h3 class="project-title">${project.title}</h3>
+        <p class="project-category">${project.category_name}</p>
+      </a>
+    `;
+
+    projectList.appendChild(li);
+  });
+});
+
+
+
+
 
 // custom select variables
 const select = document.querySelector("[data-select]");
@@ -78,20 +108,17 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+  const filterItems = document.querySelectorAll("[data-filter-item]");
+  
+  filterItems.forEach(item => {
+    if (selectedValue === "all" || selectedValue === item.dataset.category) {
+      item.classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      item.classList.remove("active");
     }
+  });
+};
 
-  }
-
-}
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
