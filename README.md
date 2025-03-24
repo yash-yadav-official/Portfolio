@@ -1,45 +1,31 @@
-# vCard - Personal portfolio
+# Jose J Reyes Chairez - Personal Portfolio
+
 ![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Joserey21/vcard-personal-portfolio/badge)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/10247/badge)](https://bestpractices.coreinfrastructure.org/projects/10247)
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+This is my personal portfolio website, built using HTML, CSS, and JavaScript. It showcases my background, skills, and experience as a Software Engineering student.
 
-## Demo
+🖥️ **Live Site:** [joserey21.github.io/vcard-personal-portfolio](https://joserey21.github.io/vcard-personal-portfolio)
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+---
 
-## Prerequisites
+## 📌 About Me
 
-Before you begin, ensure you have met the following requirements:
+Hi! I'm Jose J Reyes Chairez. I work for AutoNation Toyota in Fort Myers as a Vehicle Acquisition Specialist.  
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+I'm currently pursuing a degree in Software Engineering and enjoy building creative, functional, and secure web experiences.
 
-## Installing vCard
+---
 
-To install **vCard**, follow these steps:
+## 🛠️ Tech Used
 
-Linux and macOS:
+- HTML
+- CSS
+- JavaScript
 
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
+---
 
-Windows:
+## 📬 Contact
 
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-## Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
-## License
-
-MIT
+- 📧 Email: Joserey@gmail.com  
+- 📍 Location: Fort Myers, FL, USA  
