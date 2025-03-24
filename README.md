@@ -1,44 +1,57 @@
-# vCard - Personal portfolio
+# Jose J Reyes Chairez - Personal Portfolio
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10247/badge)](https://www.bestpractices.dev/projects/10247)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Joserey21/vcard-personal-portfolio/badge)](https://securityscorecards.dev/viewer/?uri=github.com/Joserey21/vcard-personal-portfolio)
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+This is my personal portfolio website, built using HTML, CSS, and JavaScript. It showcases my background, skills, and experience as a Software Engineering student.
 
-## Demo
+🖥️ **Live Site:** [joserey21.github.io/vcard-personal-portfolio](https://joserey21.github.io/vcard-personal-portfolio)
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
 
-## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
+---
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+## 📌 About Me
 
-## Installing vCard
+Hi! I'm Jose J Reyes Chairez. I work for AutoNation Toyota in Fort Myers as a Vehicle Acquisition Specialist.  
 
-To install **vCard**, follow these steps:
+I'm currently pursuing a degree in Software Engineering and enjoy building creative, functional, and secure web experiences.
 
-Linux and macOS:
+---
 
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
+## 🛠️ Tech Used
 
-Windows:
+- HTML  
+- CSS  
+- JavaScript  
 
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
+---
 
-## Contact
+## 📬 Contact
 
-If you want to contact me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
+- 📧 **Email:** Joserey@gmail.com  
+- 📍 **Location:** Fort Myers, FL, USA  
 
-## License
+---
 
-MIT
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to contribute to this portfolio website, please fork the repository and submit a pull request.
+
+**Guidelines:**
+- Maintain consistent design with the current layout.
+- Use clean and readable HTML/CSS/JavaScript.
+- Submit meaningful changes that improve functionality or presentation.
+
+➡️ [Contribution Section in README](https://github.com/Joserey21/vcard-personal-portfolio/blob/master/README.md#-contributing)
+
+---
+
+## 📂 Reference Details
+
+This portfolio uses:
+- **HTML** for structure: `index.html`
+- **CSS** for styling: `assets/css/style.css`
+- **JavaScript** for interactivity: `assets/js/script.js`
+
+> Note: This is a static site with no dynamic input/output or backend logic.
