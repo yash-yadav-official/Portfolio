@@ -29,3 +29,13 @@ I'm currently pursuing a degree in Software Engineering and enjoy building creat
 
 - 📧 Email: Joserey@gmail.com  
 - 📍 Location: Fort Myers, FL, USA  
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to contribute to this portfolio website, please fork the repository and submit a pull request.
+
+Recommended guidelines:
+- Keep the design consistent with the current layout.
+- Use clean and readable HTML/CSS/JavaScript.
+- Add meaningful changes that enhance functionality or presentation.
+
+For more, visit: https://github.com/Joserey21/vcard-personal-portfolio/blob/master/README.md#-contributing
