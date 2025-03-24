@@ -25,7 +25,7 @@ I'm currently pursuing a degree in Software Engineering and enjoy building creat
 
 ---
 
-## 📬 Contact
+## 📬 Contact:
 
 - 📧 Email: Joserey@gmail.com  
 - 📍 Location: Fort Myers, FL, USA  
