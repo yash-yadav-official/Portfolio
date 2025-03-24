@@ -1,11 +1,11 @@
 # Jose J Reyes Chairez - Personal Portfolio
 
 [![OpenSSF Best Practices](https://bestpractices.dev/projects/10247/badge)](https://bestpractices.dev/projects/10247)
-![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Joserey21/vcard-personal-portfolio/badge)
 
 This is my personal portfolio website, built using HTML, CSS, and JavaScript. It showcases my background, skills, and experience as a Software Engineering student.
 
 🖥️ **Live Site:** [joserey21.github.io/vcard-personal-portfolio](https://joserey21.github.io/vcard-personal-portfolio)
+
 
 ---
 
