@@ -39,3 +39,12 @@ Recommended guidelines:
 - Add meaningful changes that enhance functionality or presentation.
 
 For more, visit: https://github.com/Joserey21/vcard-personal-portfolio/blob/master/README.md#-contributing
+## Reference Details
+
+This portfolio uses:
+- **HTML** for structure (index.html)
+- **CSS** for styling (assets/css/style.css)
+- **JavaScript** for interactivity (assets/js/script.js)
+
+There are no dynamic inputs/outputs — the site is static and client-side only.
+
