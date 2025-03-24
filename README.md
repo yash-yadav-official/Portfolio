@@ -1,4 +1,5 @@
 # Jose J Reyes Chairez - Personal Portfolio
+[![OpenSSF Best Practices](https://bestpractices.dev/projects/10247/badge)](https://bestpractices.dev/projects/10247)
 
 ![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Joserey21/vcard-personal-portfolio/badge)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/10247/badge)](https://bestpractices.coreinfrastructure.org/projects/10247)
