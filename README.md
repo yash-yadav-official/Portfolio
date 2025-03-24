@@ -1,5 +1,6 @@
 # vCard - Personal portfolio
-
+![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Joserey21/vcard-personal-portfolio/badge)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/10247/badge)](https://bestpractices.coreinfrastructure.org/projects/10247)
 ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
 ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
