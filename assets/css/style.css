@@ -555,6 +555,31 @@ main {
   line-height: 1.6;
 }
 
+.github { margin-bottom: 35px;}
+
+.github-title { margin-bottom: 20px;}
+
+.github-list { gap: 20px;}
+
+.github-item { 
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
+.github-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+
 
 /**
  * #testimonials 
