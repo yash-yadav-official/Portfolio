@@ -1880,3 +1880,15 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+
+.bullet-list {
+  list-style-type: disc !important;
+  padding-left: 10px;
+  
+}
+
+.bullet-list li {
+  list-style-type: disc !important;
+  display: list-item !important;
+}
