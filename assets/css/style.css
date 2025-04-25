@@ -315,7 +315,7 @@ main {
 \*-----------------------------------*/
 
 .sidebar {
-  margin-bottom: 15px;
+  margin-bottom: 100px;
   max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
@@ -328,12 +328,12 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  gap: 50px;
 }
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .info-content .name {
