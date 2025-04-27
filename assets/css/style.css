@@ -153,9 +153,15 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-poppins); }
+html { 
+	font-family: var(--ff-poppins); 
+	overflow-y: scroll;
+}
 
-body { background: var(--smoky-black); }
+body { 
+	background: var(--smoky-black); 
+	overflow-y: scroll;
+}
 
 
 
