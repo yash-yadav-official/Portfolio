@@ -2,8 +2,8 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Charles Benedict Ragasa
+Charles Benedict Ragasa
 Web developer
 
 Show Contacts
