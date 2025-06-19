@@ -14,6 +14,84 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const indicatorsContainer = document.querySelector('.carousel-indicators');
+    
+    let currentIndex = 0;
+    let slideInterval;
+    const slideCount = slides.length;
+    
+    // Create indicators
+    slides.forEach((_, index) => {
+      const indicator = document.createElement('span');
+      indicator.addEventListener('click', () => goToSlide(index));
+      indicatorsContainer.appendChild(indicator);
+    });
+    
+    const indicators = document.querySelectorAll('.carousel-indicators span');
+    
+    // Set up auto-slide
+    function startAutoSlide() {
+      slideInterval = setInterval(() => {
+        nextSlide();
+      }, 3000);
+    }
+    
+    function stopAutoSlide() {
+      clearInterval(slideInterval);
+    }
+    
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Update indicators
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentIndex);
+      });
+    }
+    
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateCarousel();
+    }
+    
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+      updateCarousel();
+    }
+    
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+    }
+    
+    // Event listeners
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    });
+    
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    });
+    
+    // Pause on hover
+    document.querySelector('.carousel-container').addEventListener('mouseenter', stopAutoSlide);
+    document.querySelector('.carousel-container').addEventListener('mouseleave', startAutoSlide);
+    
+    // Initialize
+    updateCarousel();
+    startAutoSlide();
+  });
+</script>
 
 
 // testimonials variables

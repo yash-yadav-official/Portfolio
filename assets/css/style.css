@@ -292,8 +292,24 @@ article.active {
   z-index: -1;
 }
 
+/* /* /Logo caption/
+<style>
+  .clients-item {
+    text-align: center;
+    margin: 10px;
+  }
 
+  .clients-item img {
+    width: 100px;
+    height: auto;
+  }
 
+  .logo-caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 50px;
+  }
+</style> */
 
 
 /*-----------------------------------*\
@@ -315,7 +331,7 @@ main {
 \*-----------------------------------*/
 
 .sidebar {
-  margin-bottom: 15px;
+  margin-bottom: 100px;
   max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
@@ -328,12 +344,12 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  gap: 50px;
 }
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .info-content .name {
@@ -488,6 +504,90 @@ main {
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
 
+<style>
+  .key-roles-carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .carousel-slide img {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+  }
+
+  .carousel-prev {
+    left: 1rem;
+  }
+
+  .carousel-next {
+    right: 1rem;
+  }
+
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .carousel-indicators span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .carousel-indicators span.active {
+    background: #333;
+  }
+
+  @media (min-width: 768px) {
+    .carousel-slide {
+      min-width: 50%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .carousel-slide {
+      min-width: 33.33%;
+    }
+  }
+</style> */
 
 
 
