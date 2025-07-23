@@ -49,12 +49,28 @@ function addMessage(type, text) {
 
 // 챗봇 초기화 함수
 function initializeChatbot() {
+  console.log('챗봇 초기화 시작');
   const chatInput = document.getElementById('chatInput');
+  console.log('챗봇 입력창 찾음:', chatInput);
+  
   if (chatInput) {
-    chatInput.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        sendMessage();
-      }
-    });
+    // 기존 이벤트 리스너 제거 (중복 방지)
+    chatInput.removeEventListener('keypress', handleEnterKey);
+    
+    // 새로운 이벤트 리스너 추가
+    chatInput.addEventListener('keypress', handleEnterKey);
+    console.log('엔터키 이벤트 리스너 추가됨');
+  } else {
+    console.error('챗봇 입력창을 찾을 수 없습니다!');
+  }
+}
+
+// 엔터키 처리 함수
+function handleEnterKey(e) {
+  console.log('키 입력 감지:', e.key);
+  if (e.key === 'Enter') {
+    console.log('엔터키 감지됨');
+    e.preventDefault(); // 기본 동작 방지
+    sendMessage();
   }
 } 
