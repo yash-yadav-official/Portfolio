@@ -1,49 +1,33 @@
-name: "🛠️  버그 이슈 생성"
-description: "✨ Repo에 새로운 이슈를 생성합니다."
-title: "[BUG] 📌 이슈 제목을 입력해주세요"
+name: "🐛 버그 이슈"
+description: "버그 이슈를 생성합니다."
+title: "[BUG] "
 labels:
   - bug
 body:
-
-  - type: input
+  - type: textarea
     id: description
     attributes:
-      label: "📄 이슈 개요 (Description)"
-      description: "이슈에 대한 간략한 설명을 작성해주세요."
+      label: "버그 설명"
+      description: "어떤 버그인지 설명해주세요."
     validations:
       required: true
 
   - type: textarea
-    id: details
+    id: steps
     attributes:
-      label: "📝 상세 내용 (Details)"
-      description: "이슈의 배경, 목표 및 필요한 추가 정보를 입력해주세요."
+      label: "재현 방법"
+      description: "버그를 재현하는 단계를 설명해주세요."
       value: |
-        - 이슈의 주요 목표:
-        - 예상되는 결과:
-        - 관련 정보:
+        1. 
+        2. 
+        3. 
     validations:
       required: true
 
   - type: textarea
-    id: tasks
+    id: expected
     attributes:
-      label: "✅ 체크리스트 (Tasks)"
-      description: "해당 이슈와 관련된 작업 목록을 작성해주세요."
-      value: |
-        - [ ] 작업 1
-        - [ ] 작업 2
-        - [ ] 작업 3
+      label: "예상 결과"
+      description: "정상적으로 작동했을 때의 결과를 설명해주세요."
     validations:
       required: true
-
-  - type: textarea
-    id: references
-    attributes:
-      label: "📚 관련 자료 (References)"
-      description: "이슈와 관련된 문서, 링크, 참고 자료 등을 기재해주세요."
-      value: |
-        - 📌 Reference 1: [링크 또는 설명]
-        - 📌 Reference 2: [링크 또는 설명]
-    validations:
-      required: false
