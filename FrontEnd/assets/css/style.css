@@ -1793,6 +1793,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   body::-webkit-scrollbar-button { height: 60px; }
 
+  /* 채팅 메시지 영역의 스크롤바 */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: var(--eerie-black-1);
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: var(--orange-yellow-crayola);
+  border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: var(--vegas-gold);
+}
+
 
 
   /**
@@ -1893,7 +1911,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   * CHATBOT
   */
 .chatbot-container {
-  background: var(--eerie-black-1);
+  background: var(--bg-gradient-yellow-2);
   padding: 20px;
   border-radius: 12px;
   margin-top: 20px;
@@ -1943,12 +1961,118 @@ textarea.form-input::-webkit-resizer { display: none; }
 .user-message {
   background: var(--onyx);
   margin-left: auto;
+  background-color: var(--orange-yellow-crayola);
+  color:  var(--eerie-black-2);
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 .bot-message {
   background: var(--eerie-black-2);
   margin-right: auto;
+  background-color: var(--orange-yellow-crayola);
+  color:  var(--eerie-black-2);
+  margin-right: auto;
+  margin-left: 10px;
 }
 
 
-/* chatbot */
+/* project modal */
+.project-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: var(--eerie-black-1);
+  margin: 5% auto;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 20px;
+  position: relative;
+  animation: modalFadeIn 0.3s;
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--light-gray-70);
+  z-index: 1;
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 30px;
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.project-details {
+  padding: 20px 0;
+}
+
+.project-description {
+  margin: 20px 0;
+}
+
+.project-tech ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.project-tech li {
+  background: var(--jet);
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: var(--fs-8);
+  color: var(--orange-yellow-crayola);
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.project-links .form-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-body {
+    grid-template-columns: 1fr;
+  }
+}

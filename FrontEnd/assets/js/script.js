@@ -135,29 +135,34 @@ for (let i = 0; i < formInputs.length; i++) {
 }
 
 
-
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
+navigationLinks.forEach((link, index) => {
+  link.addEventListener("click", function () {
+    const clickedPage = this.innerHTML.toLowerCase();
+    
+    pages.forEach(page => {
+      if (page.dataset.page === clickedPage) {
+        page.classList.add("active");
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        page.classList.remove("active");
       }
-    }
+    });
 
+    navigationLinks.forEach(navLink => {
+      if (navLink === this) {
+        navLink.classList.add("active");
+      } else {
+        navLink.classList.remove("active");
+      }
+    });
+
+    window.scrollTo(0, 0);
   });
-}
-
+});
 
 // Chatbot functionality
 async function sendMessage() {
@@ -210,5 +215,57 @@ function addMessage(type, text) {
 document.getElementById('chatInput').addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {
     sendMessage();
+  }
+});
+
+const projectData = {
+  'finance': {
+    title: 'Finance Project',
+    category: 'Web Development',
+    description: '프로젝트에 대한 상세한 설명을 여기에 작성합니다.',
+    image: './assets/images/project-1.jpg',
+    technologies: ['Spring', 'Java', 'MySQL', 'JPA'],
+    github: 'https://github.com/username/project',
+    demo: 'https://demo-link.com'
+  }
+  // 다른 프로젝트들도 같은 형식으로 추가
+};
+
+document.querySelectorAll('.project-item a').forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    const projectId = e.currentTarget.querySelector('.project-title').textContent.toLowerCase();
+    const project = projectData[projectId];
+    
+    if (project) {
+      document.getElementById('modalTitle').textContent = project.title;
+      document.getElementById('modalCategory').textContent = project.category;
+      document.getElementById('modalImage').src = project.image;
+      document.getElementById('modalDescription').textContent = project.description;
+      
+      const techList = document.getElementById('modalTechList');
+      techList.innerHTML = '';
+      project.technologies.forEach(tech => {
+        const li = document.createElement('li');
+        li.textContent = tech;
+        techList.appendChild(li);
+      });
+      
+      document.getElementById('modalGithub').href = project.github;
+      document.getElementById('modalDemo').href = project.demo;
+      
+      document.getElementById('projectModal').style.display = 'block';
+    }
+  });
+});
+
+document.querySelector('.close-modal').addEventListener('click', () => {
+  document.getElementById('projectModal').style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  const modal = document.getElementById('projectModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
   }
 });
