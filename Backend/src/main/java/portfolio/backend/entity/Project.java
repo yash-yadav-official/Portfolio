@@ -18,28 +18,28 @@ public class Project extends BaseEntity{
     private String title;
     
     @Column(nullable = false)
-    private String category;
+    private String category; //어떤 종류의 프로젝트인지
     
     @Column(columnDefinition = "TEXT")
     private String description;
     
-    @Column(name = "image_path")
+    @Column
     private String imagePath;
-    
-    @Column(name = "github_url")
+
+    @Column
     private String githubUrl;
     
-    @Column(name = "demo_url")
+    @Column
     private String demoUrl;
     
-    @Column(name = "technologies", columnDefinition = "TEXT")
+    @Column
     private String technologies;
 
-    @Column(name = "display_order")
+    @Column
     private Integer displayOrder;
     
-    @Column(name = "is_active")
-    private Boolean isActive = true;
+    @Column
+    private Boolean isActive = true; //현재 진행중인지 여부
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "profile_id", nullable = false)

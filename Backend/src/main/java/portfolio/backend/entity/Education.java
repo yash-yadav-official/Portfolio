@@ -17,13 +17,13 @@ public class Education extends BaseEntity {
     @Column(nullable = false)
     private String institution;
 
-    @Column(name = "start_date")
+    @Column
     private String startDate;
     
-    @Column(name = "end_date")
+    @Column
     private String endDate;
     
-    @Column(columnDefinition = "TEXT")
+    @Column
     private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)

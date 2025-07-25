@@ -25,7 +25,10 @@ public class Profile extends BaseEntity{
     
     @Column(nullable = false, unique = true)
     private String email;
-    
+
+    @Column
+    private String job;
+
     @Column
     private String githubUrl;
     
@@ -39,7 +42,7 @@ public class Profile extends BaseEntity{
     private String location;
     
     @Column
-    private String profileImage;
+    private String profileImagePath;
     
     @Column
     private String aboutText;
@@ -51,9 +54,9 @@ public class Profile extends BaseEntity{
     private List<Experience> experience = new ArrayList<>();
 
     @OneToMany(mappedBy = "profile", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<Education> project = new ArrayList<>();
+    private List<Project> project = new ArrayList<>();
 
     @OneToMany(mappedBy = "profile", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<Education> techStack = new ArrayList<>();
+    private List<TechStack> techStack = new ArrayList<>();
 
 } 
