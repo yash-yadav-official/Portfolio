@@ -489,6 +489,64 @@
 
   .timeline-text { max-width: 700px; }
 
+  /* Timeline responsive styles */
+  .timeline-item-header {
+    gap: 20px;
+  }
+
+  .timeline-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .timeline-icon ion-icon {
+    font-size: 24px;
+  }
+
+  .timeline-detail-content {
+    margin-left: 70px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+  }
+
+  /* Timeline mobile styles */
+  .timeline-item-header {
+    gap: 10px;
+  }
+
+  .timeline-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .timeline-icon ion-icon {
+    font-size: 16px;
+  }
+
+  .timeline-detail-content {
+    margin-left: 45px;
+  }
+
+  .timeline-detail-text {
+    padding: 15px;
+  }
+
+  .timeline-detail-text h5 {
+    font-size: var(--fs-6);
+  }
+
+  .timeline-detail-text p {
+    font-size: var(--fs-7);
+  }
+
+  .timeline-detail-list li {
+    font-size: var(--fs-7);
+  }
 }
 
 @media (max-width: 768px) {
