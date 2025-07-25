@@ -51,6 +51,6 @@ function initializeAllEventListeners() {
   initializeSidebar();
   initializeNavigation();
   initializeProjects();
-  initializeContact();
   initializeChatbot();
+  initializeAbout();
 } 
