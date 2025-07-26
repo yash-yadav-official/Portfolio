@@ -75,7 +75,7 @@ async function loadProfileData() {
 
         
         // Tech Stack 업데이트
-        updateTechStack(profileData.stack, profileData.description, profileData.path);
+        updateTechStack(profileData.techInfos);
         
         // 연락처 정보 업데이트
         updateContactInfo(profileData);
@@ -85,11 +85,9 @@ async function loadProfileData() {
 
 
         // Tech Stack 섹션을 동적으로 업데이트하는 함수
-        function updateTechStack(stackList, descriptionList, pathList) {
+        function updateTechStack(techInfos) {
             console.log('updateTechStack 호출됨');
-            console.log('stackList:', stackList);
-            console.log('descriptionList:', descriptionList);
-            console.log('pathList:', pathList);
+            console.log('techInfos:', techInfos);
             
             const serviceList = document.querySelector('.service-list');
             if (!serviceList) {
@@ -100,10 +98,11 @@ async function loadProfileData() {
             // 기존 내용을 비우고 새로운 내용으로 교체
             serviceList.innerHTML = '';
             
-            if (stackList && stackList.length > 0) {
-                stackList.forEach((stack, index) => {
-                    const description = descriptionList && descriptionList[index] ? descriptionList[index] : '';
-                    const iconPath = pathList && pathList[index] ? pathList[index] : './assets/images/icon-design.svg';
+            if (techInfos && techInfos.length > 0) {
+                techInfos.forEach((techInfo, index) => {
+                    const stack = techInfo.stack || '';
+                    const description = techInfo.description || '';
+                    const iconPath = techInfo.icon_path || './assets/images/icon-design.svg';
                     
                     console.log(`인덱스 ${index}: stack="${stack}", description="${description}", iconPath="${iconPath}"`);
                     

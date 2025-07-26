@@ -2,7 +2,7 @@ package portfolio.backend.dto;
 
 import lombok.Builder;
 import lombok.Getter;
-import portfolio.backend.entity.TechStack;
+import portfolio.backend.service.ProfileService;
 
 import java.util.List;
 
@@ -16,9 +16,7 @@ public class ProfileResponse {
     String location;
     String birthday;
     String introduction;
-    List<String> stack; //기술 스택
-    List<String> description;
-    List<String> path;
+    List<ProfileService.TechInfo> techInfos;
     String job_type;
     String title;
     String profile_path;
