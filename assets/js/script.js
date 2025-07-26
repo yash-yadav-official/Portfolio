@@ -15,6 +15,13 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
+// updating toggle logo button functionality (for mobile view)
+const icon = document.getElementById("toggleIcon");
+
+icon.addEventListener("click", () => {
+  const currentIcon = icon.getAttribute("name");
+  icon.setAttribute("name", currentIcon === "chevron-down" ? "chevron-up" : "chevron-down");
+})
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
