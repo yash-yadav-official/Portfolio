@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/tech-stacks")
 @RequiredArgsConstructor
-public class TechStackController {
-    
-
+public class TimelineController {
 
 } 
