@@ -1,6 +1,8 @@
 package portfolio.backend.service;
 
 import jakarta.transaction.Transactional;
+import lombok.Builder;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import portfolio.backend.dto.ProfileResponse;
@@ -23,14 +25,19 @@ public class ProfileService {
     public ProfileResponse getProfile() {
         Profile profile = profileRepository.findByName("권하림");
         List<TechStack> techStacks = techStackRepository.findByProfileId(profile.getId());
-        List<String> stacks = new ArrayList<>();
-        List<String> descriptions = new ArrayList<>();
-        List<String> paths = new ArrayList<>();
-        for (TechStack techstack : techStacks) {
-            stacks.add(techstack.getTech());
-            descriptions.add(techstack.getDescription());
-            paths.add(techstack.getIconPath());
-        }
+        List<TechInfo> techInfos = techStacks.stream()
+                .map(techStack -> TechInfo.builder()
+                        .stack(techStack.getTech())
+                        .description(techStack.getDescription())
+                        .icon_path(techStack.getIconPath())
+                        .build())
+                .toList();
+
+
+
+
+
+
 
         return ProfileResponse.builder()
                 .name(profile.getName())
@@ -39,13 +46,20 @@ public class ProfileService {
                 .introduction(profile.getAboutText())
                 .job_type(profile.getJob())
                 .location(profile.getLocation())
-                .stack(stacks)
-                .description(descriptions)
-                .path(paths)
                 .title(profile.getTitle())
                 .birthday(profile.getBirthDate())
+                .techInfos(techInfos)
                 .github_username(profile.getGithubUsername())
                 .profile_path(profile.getProfileImagePath())
                 .build();
+    }
+
+
+    @Builder
+    @Getter
+    public static class TechInfo {
+        String stack;
+        String description;
+        String icon_path;
     }
 }

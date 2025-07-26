@@ -81,10 +81,10 @@
             try {
                 const response = await fetch(`${API_BASE_URL}/about/KwonHalim`);
                 const data = await response.json();
-                const profileData = data.data;
+                const profileData = data.result;
                 
                 // 데이터 구조 확인
-                const expectedFields = ['name', 'job_type', 'title', 'introduction', 'stack', 'description'];
+                const expectedFields = ['name', 'job_type', 'title', 'introduction', 'techInfos'];
                 const missingFields = expectedFields.filter(field => !profileData[field]);
                 
                 if (missingFields.length === 0) {
@@ -97,8 +97,11 @@
                             <li>job_type: ${profileData.job_type}</li>
                             <li>title: ${profileData.title}</li>
                             <li>introduction: ${profileData.introduction}</li>
-                            <li>stack: ${profileData.stack.join(', ')}</li>
-                            <li>description: ${profileData.description.join(', ')}</li>
+                            <li>techInfos: ${profileData.techInfos.length}개 항목</li>
+                        </ul>
+                        <h4>Tech Stack 정보:</h4>
+                        <ul>
+                            ${profileData.techInfos.map(tech => `<li>${tech.stack}: ${tech.description}</li>`).join('')}
                         </ul>
                     `;
                 } else {
