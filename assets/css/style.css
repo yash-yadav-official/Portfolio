@@ -504,7 +504,10 @@ main {
   line-height: 1.6;
 }
 
-.about-text p { margin-bottom: 15px; }
+.about-text p { 
+  
+  margin-bottom: 15px; }
+
 
 
 
@@ -560,11 +563,11 @@ main {
  * #testimonials 
  */
 
-.testimonials { margin-bottom: 30px; }
+.Reviews-avatar-box { margin-bottom: 30px; }
 
-.testimonials-title { margin-bottom: 20px; }
+.Reviews-title { margin-bottom: 20px; }
 
-.testimonials-list {
+.-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -578,12 +581,12 @@ main {
   scroll-snap-type: inline mandatory;
 }
 
-.testimonials-item {
+.Reviews-item {
   min-width: 100%;
   scroll-snap-align: center;
 }
 
-.testimonials-avatar-box {
+.Reviews-avatar-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -593,9 +596,9 @@ main {
   box-shadow: var(--shadow-1);
 }
 
-.testimonials-item-title { margin-bottom: 7px; }
+.Reviews-item-title { margin-bottom: 7px; }
 
-.testimonials-text {
+.Reviews-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
@@ -655,7 +658,7 @@ main {
   pointer-events: all;
 }
 
-.testimonials-modal {
+.Reviews-modal {
   background: var(--eerie-black-2);
   position: relative;
   padding: 15px;
@@ -766,10 +769,28 @@ main {
 
 .article-title { margin-bottom: 30px; }
 
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #4e73df;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #2e59d9;
+}
+
 
 /**
  * education and experience 
  */
+
 
 .timeline { margin-bottom: 30px; }
 
@@ -1030,89 +1051,7 @@ main {
 
 
 
-/*-----------------------------------*\
-  #BLOG
-\*-----------------------------------*/
 
-.blog-posts { margin-bottom: 10px; }
-
-.blog-posts-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.blog-post-item > a {
-  position: relative;
-  background: var(--border-gradient-onyx);
-  height: 100%;
-  box-shadow: var(--shadow-4);
-  border-radius: 16px;
-  z-index: 1;
-}
-
-.blog-post-item > a::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: var(--eerie-black-1);
-  z-index: -1;
-}
-
-.blog-banner-box {
-  width: 100%;
-  height: 200px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.blog-banner-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition-1);
-}
-
-.blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); }
-
-.blog-content { padding: 15px; }
-
-.blog-meta {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 7px;
-  margin-bottom: 10px;
-}
-
-.blog-meta :is(.blog-category, time) {
-  color: var(--light-gray-70);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
-}
-
-.blog-meta .dot {
-  background: var(--light-gray-70);
-  width: 4px;
-  height: 4px;
-  border-radius: 4px;
-}
-
-.blog-item-title {
-  margin-bottom: 10px;
-  line-height: 1.3;
-  transition: var(--transition-1);
-}
-
-.blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
-
-.blog-text {
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
-  line-height: 1.6;
-}
 
 
 
@@ -1408,9 +1347,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* testimonials */
 
-  .testimonials-title { margin-bottom: 25px; }
+  .Reviews-title { margin-bottom: 25px; }
 
-  .testimonials-list {
+  .Reviews-list {
     gap: 30px;
     margin: 0 -30px;
     padding: 30px;
@@ -1422,28 +1361,28 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding-top: 25px;
   }
 
-  .testimonials-avatar-box {
+  .Reviews-avatar-box {
     transform: translate(30px, -30px);
     border-radius: 20px;
   }
 
-  .testimonials-avatar-box img { width: 80px; }
+  .Reviews-avatar-box img { width: 80px; }
 
-  .testimonials-item-title {
+  .Reviews-item-title {
     margin-bottom: 10px;
     margin-left: 95px;
   }
 
-  .testimonials-text {
+  .Reviews-text {
     line-clamp: 2;
     -webkit-line-clamp: 2;
   }
 
-  /* testimonials modal */
+ 
 
   .modal-container { padding: 20px; }
 
-  .testimonials-modal {
+  .Reviews-modal {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
