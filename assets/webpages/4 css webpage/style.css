@@ -1,0 +1,618 @@
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+section {
+    scroll-margin-top: 60px; /* Height of your nav */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Fixed Sticky Navigation */
+nav {
+    background-color: lightgreen;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.child1 {
+    display: inline-block;
+}
+
+.child2 {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+/* Hero Image Section */
+#HOME {
+    position: relative;
+}
+
+#image1 img {
+    width: 100%;
+    display: block;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.image-text h1 {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.text-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px 16px;
+    color: white;
+}
+
+.rest-text {
+    color: red;
+    font-weight: normal;
+    letter-spacing: normal;
+}
+
+/* Projects Section */
+.projects-section {
+    width: 100%;
+    background-color: white;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.projects-section h1 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Image Grid Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.image-card {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-card img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.03);
+}
+
+.image-card p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 13px;
+    margin: 0;
+    font-size: 13px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+/* About Section */
+.About-section {
+    width: 100%;
+    background-color: white;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Team Member Cards */
+.container div {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.container h3 {
+    color: red;
+    margin: 8px 0;
+}
+
+.container p {
+    margin: 8px 0;
+}
+
+.container button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+    align-self: center;
+}
+
+.container button:hover {
+    background-color: lightslategray;
+}
+/* Contact Section */
+.contact-section {
+    padding: 20px;
+    background-color: white;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Add border to the form */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: 15px;
+    border-radius: 3px;
+    transition: border 0.2s ease;
+    background-color: white;
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #555;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    width: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+    margin-top: 5px;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
+
+/* Map Image */
+#image1.map {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .image-text h1 {
+        font-size: 30px;
+    }
+    
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .child1, .child2 {
+        display: block;
+        position: static;
+        text-align: center;
+    }
+    
+    .child2 {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-card img {
+        height: 300px;
+    }/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Fixed Sticky Navigation */
+nav {
+    background-color: lightgreen;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.child1 {
+    display: inline-block;
+}
+
+.child2 {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+/* Hero Image Section */
+#HOME {
+    position: relative;
+}
+
+#image1 img {
+    width: 100%;
+    display: block;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.image-text h1 {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.text-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px 16px;
+    color: white;
+}
+
+.rest-text {
+    color: red;
+    font-weight: normal;
+    letter-spacing: normal;
+}
+
+/* Projects Section */
+.projects-section {
+    width: 100%;
+    background-color: white;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.projects-section h1 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Image Grid Container */
+.container {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 12px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.image-card {
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-card img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.03);
+}
+
+.image-card p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 13px;
+    margin: 0;
+    font-size: 13px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+/* About Section */
+.About-section {
+    padding: 20px;
+    background-color: white;
+}
+
+/* Team Member Cards */
+.container.team {
+    border: 2px solid black;
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.container.team div {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.container.team img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.container.team h3 {
+    color: red;
+    margin: 8px 0;
+}
+
+.container.team p {
+    margin: 8px 0;
+}
+
+.container.team button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+    align-self: center;
+}
+
+.container.team button:hover {
+    background-color: lightslategray;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 5px;
+    background-color: white;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: #f5f5f5;
+    padding: 0px;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: 15px;
+    border-radius: 3px;
+    transition: border 0.2s ease;
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #555;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 160px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+    margin-top: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
+
+/* Map Image */
+#image1.map {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .image-text h1 {
+        font-size: 30px;
+    }
+    
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .child1, .child2 {
+        display: block;
+        position: static;
+        text-align: center;
+    }
+    
+    .child2 {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-card img {
+        height: 300px;
+    }
+}
+}
