@@ -1884,22 +1884,22 @@ textarea.form-input::-webkit-resizer { display: none; }
   * Copyright
   */
 
-  .anchor {
-    /* anchor-name: --footer-anchor; */
+  /* .anchor {
+    anchor-name: --footer-anchor;
     text-align: right;
     justify-content: center;
-    /* width:  */
+    width: 
   }
 
   footer {
   background-color: var(--bg-color);
   color: var(--text-color);
   text-align: calc(anchor-size(justify-content) * 300);
-  /* padding: 0.5rem 20; */
+  padding: 0.5rem 20;
   font-size: 1.5rem;
 }
 
 .footer small {
   color: var(--main-color);
-}
+} */
 }
