@@ -2,8 +2,8 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Waleed Ahmad
+Waleed Ahmad
 Web developer
 
 Show Contacts
