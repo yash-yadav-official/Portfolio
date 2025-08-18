@@ -6,13 +6,12 @@
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 
+// // sidebar variables
+// const sidebar = document.querySelector("[data-sidebar]");
+// const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+// // sidebar toggle functionality for mobile
+// sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
 
@@ -136,6 +135,8 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
+
+
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
@@ -156,4 +157,40 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+}
+
+
+
+
+
+
+//Added later on - Hide the show contacts button when the screen size is less than 1250px, 
+// instead added contacts to expand when the user hovers over the profile card which seems much better.
+
+
+
+
+const elementAddFunc = function (elem) { elem.classList.add("active"); }
+const elementRemoveFunc = function (elem) { elem.classList.remove("active"); }
+
+
+const _sidebar = document.querySelector("[data-sidebar]");
+var sidebarInfo = document.querySelectorAll(".sidebar-info");
+for(let i=0;i<sidebarInfo.length;i++){
+  sidebarInfo[i].addEventListener("mouseover",function(){
+    console.log("mouseover");
+    //To make sure the side screen got active when it is horizontally aligned
+    if(window.innerWidth<=1250){
+      elementAddFunc(_sidebar);
+    }
+  })
+
+  sidebarInfo[i].addEventListener("mouseout",function(){
+    console.log("mouseout");
+
+    //To make sure the side screen got active when it is horizontally aligned
+    if(window.innerWidth<=1250){
+      elementRemoveFunc(_sidebar);
+    }
+  })
 }
