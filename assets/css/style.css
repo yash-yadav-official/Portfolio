@@ -129,6 +129,7 @@ a { text-decoration: none; }
 
 li { list-style: none; }
 
+
 img, ion-icon, a, button, time, span { display: block; }
 
 button {
@@ -291,6 +292,16 @@ article.active {
   border-radius: inherit;
   z-index: -1;
 }
+
+
+.resume-text {
+  color: orange;
+  font-size: var(--fs-11);
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
 
 
 
@@ -828,6 +839,7 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
+
 
 
 /**
@@ -1497,6 +1509,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 8px;
     left: -43px;
   }
+
 
   .skills-item:not(:last-child) { margin-bottom: 25px; }
 

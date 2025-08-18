@@ -2,23 +2,23 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
-Web developer
+alt = Priyal Padheriya
+Priyal Padheriya
+Aspiring Product Manager
 
 Show Contacts
 
 Email
-richard@example.com
+priyalp2302@gmail.com
 
 Phone
-+1 (213) 352-2795
++1 (520) 328-4210
 
 Birthday
-June 23, 1982
+February 23, 2000
 
 Location
-Sacramento, California, USA
+Tempe, Arizona, USA
 
 # navbar
 
