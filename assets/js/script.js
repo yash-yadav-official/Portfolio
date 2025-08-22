@@ -58,7 +58,7 @@ overlay.addEventListener("click", testimonialsModalFunc);
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () { elementToggleFunc(this); });
@@ -77,12 +77,14 @@ for (let i = 0; i < selectItems.length; i++) {
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
+// checking what is selected value
+console.log(selectValue);
 
 const filterFunc = function (selectedValue) {
 
   for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
+    
+    if (selectedValue === "all games") {
       filterItems[i].classList.add("active");
     } else if (selectedValue === filterItems[i].dataset.category) {
       filterItems[i].classList.add("active");
