@@ -75,11 +75,13 @@ for (let i = 0; i < selectItems.length; i++) {
   });
 }
 
+// FOR PORTFOLIO PROJECT CATEGORIES
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 // checking what is selected value
 console.log(selectValue);
 
+// loop through list of all projects and filter by category
 const filterFunc = function (selectedValue) {
 
   for (let i = 0; i < filterItems.length; i++) {
