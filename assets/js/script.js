@@ -54,14 +54,17 @@ modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
 
-
+// PORTFOLIO RELATED
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
+// header buttons
 const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
+// Click events
 select.addEventListener("click", function () { elementToggleFunc(this); });
+
 
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
@@ -116,6 +119,11 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 
 }
+
+// open links in new tab: https://developer.mozilla.org/en-US/docs/Web/API/Window/open
+// unnecessary for pure on click and run on same tab:
+// const clickIcons = document.querySelectorAll("a[href]");
+
 
 
 
