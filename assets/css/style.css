@@ -5,6 +5,7 @@
 
 /**
  * copyright 2022 @codewithsadee
+ * further personalized 2025 @symsoph
  */
 
 
@@ -440,7 +441,7 @@ main {
 
 .social-item .social-link {
   color: var(--light-gray-70);
-  font-size: 18px;
+  font-size: 25px;
 }
 
 
@@ -1879,4 +1880,26 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+  /**
+  * Copyright
+  */
+
+  /* .anchor {
+    anchor-name: --footer-anchor;
+    text-align: right;
+    justify-content: center;
+    width: 
+  }
+
+  footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: calc(anchor-size(justify-content) * 300);
+  padding: 0.5rem 20;
+  font-size: 1.5rem;
+}
+
+.footer small {
+  color: var(--main-color);
+} */
 }
