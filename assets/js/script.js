@@ -140,46 +140,26 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+// Map button text to data-page value (Portuguese)
+const pageMap = {
+  "Sobre": "sobre",
+  "Currículo": "curriculo",
+  "Portfólio": "portfólio",
+  "Blog": "blog",
+  "Contato": "contato"
+};
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
+navigationLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    const pageName = pageMap[link.textContent.trim()];
+    pages.forEach(page => {
+      if (page.dataset.page === pageName) {
+        page.classList.add("active");
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        page.classList.remove("active");
       }
-    }
-
-  });
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = document.querySelectorAll('[data-nav-link]');
-  const pages = document.querySelectorAll('[data-page]');
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-      // Remove active from all
-      navLinks.forEach(l => l.classList.remove('active'));
-      pages.forEach(p => p.classList.remove('active'));
-
-      // Get the text of the clicked button, lowercase, remove accents
-      let page = this.textContent.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-
-      // Find the matching article
-      pages.forEach(p => {
-        let attr = p.getAttribute('data-page').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        if (attr === page) {
-          p.classList.add('active');
-        }
-      });
-
-      this.classList.add('active');
     });
+    navigationLinks.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
   });
 });
