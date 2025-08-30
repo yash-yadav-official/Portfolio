@@ -157,3 +157,29 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = document.querySelectorAll('[data-nav-link]');
+  const pages = document.querySelectorAll('[data-page]');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      // Remove active from all
+      navLinks.forEach(l => l.classList.remove('active'));
+      pages.forEach(p => p.classList.remove('active'));
+
+      // Get the text of the clicked button, lowercase, remove accents
+      let page = this.textContent.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+      // Find the matching article
+      pages.forEach(p => {
+        let attr = p.getAttribute('data-page').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        if (attr === page) {
+          p.classList.add('active');
+        }
+      });
+
+      this.classList.add('active');
+    });
+  });
+});
