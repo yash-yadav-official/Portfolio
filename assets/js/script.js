@@ -137,29 +137,18 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 // page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+const navLinks = document.querySelectorAll('[data-nav-link]');
+const pages = document.querySelectorAll('article[data-page]');
 
-// Map button text to data-page value (Portuguese)
-const pageMap = {
-  "Sobre": "sobre",
-  "Currículo": "curriculo",
-  "Portfólio": "portfólio",
-  "Blog": "blog",
-  "Contato": "contato"
-};
+navLinks.forEach(link => {
+  link.addEventListener('click', function () {
+    // Remove active class from all links and pages
+    navLinks.forEach(l => l.classList.remove('active'));
+    pages.forEach(p => p.classList.remove('active'));
 
-navigationLinks.forEach(link => {
-  link.addEventListener("click", function () {
-    const pageName = pageMap[link.textContent.trim()];
-    pages.forEach(page => {
-      if (page.dataset.page === pageName) {
-        page.classList.add("active");
-      } else {
-        page.classList.remove("active");
-      }
-    });
-    navigationLinks.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
+    // Add active class to clicked link and corresponding page
+    this.classList.add('active');
+    const pageName = this.getAttribute('data-page');
+    document.querySelector(`article[data-page="${pageName}"]`).classList.add('active');
   });
 });
