@@ -324,7 +324,7 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .info-content .name {
@@ -337,7 +337,7 @@ main {
 
 .info-content .title {
   color: var(--text-1);
-  background: var(--onyx);
+  background: var(--highlight);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
