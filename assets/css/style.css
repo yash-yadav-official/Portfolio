@@ -345,37 +345,32 @@ main {
   border-radius: 8px;
 }
 
+.title-group { display: flex; flex-direction: row; gap: 12px; }
+
 .info_more-btn {
   position: absolute;
-  top: -15px;
-  right: -15px;
-  border-radius: 0 15px;
+  top: -30px;
+  right: -30px;
+  border-radius: 0 15px 0 15px;
   font-size: 13px;
-  color: var(--orange-yellow-crayola);
-  background: var(--border-gradient-onyx);
-  padding: 10px;
+  color: var(--accent);
+  background: var(--surface);
+  padding: 10px 15px;
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
   z-index: 1;
+  border: 1px solid transparent;
 }
 
-.info_more-btn::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: var(--bg-gradient-jet);
-  transition: var(--transition-1);
-  z-index: -1;
-}
+.info_more-btn::before { display: none; }
 
 .info_more-btn:hover,
-.info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+.info_more-btn:focus { background: var(--surface); }
 
 .info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+.info_more-btn:focus::before { display: none; }
 
-.info_more-btn span { display: none; }
+.info_more-btn span { display: block; font-size: var(--fs-8); }
 
 .sidebar-info_more {
   opacity: 0;
@@ -1341,6 +1336,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .info_more-btn ion-icon { display: none; }
+.info_more-btn:focus-visible { outline:2px solid rgba(60,91,111,.35); outline-offset:2px; }
 
   .separator { margin: 32px 0; }
 
