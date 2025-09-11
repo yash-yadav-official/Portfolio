@@ -42,3 +42,14 @@ If you want to contact me you can reach me at [Twitter](https://www.x.com/codewi
 ## License
 
 MIT
+
+
+## How to edit in Builder
+
+- Open this project in Builder visual editor. The page is still static HTML/CSS; only data attributes were added.
+- Inline editable text fields are marked with data-builder-field (e.g., hero.name, about.paragraph1, service item titles/descriptions, testimonials, timeline items, project/blog titles, categories/excerpts, and contact headings/placeholders).
+- Images are replaceable via media picker where data-builder-attr="src" is present (avatar, service icons, project/blog images, client logos).
+- Repeatable lists support add/reorder/delete in the editor:
+  - services-list, testimonials-list, clients-list, projects-list, blogposts-list, education-list, experience-list.
+- Each list item has a stable data-builder-item-id for targeting. Links expose data-builder-attr="href".
+- Light theme stays intact; no layout/CSS changes were made.
