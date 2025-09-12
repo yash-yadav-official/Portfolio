@@ -316,7 +316,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 132px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -331,9 +331,6 @@ main {
   gap: 15px;
 }
 
-.sidebar-info.active { 
-  padding-bottom: 10px
-}
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
