@@ -1,44 +1,74 @@
-# vCard - Personal portfolio
+# Ashok Sanke - Personal Portfolio
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+A professional portfolio website showcasing 12+ years of experience in Banking and Financial Services testing.
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+## 🌐 Live Website
+[https://sankeashok.github.io](https://sankeashok.github.io)
 
-## Demo
+## 👨‍💻 About
+Senior Test Engineer specializing in:
+- **Test Automation** (Selenium, Python, VirtuosoQA)
+- **Banking Platforms** (Oracle Flexcube, FIS Modern Banking)
+- **EDI Systems** (Electronic Data Interchange)
+- **Cloud Technologies** (AWS, Azure)
+- **API Testing** & Integration Testing
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+## 🛠️ Technical Skills
+- **Languages**: Python, SQL
+- **Testing Tools**: Selenium, VirtuosoQA, OATS, Playwright
+- **Cloud**: AWS (SQS, DynamoDB, Redshift), Azure, OpenShift
+- **Databases**: Oracle PL/SQL, BigQuery
+- **CI/CD**: Jenkins, GitHub, Bitbucket
 
-## Prerequisites
+## 🏆 Key Achievements
+- Automated 500+ test cases across 15 banking modules
+- Reduced regression testing time from 2 weeks to 3 days
+- Led EDI modernization projects on AWS cloud
+- Implemented CI/CD pipelines for continuous testing
 
-Before you begin, ensure you have met the following requirements:
+## 📜 Certifications
+- [VirtuosoQA Certified Associate Level 1](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/129992133)
+- [VirtuosoQA Certified Associate Level 2](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/130092535)
+- [VirtuosoQA Certified Platform Specialist](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/160682415)
+- [Tricentis Tosca Fundamentals](https://verify.skilljar.com/c/pditrowb6ev9)
+- ISTQB Foundation
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+## 🚀 Technologies Used
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Icons**: Ionicons
+- **Fonts**: Google Fonts (Poppins)
+- **Hosting**: GitHub Pages
 
-## Installing vCard
-
-To install **vCard**, follow these steps:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+## 📁 Project Structure
+```
+ashoksanke.github.io/
+├── index.html          # Main portfolio page
+├── assets/
+│   ├── css/
+│   │   └── style.css   # Stylesheet
+│   ├── js/
+│   │   └── script.js   # JavaScript functionality
+│   └── images/         # Portfolio images
+└── README.md           # Project documentation
 ```
 
-Windows:
+## 🔧 Features
+- **Responsive Design** - Works on all devices
+- **Interactive Navigation** - Smooth page transitions
+- **Professional Timeline** - Career progression
+- **Skills Showcase** - Technical expertise
+- **Certification Links** - Verifiable credentials
+- **Contact Form** - Professional inquiries
 
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
+## 📞 Contact
+- **Email**: sanke.ashokk@gmail.com
+- **Phone**: +91 9176996600
+- **LinkedIn**: [linkedin.com/in/ashok-sanke](https://www.linkedin.com/in/ashok-sanke)
+- **GitHub**: [github.com/sankeashok](https://github.com/sankeashok)
+- **Location**: Bengaluru, India
 
-## Contact
+## 📄 License
+This project is open source and available under the [MIT License](LICENSE).
 
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
-
-## License
-
-MIT
+---
+*Built with ❤️ by Ashok Sanke*
