@@ -1,9 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- <style type="text/css">
-  ul { list-style-type: "*"; }
-</style> -->
+<style type="text/css">
+  body {
+    padding: 0em 1em 1em; 
+  }
+
+  /* article {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+} didnt really work */
+
+.container {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  padding: 20px;
+  font: 1.2em sans-serif;
+
+  column-width: 20em;
+  column-rule: 1px solid rgb(75 70 74);
+} 
+
+/* for handling sub classes under container class */
+.container > * {
+  padding: 10px;
+  margin: 0 10px;
+  flex: 1;
+}
+
+  div {
+      text-align: center;
+
+  }
+  small {
+    text-align: left;
+  }
+
+  ul { 
+    list-style-type: "➡️ "; /* spaces count */
+    margin: 0.3 rem; /* above ul */
+  }
+</style>
 
 <head>
   <meta charset="UTF-8">
@@ -21,34 +62,51 @@
 
 <body>
 
-<h1> Soul Haven by The GoodDemons</h1>
-<h2> <font color='#FCBEBB'>Animation UI Process</font></h2>
-
-<p>I was tasked with implementing interesting button animations and did some competitive research of other cozy, incremental games.
-
-Then I referenced some tutorials, I created a customized shader and squish-and-squeeze animations. 
-
-These implementations are visible on the home screen - shown below. </p>
-
-![Home Screen Animations](/assets/visual-media/showcase-home-buttons.gif)
-
-<h2> <font color='#FCBEBB'>Gameplay Synchronization</font></h2>
+  <h1> Soul Haven by The GoodDemons</h1>
 
 
-<p>While polishing and testing our final builds, we received feedback regarding the accessibility of customizing settings like the background music level, and I implemented this accessibility feature with C# scripting.</p>
+<article class="container">
+  <h2> <font color='#FCBEBB'><u>Animation UI Process</u></font></h2>
 
-![Setting Sync](/assets/visual-media/soulhaven-sync.mp4)
+  <p>I was tasked with implementing interesting button animations and did some competitive research of other cozy, incremental games.
 
-<br>
-<small>(Note: In the submission build of the Soul Haven, you can not adjust the music volume after leaving the home screen, but your adjusted music levels are saved in the next scenes!)</small>
+  Then I referenced some tutorials, I created a customized shader and squish-and-squeeze animations. 
+
+  These implementations are visible on the home screen - shown to the right. </p>
+
+  <!-- <img src="/assets/visual-media/showcase-home-buttons.gif" alt="Home Screen Animations]"/> -->
+  <div>
+    <img
+    src="/assets/visual-media/showcase-home-buttons.gif" 
+    width="300" height="200"
+    alt="Home Screen Animations" />
+  </div>
+</article>
+
+<article class="container">
+  <h2> <font color='#FCBEBB'><u>Gameplay Synchronization</u></font></h2>
 
 
-<ul>
+  <p>While polishing and testing our final builds, we received feedback regarding the accessibility of customizing settings like the background music level, and I implemented this accessibility feature with C# scripting.</p>
 
-  <li>Check out [SoulHaven](https://tomchung.itch.io/soulhaven)</li>
-  <!-- custom back button image? -->
-  <li>Return to [portfolio site](symsoph.github.io)</li>
-</ul>
+  <div>
+    <video controls width="300" height="200"> 
+      <source src="/assets/visual-media/soulhaven-sync.mp4" 
+      type="video/mp4" />
+      alt="Settings Sync"
+    </video> 
+  </div>
+
+  <small>Note: In the submission build of the Soul Haven, you can not adjust the music volume after leaving the home screen, but your adjusted music levels are saved in the next scenes!</small>
+
+</article>
+
+  <ul>
+
+    <li>Check out <a href="https://tomchung.itch.io/soulhaven">SoulHaven</a></li>
+    <!-- custom back button image? -->
+    <li>Return to <a href="https://symsoph.github.io/personal-portfolio/">portfolio site</a></li>
+  </ul>
 
 
 </body>
