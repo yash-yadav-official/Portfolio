@@ -15,46 +15,6 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-  
-  testimonialsItem[i].addEventListener("click", function () {
-    
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-    
-    testimonialsModalFunc();
-    
-  });
-  
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
 // PORTFOLIO RELATED
 // custom select variables
 const select = document.querySelector("[data-select]");
@@ -181,12 +141,13 @@ console.log(pathPortion);
 const hashPortion = window.location.hash.split("#").slice(1); // gives after # (the anchor) ... array in both cases ["", insertword] if .slice(0)
 console.log('hash', hashPortion);
 
-// detechs change in anchor, but will not work if nav button is not fully clicked (stuck)
+// detects change in anchor
 window.addEventListener(
   "hashchange", () => 
   {
     console.log("hash changed", window.location.hash.split("#").slice(1)); // hashPortion is an array
     for (let i = 0; i < pages.length; i++) {
+      // need to always check for updated hash
       const hashPortion = window.location.hash.split("#").slice(1)
       if (hashPortion[0] === pages[i].dataset.page) {
         document.getElementById(hashPortion[0] + "Button").click();
@@ -237,5 +198,4 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// something something trying to trigger click event with the anchor/jump link : https://stackoverflow.com/questions/5811122/how-to-trigger-a-click-on-a-link-using-jquery
 
