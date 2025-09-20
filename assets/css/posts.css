@@ -11,17 +11,17 @@
 body {
     padding: 0em 1em 1em; 
 }
-
+/* plain text */
 .container {
   border: 2px solid rgb(75 70 74);
   border-radius: 0.5em;
-  padding: 20px;
+  padding: 30px;
   font: 1.2em sans-serif;
 
-  column-width: 20em;
+  columns: 1;
+  column-width: 30em;
   column-rule: 1px solid rgb(75 70 74);
 } 
-
 /* for handling sub classes under container class */
 .container > * {
   padding: 10px;
@@ -29,7 +29,64 @@ body {
   flex: 1;
 }
 
-div {
+/* long paragraph with visuals */
+.lcontainer {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  padding: 20px;
+  font: 1.2em sans-serif;
+
+  columns: 2;
+  /* break-inside: avoid; */
+  column-width: 20em;
+  column-rule: 1px solid rgb(75 70 74);
+  margin: 0;
+}
+/* for handling sub classes under lcontainer class */
+.lcontainer > * {
+  padding: 20px;
+  margin: 0 10px;
+  flex: 1;
+}
+/* .lcontainer {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em; curve corners of box
+
+  top | left and right | bottom
+  padding: 0em 10em 0em;
+  font: 1.2em sans-serif;
+
+  column-width: 5em;
+  column-rule: 1px solid rgb(75 70 74); separator link
+} 
+
+for handling sub classes under lcontainer class
+.lcontainer > * {
+  padding: 20px;
+  margin: 0 10px;
+  flex: 1;
+} */
+
+/* short paragraph with visuals */
+.vcontainer {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  padding: 20px;
+  font: 1.2em sans-serif;
+
+  columns: 2;
+  column-width: 20em;
+  column-rule: 1px solid rgb(75 70 74);
+} 
+
+/* for handling sub classes under vcontainer class */
+.vcontainer > * {
+  padding: 10px;
+  margin: 0 10px;
+  flex: 1;
+}
+
+div, h3 {
     text-align: center;
 
 }
@@ -38,7 +95,11 @@ small {
     text-align: left;
 }
 
-ul { 
+.footlinks { 
     list-style-type: "➡️ "; /* spaces count */
     margin: 0.3 rem; /* above ul */
 }
+videoPad > video {
+  object-position: center;
+  font-size: 0;
+  }

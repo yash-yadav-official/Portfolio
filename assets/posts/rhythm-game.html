@@ -1,104 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../../assets/visual-media/mouse-favicon.jpg" type="image/mouse-icon">
+
 <!--- custom css link -->
-  <!-- <link rel="stylesheet" href="../../assets/css/posts.css"> -->
-<style>
-body {
-    padding: 0em 1em 1em; 
-}
-/* plain text */
-.container {
-  border: 2px solid rgb(75 70 74);
-  border-radius: 0.5em;
-  padding: 30px;
-  font: 1.2em sans-serif;
+  <link rel="stylesheet" href="../../assets/css/posts.css">
 
-  columns: 1;
-  column-width: 30em;
-  column-rule: 1px solid rgb(75 70 74);
-} 
-/* for handling sub classes under container class */
-.container > * {
-  padding: 10px;
-  margin: 0 10px;
-  flex: 1;
-}
-
-/* long paragraph with visuals */
-.lcontainer {
-  border: 2px solid rgb(75 70 74);
-  border-radius: 0.5em;
-  padding: 20px;
-  font: 1.2em sans-serif;
-
-  columns: 2;
-  /* break-inside: avoid; */
-  column-width: 20em;
-  column-rule: 1px solid rgb(75 70 74);
-  margin: 0;
-}
-/* for handling sub classes under lcontainer class */
-.lcontainer > * {
-  padding: 20px;
-  margin: 0 10px;
-  flex: 1;
-}
-/* .lcontainer {
-  border: 2px solid rgb(75 70 74);
-  border-radius: 0.5em; curve corners of box
-
-  top | left and right | bottom
-  padding: 0em 10em 0em;
-  font: 1.2em sans-serif;
-
-  column-width: 5em;
-  column-rule: 1px solid rgb(75 70 74); separator link
-} 
-
-for handling sub classes under lcontainer class
-.lcontainer > * {
-  padding: 20px;
-  margin: 0 10px;
-  flex: 1;
-} */
-
-/* short paragraph with visuals */
-.vcontainer {
-  border: 2px solid rgb(75 70 74);
-  border-radius: 0.5em;
-  padding: 20px;
-  font: 1.2em sans-serif;
-
-  columns: 2;
-  column-width: 20em;
-  column-rule: 1px solid rgb(75 70 74);
-} 
-
-/* for handling sub classes under vcontainer class */
-.vcontainer > * {
-  padding: 10px;
-  margin: 0 10px;
-  flex: 1;
-}
-
-div, h3 {
-    text-align: center;
-
-}
-
-small {
-    text-align: left;
-}
-
-.footlinks { 
-    list-style-type: "➡️ "; /* spaces count */
-    margin: 0.3 rem; /* above ul */
-}
-videoPad > video {
-  object-position: center;
-  font-size: 0;
-  }
-</style>
 
 <head>
     <meta charset="UTF-8">
@@ -120,14 +30,14 @@ videoPad > video {
     <p>Concept: We are inverting the usual rhythm game expectations. Instead of hitting notes, you try to dodge them. Also, you play as a mouse to the tune of classical music.</p> 
 
 <article class="container">
-            <h2>MIDI Parsing</h2>
+            <h2><u>MIDI Parsing</u></h2>
             <p>As discussed with my team, our game needed to be able to parse a MIDI file in order to generate notes in the right order.
             <br><br>
             In short time, I was tasked with researching how to build a MIDI parser.  After a lot of tutorial watching and forum reading, I discovered a resource in the Unity Asset store, <a href="https://github.com/melanchall/drywetmidi">DryWetMIDI</a> by <em>melanchall</em> (on github). This tool was a life-saver because you can parse the MIDI file and generate 3D notes so that they appear to the player in real time with the music. </p>
 </article>
 
 <article class="lcontainer">
-    <h2>Player Health</h2>
+    <h2><u>Player Health</u></h2>
     <!-- <p>I also built the game's health system.</p>  -->
 
     <ul>
@@ -164,7 +74,7 @@ videoPad > video {
         <li>Play <a href="https://frndlydragon.itch.io/the-great-mouse-performance">The Great Mouse Performance</a></li>
 
     <!-- custom back button image? -->
-        <li>Return to <a href="___">portfolio site</a></li> 
+        <li>Return to <a href="">portfolio site</a></li> 
     </ul>
 
 </body>
