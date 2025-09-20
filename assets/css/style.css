@@ -49,6 +49,11 @@
     hsl(0, 0%, 25%) 0%, 
     hsla(0, 0%, 25%, 0) 50%
   );
+  --bg-gradient-violet: linear-gradient(
+    to bottom right, 
+    hsla(255, 75%, 63%, 0.936) 0%, 
+    hsla(270, 58%, 56%, 0.781) 100%
+  ), hsl(280, 20%, 13%);
   --text-gradient-yellow: linear-gradient(
     to right, 
     hsl(45, 100%, 72%), 
@@ -69,7 +74,9 @@
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
-
+  
+  --violet: hsl(265, 89%, 63%);
+  --light-violet: hsl(265, 86%, 70%);
   /**
    * typography
    */
@@ -149,14 +156,14 @@ input, textarea {
 
 ::selection {
   background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
+  color: var(--violet);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { background: var(--violet); }
 
 
 
@@ -168,7 +175,7 @@ body { background: var(--smoky-black); }
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
+  background: var(--light-violet);
   border: 1px solid var(--jet);
   border-radius: 20px;
   padding: 15px;
@@ -199,7 +206,7 @@ article {
 }
 
 .icon-box::before {
-  content: "";
+  content: ""; 
   position: absolute;
   inset: 1px;
   background: var(--eerie-black-1);
@@ -333,7 +340,7 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
+  background: var(--light-gray-70);
   border-radius: 20px;
 }
 
@@ -505,7 +512,10 @@ main {
   line-height: 1.6;
 }
 
-.about-text p { margin-bottom: 15px; }
+.about-text p { 
+  color: var(--white-2);
+  margin-bottom: 15px; 
+}
 
 
 
@@ -525,10 +535,10 @@ main {
 
 .service-item {
   position: relative;
-  background: var(--border-gradient-onyx);
+  /* background: var(--bg-gradient-violet); */
   padding: 20px;
   border-radius: 14px;
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-1);
   z-index: 1;
 }
 
@@ -536,7 +546,7 @@ main {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
+  /* background: var(--bg-gradient-violet); */
   border-radius: inherit;
   z-index: -1;
 }
@@ -1249,7 +1259,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .project-img,
-  .blog-banner-box { height: auto; }
+  .blog-banner-box { height: min-content; }
 
 }
 

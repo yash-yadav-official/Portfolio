@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../../assets/visual-media/mouse-favicon.jpg" type="image/mouse-icon">
+
+<!--- custom css link -->
+  <link rel="stylesheet" href="../../assets/css/posts.css">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm Game</title>
+
+    <!--
+    - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>The Great Mouse Performance</h1>
+
+    <p>Concept: We are inverting the usual rhythm game expectations. Instead of hitting notes, you try to dodge them. Also, you play as a mouse to the tune of classical music.</p> 
+
+<article class="container">
+            <h2><u>MIDI Parsing</u></h2>
+            <p>As discussed with my team, our game needed to be able to parse a MIDI file in order to generate notes in the right order.
+            <br><br>
+            In short time, I was tasked with researching how to build a MIDI parser.  After a lot of tutorial watching and forum reading, I discovered a resource in the Unity Asset store, <a href="https://github.com/melanchall/drywetmidi">DryWetMIDI</a> by <em>melanchall</em> (on github). This tool was a life-saver because you can parse the MIDI file and generate 3D notes so that they appear to the player in real time with the music. </p>
+</article>
+
+<article class="lcontainer">
+    <h2><u>Player Health</u></h2>
+    <!-- <p>I also built the game's health system.</p>  -->
+
+    <ul>
+        <li>I created the health icons that matched the game's classical music aesthetic
+            <ul>
+                <li>The player's (mouse) health consists of 3 red hearts, which are created from mirror images of the bass clef. 
+                </li>
+            </ul>
+        </li>
+        <li>Defined and scripted collision and damage behaviors
+            <ul>
+                <li>Player's body flashes white on collision with an incoming note</li>
+                <li> One red heart turn black, meaning one life lost</li>
+                <li>Edited mouse squeak SFXs to represent damage</li>
+            </ul>
+        </li>
+    </ul>
+
+        <div>
+            <img
+              src="/assets/visual-media/fullHeart copy.png" 
+              width="300" height="200"
+              alt="Red Heart" />
+            <video class="videoPad" controls width="500" height="300"> 
+                <source src="/assets/visual-media/greatmouse-health.mov" type="video/mp4">
+                alt="The GreatMouseAdventures Demo"
+            </video> 
+             
+        </div>
+</article>
+    
+    <ul class="footlinks">
+
+        <li>Play <a href="https://frndlydragon.itch.io/the-great-mouse-performance">The Great Mouse Performance</a></li>
+
+    <!-- custom back button image? -->
+        <li>Return to <a href="">portfolio site</a></li> 
+    </ul>
+
+</body>
+
+</html>
