@@ -102,4 +102,18 @@ small {
 videoPad > video {
   object-position: center;
   font-size: 0;
-  }
+}
+.imgNVid {
+  display: inline;
+  margin: 1em;
+}
+/* on hover over image, popup that says click me? 
+audio player controls appear
+sound will play */
+
+/* for small figcaption in qualcomm */
+.smallcap {
+  /* top and bottom | left and right */
+  margin: 0 20%;
+  font-size: x-small;
+}

@@ -130,23 +130,9 @@ function navClickEventHandler() {
   }
 }
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-console.log(pages);
-
-// using the current page's URL
-const pathPortion = window.location.pathname.split("/").slice(1); // gives only index.html
-console.log(pathPortion);
-const hashPortion = window.location.hash.split("#").slice(1); // gives after # (the anchor) ... array in both cases ["", insertword] if .slice(0)
-console.log('hash', hashPortion);
-
-// detects change in anchor
-window.addEventListener(
-  "hashchange", () => 
-  {
-    console.log("hash changed", window.location.hash.split("#").slice(1)); // hashPortion is an array
-    for (let i = 0; i < pages.length; i++) {
+// to navigate to 'correct page' when pasting link with anchor
+function anchorLinker() {
+  for (let i = 0; i < pages.length; i++) {
       // need to always check for updated hash
       const hashPortion = window.location.hash.split("#").slice(1)
       if (hashPortion[0] === pages[i].dataset.page) {
@@ -162,6 +148,30 @@ window.addEventListener(
         navigationLinks[i].classList.remove("active");
       }
     }
+}
+
+// page navigation variables
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+console.log(pages);
+
+// using the current page's URL
+const pathPortion = window.location.pathname.split("/").slice(1); // gives only index.html
+console.log(pathPortion);
+const hashPortion = window.location.hash.split("#").slice(1); // gives after # (the anchor) ... array in both cases ["", insertword] if .slice(0)
+console.log('hash', hashPortion);
+
+// check for any anchor link - ex. copy paste
+if (hashPortion) {
+  anchorLinker();
+}
+
+// detects change in anchor - only for typing into search bar
+window.addEventListener(
+  "hashchange", () => 
+  {
+    console.log("hash changed", window.location.hash.split("#").slice(1)); // hashPortion is an array
+    anchorLinker();
   }
   );
 
