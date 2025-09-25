@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../../assets/visual-media/IMG_0040.PNG" type="image/my-icon">
+
+<!--- custom css link -->
+  <link rel="stylesheet" href="../../assets/css/posts.css">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cognitive Cities</title>
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <h1> Digital Twins: Cognitive Cities</h1>
+
+
+<article class="container">
+  <h2> <font color='#F4AE0B'><u>Purpose</u></font></h2>
+    <p>Role: <b>Unreal 3D Modeling Intern</b>
+    <br><br>
+        I was an intern for a research project with the Qualcomm Institute (QI) called the Cognitive Cities, which aimed to develop <u>an urban planning tool with Unreal Engine that would create and simulate digital versions of any city</u>. The application was an real-time integration with Google Maps and Cesium for actual geo-location. With this tool, we envisioned everyone, from non-technologists to real estate developers and urban planners, to use the Cognitive Cities to model and visualize how to improve their towns. 
+    </p>
+    <p>
+        As part of my internship, I was tasked with creating my own project that utilized Unreal Engine 5. I chose to improve energy costs and make the case for solar panels by simulating the intensity of sunlight on UCSD's main campus.  
+    </p>
+    <p>
+      First, because the UCSD campus is humongous, I searched for which sections used the most energy. Thankfully, I found a publically accessible database and found the top 5 places at UCSD that used the most electricity, specifically (there was no energy category). 
+    
+      I decided to focus on Jacobs Hall and the Warren Mall area because the Cognitive Cities team already had scans of that area of UCSD. I could get right to work. 
+    </p>
+    <div>
+    <figure>
+      <!-- 3 gifs of jacobs hall -->
+      <img src="../../assets/visual-media/jacobsHall-side.gif" alt="warren hall side view" width="500" height="400">
+      
+      <img src="../../assets/visual-media/jacobshall-top.gif" alt="warren hall top view" width="500" height="400">
+      <!-- figcaption for the middle gif -->
+   
+    <figcaption class="smallcap">
+      The grayscale gifs are different angles of the Jacobs Hall and the Warren Mall area. You can see the light shifting as I move it inside Unreal. 
+    </figcaption>
+  </figure> 
+<div>
+
+<div>
+  <figure>
+     <img src="../../assets/visual-media/cesium-atkinson-circles.png" alt="final cesium results" width="700" height="450"> 
+     <figcaption class="smallcap">Taking what I learned from the grayscale models of Warren Mall and Jacobs Hall, I focused more specifically on the most energy intensive building in this area of campus - Atkinson Hall. I used Cesium Ion and Google Maps (Unreal plugins) to simulate the behavior of shadows in order to determine which spots would be ideal places for solar panels.</small>
+  </figure>
+  </div>
+</article>
+
+<article class="container">
+  <h2> <font color='#F4AE0B'><u>Accessibility</u></font></h2>
+
+
+  <p>In addition, I was also tasked with testing Unreal's current modeling controls and think of ways to make replicating and modeling buildings easy and accessible. These ideas would be implemented in Cognitive Cities.</p>
+
+  <div> 
+  <!-- Real Life -->
+  <figure>
+    <img src="../../assets/visual-media/hotel-west-inn-initial.png" alt="Hotel Initial" width="600" height="300">
+      
+    <figcaption class="smallcap">This is the most accurate 3D drone scan of the Hotel West Inn in the Hollywood Vinyl Distrinct, created by the director of the project. I used this scan to create a basic surface 3D model of the Hotel West Inn. By simulating the modeling process, I could identify improvements that could be developed to make the Cognitive Cities an accessible urban planning tool for all.</figcaption>
+
+  </figure> 
+    <!-- Full Model with/out Scan -->
+    <figure>
+      <img src="../../assets/visual-media/hotel-west-inn-surface.png" alt="Full Model with Scan" width="600" height="300">
+    
+    <img src="../../assets/visual-media/hotel-west-inn-naked.png" alt="Full Model without Scan" width="600" height="300">
+    <figcaption class="smallcap">Full model of the Hotel West Inn with & without the scan</figcaption>
+  </figure> 
+  </div>
+
+  Once I completed the front facade of the Hotel West Inn, I reflected on what I struggled with while modeling and what kinds of controls would have improved my Unreal experience. 
+  <br><br>
+  I mostly struggled with scaling, positioning, aligning blocks together and matching existing repository materials and the hotel's colors (in lieu of not having the building's material skin). It was an extremely tedious process. Therefore, I shared some of my ideas with the Cognitive Cities team for potential Cognitive Cities plugins:
+  <ul>
+    <li>A snapping tool for each of the three axises
+      <ul>
+      <li>Snapping to other blocks</li>
+      </ul>
+    </li>
+    <li>Easy way to group blocks ()</li>
+    <li>Ability to stretch shapes in one direction (like in 2D)</li>
+    <li>Right click on a block and a selection bar appears with color, texture, material options</li>
+  </ul> 
+
+</article>
+
+  <ul>
+    <!-- custom back button image? -->
+    <li>Return to <a href="https://symsoph.github.io/#portfolio">portfolio site</a></li>
+  </ul>
+
+
+</body>
+
+</html>
