@@ -117,3 +117,9 @@ sound will play */
   margin: 0 20%;
   font-size: x-small;
 }
+blockquote {
+  background-color: #ededed;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
