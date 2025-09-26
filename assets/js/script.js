@@ -161,10 +161,11 @@ console.log(pathPortion);
 const hashPortion = window.location.hash.split("#").slice(1); // gives after # (the anchor) ... array in both cases ["", insertword] if .slice(0)
 console.log('hash', hashPortion);
 
-// check for any anchor link - ex. copy paste
-if (hashPortion) {
+// check for any anchor link - ex. copy paste - while allowing for homepage default to land on 'about' page
+if (hashPortion[0] == 'about' || hashPortion[0] == 'portfolio' || hashPortion[0] == 'contact') {
   anchorLinker();
-}
+  console.log('this is hashed');
+} 
 
 // detects change in anchor - only for typing into search bar
 window.addEventListener(
