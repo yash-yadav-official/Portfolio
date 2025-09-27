@@ -486,9 +486,10 @@ function showSuccessMessage(message) {
     top: 20px;
     right: 20px;
     background: var(--bg-gradient-yellow-1);
-    color: var(--smoky-black);
+    color: var(--vegas-gold);
     padding: 12px 20px;
     border-radius: 8px;
+    border:1px solid var(--vegas-gold);
     box-shadow: var(--shadow-1);
     z-index: 1000;
     font-weight: 500;
