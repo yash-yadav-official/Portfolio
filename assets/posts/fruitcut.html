@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--- custom css link -->
+  <link rel="stylesheet" href="../../assets/css/posts.css">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Cut</title>
+    <!-- Favicon Game icon or website icon to show continuity-->
+    <link rel="icon" type="image/fruit-cut" href="/assets/visual-media/fruit-cover.PNG">
+    <!--
+    - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1><font color="#FC7160">Fruit Cut</font></h1>
+
+    <!-- <p>Concept: We are inverting the usual rhythm game expectations. Instead of hitting notes, you try to dodge them. Also, you play as a mouse to the tune of classical music.</p>  -->
+
+<article class="container">
+            <h2><font color="#A7E37D"><u>Concept</u> </font></h2>
+            <p>This unfinished game was centered around cutting fruit to match a weight - created for <a href="https://itch.io/jam/gmtk-2024">Game Maker's Toolkit Jam 2024</a> 
+            <br><br>
+            Through this game jam, I learned of a cool feature that Unity has where the engine can calculate the atomic mass of an asset. Of course, if you had a fruit asset, the its mass measured by Unity won't match real life. </p>
+           
+</article>
+
+<article class="lcontainer">
+    <h2><font color="#A7E37D"><u>Slice and Weigh</u></font></h2>
+
+    <ul>
+        <li>I was a <b>programmer</b> for Fruit Cut.  I polished the key feature, which was the slicing and 'weighing' of the cut pieces of food.
+            <ul>
+                <li>BEFORE: The in-game scale's collision boxes were too large and would not re-measure new slices, thus the mass measurements were not accurate. 
+                
+                <li>AFTER: As a result, I created a script defining behaviors for 3 triggers - entering, staying, and exiting the collision. This created a dynamic scale</li> 
+                </li>
+            </ul>
+        </li>
+        <li>However, I was not able to create boundaries to contain the fruit slices and keep them from floating off the game screen. As one notices in the demo video, once the player slices the apple, both pieces float and bounce around. 
+        <br><br>    
+        <li>In the future, I would look into these improvements:
+            <ul>
+                <li>Adding gravity  so that slices does not bounce after being cut or moved around</li>
+                <li>Refining the interactions between the food slices and the scale i.e. making sure the slice stays on top of the scale and not phase through it</li>
+                <li>Customize the slice i.e. make the apple slice look more than just red</li>
+                <li>Visual cues for meeting the weight goal</li>
+        </li>
+            </ul>
+        </li>
+    </ul>
+
+        <div>
+            <video class="videoPad" controls width="600" height="400"> 
+                <source src="/assets/visual-media/fruit-cut-demo.mp4" type="video/mp4">
+                alt="Fruit Demo"
+            </video> 
+             
+        </div>
+</article>
+    
+    <ul class="footlinks">
+    <!-- custom back button image? -->
+        <li>Return to <a href="https://symsoph.github.io/#portfolio">portfolio site</a></li> 
+    </ul>
+
+</body>
+
+</html>
