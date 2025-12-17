@@ -1881,21 +1881,4 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
-/* Add to bottom of style.css */
 
-/* Use this class in your HTML: <div class="service-item no-gap"> */
-.service-item.no-gap {
-  padding: 0 !important;
-  overflow: hidden;
-}
-
-/* This adds padding back to the text so it doesn't hit the edge */
-.service-item.no-gap .service-content-box {
-  padding: 20px;
-}
-
-/* Force the image to fill the space */
-.service-item.no-gap img {
-  width: 100%;
-  display: block;
-}
