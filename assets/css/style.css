@@ -155,7 +155,10 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { 
+  background: var(--smoky-black);
+  color: var(--white-2); /* This forces all text to be light grey/white */
+}
 
 
 
